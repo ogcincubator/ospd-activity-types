@@ -1,17 +1,10 @@
-# OGC Building Block template
+# OSPD Activity Types
 
-This template provides a working example of an [OGC Building Block](https://opengeospatial.github.io/bblocks/register/). For more info see [the Documentation](https://ogcincubator.github.io/bblocks-docs/).
+Consolidated activity types for the OGC Open Science Persistent Demonstrator (OSPD), published as an
+[OGC Building Blocks](https://ogcincubator.github.io/bblocks-docs/) register.
 
-This template is a working automation recipe to define, test and document a set of Building Blocks.
+- Persistent URIs: `https://w3id.org/ogc/ospd/activity-type/<slug>`
+- Root block: *OSPD Activity type*; one profile sub-block per family of related activity types
+- Data: each family block carries its activity types as Turtle, uploaded to the OSPD Prez instance on build
 
-The automation-generated documentation for this example is here: [https://opengeospatial.github.io/bblock-template/](https://opengeospatial.github.io/bblock-template/)
-
-[Examples of using this with typical applications of OGC standards](https://github.com/ogcincubator/bblocks-examples)
-
-Please replace the contents of this README with information about your Building Block(s).
-
-# How to use this template
-
-[More information on design and usage](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md)
-
-
+See `SECURITY.md` and `USAGE.md` (from the bblock-template) for build and viewing instructions.

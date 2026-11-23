@@ -1,18 +1,20 @@
 # A short, descriptive name of this building block collection
-name: My OGC Building Blocks repository
+name: OSPD Activity Types
 
 # Short abstract for this collection (optional)
 abstract: |
-  This is an example text for the abstract. It should be short and to the point.
-  A "Tell me more" link will appear if there is an additional description with a longer explanation.
+  Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under
+  stable `https://w3id.org/ogc/ospd/activity-type/` URIs and grouped into families of related types.
 
 # Description for this collection (optional)
 description: |
-  The description can be longer. Both **the abstract** *and the description* support Markdown,
-  including [links](https://google.es).
+  A root *OSPD Activity type* block, a profile of the Registered Item Model's activity-type block, and one
+  sub-block (profile of the root) per family of related activity types. Each family block carries the Turtle
+  definitions of its activity types as a data resource, which is uploaded to the OSPD Prez instance when
+  the register is built.
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.bbr.template.
+identifier-prefix: ogc.ospd.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register).
 # An entry can also be an "@org/register" alias (e.g. "@ogc/main", equivalent to "default"),
@@ -20,6 +22,7 @@ identifier-prefix: ogc.bbr.template.
 # a full register.json URL.
 imports:
   - default
+  - https://ogcincubator.github.io/registered-item-model/
 
 # Meta-registry used to resolve "@org/register" import aliases above (optional).
 # Defaults to the postprocessor's built-in meta-registry if omitted; set to null to disable
