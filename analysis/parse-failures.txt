@@ -1,0 +1,6 @@
+GeoLabs__bblocks-generic-profiles/build/tests/register/example_2_1.ttl	at line 1 of <>:
+Bad syntax (Prefix "gp:" not bound) at ^ in:
+"b''^b'gp:register a rim:Register ;\n    dct:title "Generi
+geonovum-labs__bblocks-demo-register/_sources/logboek/dataverwerkingen/opentelemetry/rml-2-prov-o/examples/ldv-prov.rml.ttl	at line 24 of <>:
+Bad syntax (Prefix "rdfs:" not bound) at ^ in:
+"...b'v:Activity\n  ];\n\n  rr:predicateObjectMap [\n  
