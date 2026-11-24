@@ -127,9 +127,12 @@ for r in sorted(defs, key=lambda r: r["new_iri"]):
         if agent is None or role is None:
             continue
         name = None
-        if isinstance(agent, BNode):  # agent described inline: keep its name only (no email addresses)
+        # agent described inline, or minted under the unresolvable http://ospd/demo/ namespace: keep its name
+        # only, as a named blank node (no email addresses, no dangling IRI)
+        if isinstance(agent, BNode) or str(agent).startswith("http://ospd/demo/"):
             nm = first_node(agent, [SCHEMA.name, RDFS.label, FOAF.name])
             name = str(nm) if nm is not None else None
+            agent = BNode()
         key = (str(agent) if not isinstance(agent, BNode) else name, str(role))
         if key in seen_attr:
             continue

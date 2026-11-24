@@ -1,5 +1,6 @@
 @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -18,7 +19,7 @@ ospd:GA012 a skos:Concept,
     skos:definition "NDVI with adjustments for soil colour, moisture and high density vegetation saturation effect"@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Soil-adjusted vegetation index (SAVI)"@en ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA012"^^xsd:anyURI ;
@@ -35,7 +36,7 @@ ospd:GA013 a skos:Concept,
     skos:definition "Normalized difference vegetation index (NDVI)"@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "NDVI"@en ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA013"^^xsd:anyURI ;
@@ -257,7 +258,7 @@ ospd:GA018 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Reproject"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA018"^^xsd:anyURI ;

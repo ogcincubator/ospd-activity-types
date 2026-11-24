@@ -1,6 +1,7 @@
 {
   "name": "Machine learning and statistical modeling",
   "abstract": "Machine-learning and statistical activities: regression, climate-variable downscaling, super-resolution and trend analysis, and inference executions.",
+  "highlighted": true,
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",

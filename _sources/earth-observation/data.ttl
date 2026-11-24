@@ -1,5 +1,6 @@
 @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -87,7 +88,7 @@ ospd:GA016 a skos:Concept,
         ospd:GA014,
         ospd:GA015 ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA016"^^xsd:anyURI ;
@@ -261,7 +262,7 @@ ospd:GA014 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Cloud cover"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA014"^^xsd:anyURI ;
@@ -276,7 +277,7 @@ ospd:GA015 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Cloud mask distance"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA015"^^xsd:anyURI ;

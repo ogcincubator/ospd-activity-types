@@ -53,7 +53,7 @@ ospd:GA017 a skos:Concept,
     skos:prefLabel "Seasonal Sen’s Slope"@en ;
     skos:related ospd:GA016 ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA017"^^xsd:anyURI ;

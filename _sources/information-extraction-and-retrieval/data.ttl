@@ -43,10 +43,10 @@ ospd:GA044 a skos:Concept,
     skos:prefLabel "Field Normalization"@en ;
     skos:related ospd:GA042,
         ospd:GA043 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA044"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
@@ -64,10 +64,10 @@ ospd:GA045 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Retrieve"@en ;
     skos:related ospd:GA046 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA045"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
@@ -85,10 +85,10 @@ ospd:GA046 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Generate"@en ;
     skos:related ospd:GA045 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA046"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
@@ -107,10 +107,10 @@ ospd:GA037 a skos:Concept,
     skos:prefLabel "FAS Source Fetch"@en ;
     skos:related ospd:GA038,
         ospd:GA039 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
-        [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
+        [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA037"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
@@ -129,10 +129,10 @@ ospd:GA038 a skos:Concept,
     skos:prefLabel "FAS Code Decode"@en ;
     skos:related ospd:GA037,
         ospd:GA039 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA038"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
@@ -239,10 +239,10 @@ ospd:GA049 a skos:Concept,
     skos:prefLabel "Retrieval-Augmented Generation"@en ;
     skos:related ospd:GA048 ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA049"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
@@ -260,10 +260,10 @@ ospd:GA047 a skos:Concept,
     skos:prefLabel "Data Acquisition"@en ;
     skos:related ospd:GA048 ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA047"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;

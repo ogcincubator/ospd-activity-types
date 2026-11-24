@@ -144,7 +144,7 @@ for key, (name, abstract) in FAMILIES.items():
     cs = concepts(os.path.join(d, "data.ttl"))
     write_if_missing(os.path.join(d, "bblock.json"), json.dumps({
         "name": name,
-        "abstract": abstract,
+        "abstract": abstract, "highlighted": True,
         "status": "under-development", "dateTimeAddition": ADDED, "itemClass": "model", "version": "0.1",
         "tags": ["ospd", "activity-type", key],
         "group": "OSPD Activity Types",

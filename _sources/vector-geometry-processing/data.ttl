@@ -245,10 +245,10 @@ ospd:GA003 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:prefLabel "Envelope"@en ;
     skos:related ospd:GA004 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Nicholas Car" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
-        [ prov:agent <https://defs.opengis.net/org/ogc> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    prov:qualifiedAttribution [ prov:agent <https://defs.opengis.net/org/ogc> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
+        [ prov:agent [ foaf:name "Nicholas Car" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA003"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
@@ -281,7 +281,7 @@ ospd:GA019 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:prefLabel "Difference"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA019"^^xsd:anyURI ;
@@ -298,7 +298,7 @@ ospd:GA020 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:prefLabel "Filter geometries"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
-    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA020"^^xsd:anyURI ;
@@ -337,10 +337,10 @@ ospd:GA006 a skos:Concept,
     skos:prefLabel "Convex Hull"@en ;
     skos:related ospd:GA005 ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
-    prov:qualifiedAttribution [ prov:agent <https://defs.opengis.net/org/ogc> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Nicholas Car" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Nicholas Car" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent <https://defs.opengis.net/org/ogc> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA006"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
