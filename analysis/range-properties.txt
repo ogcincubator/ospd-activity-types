@@ -1,7 +1,0 @@
-instance-range	http://www.w3.org/ns/prov#activity
-instance-range	http://www.w3.org/ns/prov#hadActivity
-instance-range	http://www.w3.org/ns/prov#wasGeneratedBy
-instance-range	http://www.w3.org/ns/prov#wasInformedBy
-instance-range	http://www.w3.org/ns/prov#wasInvalidatedBy
-instance-range	https://w3id.org/ogc/rim/hasAction
-type-range	https://w3id.org/geolabs/ospd/generic-profiles/activityType
