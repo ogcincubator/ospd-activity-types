@@ -218,7 +218,7 @@
   "abstract": "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under\nstable `https://w3id.org/ogc/ospd/activity-type/` URIs and grouped into families of related types.\n",
   "description": "A root *OSPD Activity type* block, a profile of the Registered Item Model's activity-type block, and one\nsub-block (profile of the root) per family of related activity types. Each family block carries the Turtle\ndefinitions of its activity types as a data resource, which is uploaded to the OSPD Prez instance when\nthe register is built.\n",
   "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
-  "modified": "2026-11-24T11:05:54.383029",
+  "modified": "2026-11-24T11:27:46.709547",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"61523b7930e440b7e6e6bc03cb1b104d5d01f3f5",
@@ -278,12 +278,33 @@
         "provenance"
       ],
       "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.rim.activity-type"
+      ],
       "shaclShapes": [
         {
           "prof:hasArtifact": [
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -296,6 +317,9 @@
           "format": "text/turtle",
           "title": "OSPD activity types catalog"
         }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.rim.activity-type"
       ],
       "dateOfLastChange": "2026-11-24",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",
@@ -328,8 +352,6 @@
       "openAPIDocument": null,
       "ontology": null,
       "rdfData": [],
-      "dependsOn": null,
-      "isProfileOf": null,
       "isDescribedBy": null,
       "skos:topConceptOf": {
         "@id": "https://ogcincubator.github.io/ospd-activity-types/"
@@ -366,6 +388,24 @@
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -444,6 +484,24 @@
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         }
       ],
       "dependsOn": [
@@ -516,6 +574,24 @@
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -594,6 +670,24 @@
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         }
       ],
       "dependsOn": [
@@ -666,6 +760,24 @@
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -744,6 +856,24 @@
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         }
       ],
       "dependsOn": [
@@ -816,6 +946,24 @@
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -894,6 +1042,24 @@
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         }
       ],
       "dependsOn": [
@@ -966,6 +1132,24 @@
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"

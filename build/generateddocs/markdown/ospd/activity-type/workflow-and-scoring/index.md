@@ -31,7 +31,9 @@ This family has 3 activity types. It is a profile of the OSPD Activity Type core
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ospd: a skos:ConceptScheme .
 
@@ -42,7 +44,11 @@ ospd:ScoringAndProgressTracking a skos:Concept,
     skos:definition "Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded)."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
     skos:prefLabel "Scoring and progress tracking"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/ScoringAndProgressTracking"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ```
 

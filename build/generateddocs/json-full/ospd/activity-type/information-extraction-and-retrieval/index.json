@@ -28,6 +28,12 @@
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.rim.activity-type": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "dependsOn": [
@@ -45,8 +51,8 @@
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/information-extraction-and-retrieval/example_1_1.ttl",
-          "sizeBytes": 1543,
-          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd: a skos:ConceptScheme .\n\nospd:GA042 a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:modified \"2026-09-23\"^^xsd:date ;\n    dcterms:replaces <http://ospd/demo/GA042> ;\n    dcterms:source <https://github.com/voyagersearch/voyager-prov-ts/blob/dev/docs/ospd-register-proposal.md> ;\n    rdfs:seeAlso <http://ospd/demo/classify-commodity> ;\n    owl:versionInfo \"v1\" ;\n    skos:broader ospd:GA048 ;\n    skos:definition \"Text \u2192 commodity-taxonomy classifier (dictionary matcher over normalized labels). Domain-specific to agricultural / commodity data.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;\n    skos:prefLabel \"Commodity Classification\"@en ;\n    skos:related ospd:GA043,\n        ospd:GA044 ;\n    prov:qualifiedAttribution [ prov:agent [ foaf:name \"Alex Bostic\" ] ;\n            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],\n        [ prov:agent [ foaf:name \"Voyager Search\" ] ;\n            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .\n"
+          "sizeBytes": 1800,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd: a skos:ConceptScheme .\n\nospd:GA042 a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:modified \"2026-09-23\"^^xsd:date ;\n    dcterms:replaces <http://ospd/demo/GA042> ;\n    dcterms:source <https://github.com/voyagersearch/voyager-prov-ts/blob/dev/docs/ospd-register-proposal.md> ;\n    rdfs:seeAlso <http://ospd/demo/classify-commodity> ;\n    owl:versionInfo \"v1\" ;\n    skos:broader ospd:GA048 ;\n    skos:definition \"Text \u2192 commodity-taxonomy classifier (dictionary matcher over normalized labels). Domain-specific to agricultural / commodity data.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;\n    skos:prefLabel \"Commodity Classification\"@en ;\n    skos:related ospd:GA043,\n        ospd:GA044 ;\n    prov:qualifiedAttribution [ prov:agent [ foaf:name \"Voyager Search\" ] ;\n            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],\n        [ prov:agent [ foaf:name \"Alex Bostic\" ] ;\n            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/GA042\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n"
         }
       ]
     }

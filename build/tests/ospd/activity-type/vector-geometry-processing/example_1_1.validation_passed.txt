@@ -1,5 +1,5 @@
 Validation report for ogc.ospd.activity-type.vector-geometry-processing - Vector geometry processing
-Generated 2026-11-24T11:05:56.660158+00:00
+Generated 2026-11-24T11:27:52.739298+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl kept as provided
@@ -7,11 +7,33 @@ Output Turtle example_1_1.ttl kept as provided
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - /github/workspace/_sources/vector-geometry-processing/data.ttl
  - /github/workspace/_sources/core/data.ttl
+ - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl
+ - /github/workspace/_sources/vector-geometry-processing/data.ttl
+ - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl
+ - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl
 Validation result for _sources/core/shapes.shacl: no results
 Focus nodes for _sources/core/shapes.shacl:
  - Shape ex:ActivityTypeShape: ospd:area
+
+Validation result for https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl: no results
+Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl:
+ - Shape acttype:ActivityTypeShape: ospd:area
+ - Shape acttype:ActivityTypeItemClassShape: acttype:activityTypeItemClass
+
+Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results
+Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
+ - Shape rim:CommitmentShape: *none*
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:RegisterActionShape: *none*
+ - Shape rim:ConceptShape: *none*
+ - Shape rim:RegisterItemClassShape: *none*
+ - Shape rim:ConceptVersionShape: *none*
+ - Shape rim:RegisterSpecificationShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape rim:RegisterShape: *none*
 
 === End SHACL ===
 

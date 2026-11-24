@@ -1,5 +1,5 @@
 Validation report for ogc.ospd.activity-type.core - OSPD Activity Type
-Generated 2026-11-24T11:05:56.314655+00:00
+Generated 2026-11-24T11:27:49.166737+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl kept as provided
@@ -8,9 +8,31 @@ Output Turtle example_1_1.ttl kept as provided
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
  - /github/workspace/_sources/core/data.ttl
+ - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl
+ - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl
+ - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl
 Validation result for _sources/core/shapes.shacl: no results
 Focus nodes for _sources/core/shapes.shacl:
  - Shape ex:ActivityTypeShape: *none*
+
+Validation result for https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl: no results
+Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl:
+ - Shape acttype:ActivityTypeShape: *none*
+ - Shape acttype:ActivityTypeItemClassShape: <https://w3id.org/ogc/rim/activity-type/activityTypeItemClass>
+
+Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results
+Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
+ - Shape rim:CommitmentShape: *none*
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:RegisterActionShape: *none*
+ - Shape rim:ConceptShape: *none*
+ - Shape rim:RegisterItemClassShape: *none*
+ - Shape rim:ConceptVersionShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:RegisterSpecificationShape: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape rim:RegisterShape: *none*
 
 === End SHACL ===
 

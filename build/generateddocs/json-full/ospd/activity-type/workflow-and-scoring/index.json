@@ -28,6 +28,12 @@
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.rim.activity-type": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "dependsOn": [
@@ -45,8 +51,8 @@
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/workflow-and-scoring/example_1_1.ttl",
-          "sizeBytes": 994,
-          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd: a skos:ConceptScheme .\n\nospd:ScoringAndProgressTracking a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;\n    rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;\n    skos:definition \"Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded).\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;\n    skos:prefLabel \"Scoring and progress tracking\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> .\n"
+          "sizeBytes": 1323,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd: a skos:ConceptScheme .\n\nospd:ScoringAndProgressTracking a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;\n    rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;\n    skos:definition \"Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded).\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;\n    skos:prefLabel \"Scoring and progress tracking\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/ScoringAndProgressTracking\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n"
         }
       ]
     }

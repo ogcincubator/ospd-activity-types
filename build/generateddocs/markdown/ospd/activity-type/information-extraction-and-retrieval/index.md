@@ -44,6 +44,7 @@ This family has 13 activity types. It is a profile of the OSPD Activity Type cor
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -62,10 +63,14 @@ ospd:GA042 a skos:Concept,
     skos:prefLabel "Commodity Classification"@en ;
     skos:related ospd:GA043,
         ospd:GA044 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
-        [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
+        [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA042"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ```
 

@@ -14,9 +14,18 @@
     "provenance"
   ],
   "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.rim.activity-type"
+  ],
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.rim.activity-type": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "resources": [
@@ -26,6 +35,9 @@
       "format": "text/turtle",
       "title": "OSPD activity types catalog"
     }
+  ],
+  "dependsOn": [
+    "ogc.rim.activity-type"
   ],
   "dateOfLastChange": "2026-11-24",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",

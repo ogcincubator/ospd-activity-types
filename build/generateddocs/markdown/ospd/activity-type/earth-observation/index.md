@@ -52,7 +52,9 @@ This family has 25 activity types. It is a profile of the OSPD Activity Type cor
 @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ospd: a skos:ConceptScheme .
 
@@ -63,7 +65,11 @@ ospd:workflow-copernicus a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Algae bloom for water quality assessment on Sentinel-2 imagery offered by Copernicus platform."@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/workflow-copernicus"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ```
 

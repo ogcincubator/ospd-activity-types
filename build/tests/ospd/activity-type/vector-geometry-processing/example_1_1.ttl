@@ -2,7 +2,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ospd: a skos:ConceptScheme .
 
@@ -15,4 +17,8 @@ ospd:area a skos:Concept,
     skos:definition "The area of this Surface, as measured in the spatial reference system of this Surface."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:prefLabel "Area"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/area"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .

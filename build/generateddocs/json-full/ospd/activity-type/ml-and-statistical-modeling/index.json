@@ -28,6 +28,12 @@
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.rim.activity-type": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "dependsOn": [
@@ -45,8 +51,8 @@
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/ml-and-statistical-modeling/example_1_1.ttl",
-          "sizeBytes": 1073,
-          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd: a skos:ConceptScheme .\n\nospd:climate-downscaling a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:modified \"2026-10-15\"^^xsd:date ;\n    dcterms:replaces <https://crim-ca.github.io/bblocks-process-profiles/def/activity-type/climate-downscaling> ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    skos:closeMatch ospd:GA009 ;\n    skos:definition \"Transforms georeferenced climate fields to a finer-resolution target grid.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;\n    skos:prefLabel \"Climate-variable downscaling\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> .\n"
+          "sizeBytes": 1344,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd: a skos:ConceptScheme .\n\nospd:climate-downscaling a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:modified \"2026-10-15\"^^xsd:date ;\n    dcterms:replaces <https://crim-ca.github.io/bblocks-process-profiles/def/activity-type/climate-downscaling> ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    skos:closeMatch ospd:GA009 ;\n    skos:definition \"Transforms georeferenced climate fields to a finer-resolution target grid.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;\n    skos:prefLabel \"Climate-variable downscaling\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/climate-downscaling\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n"
         }
       ]
     }

@@ -65,6 +65,7 @@ This family has 35 activity types. It is a profile of the OSPD Activity Type cor
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -82,7 +83,11 @@ ospd:GA008 a skos:Concept,
     skos:prefLabel "Band Calculation"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA008"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ```
 

@@ -32,6 +32,7 @@ This family has 3 activity types. It is a profile of the OSPD Activity Type core
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -50,7 +51,11 @@ ospd:GA029 a skos:Concept,
     skos:related ospd:GA027,
         ospd:GA028 ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA029"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ```
 

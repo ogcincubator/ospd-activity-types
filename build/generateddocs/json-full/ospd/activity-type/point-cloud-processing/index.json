@@ -28,6 +28,12 @@
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.rim.activity-type": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "dependsOn": [
@@ -45,8 +51,8 @@
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/point-cloud-processing/example_1_1.ttl",
-          "sizeBytes": 847,
-          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd: a skos:ConceptScheme .\n\nospd:pointcloud-point-cloud-thinning a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-thinning> ;\n    skos:broader ospd:point-cloud-thinning ;\n    skos:definition \"This simple thinning tool reduces the number of points in a point cloud by sequential point removal. It is therefore most suited for points stored in chronological order.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;\n    skos:prefLabel \"Point Cloud Thinning (Simple)\"@en .\n"
+          "sizeBytes": 1181,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd: a skos:ConceptScheme .\n\nospd:pointcloud-point-cloud-thinning a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-thinning> ;\n    skos:broader ospd:point-cloud-thinning ;\n    skos:definition \"This simple thinning tool reduces the number of points in a point cloud by sequential point removal. It is therefore most suited for points stored in chronological order.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;\n    skos:prefLabel \"Point Cloud Thinning (Simple)\"@en ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/pointcloud-point-cloud-thinning\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n"
         }
       ]
     }

@@ -28,6 +28,12 @@
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.rim.activity-type": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "dependsOn": [
@@ -45,8 +51,8 @@
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/vector-geometry-processing/example_1_1.ttl",
-          "sizeBytes": 929,
-          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd: a skos:ConceptScheme .\n\nospd:area a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;\n    dcterms:source [ ],\n        [ ] ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    skos:definition \"The area of this Surface, as measured in the spatial reference system of this Surface.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;\n    skos:prefLabel \"Area\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .\n"
+          "sizeBytes": 1236,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd: a skos:ConceptScheme .\n\nospd:area a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;\n    dcterms:source [ ],\n        [ ] ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    skos:definition \"The area of this Surface, as measured in the spatial reference system of this Surface.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;\n    skos:prefLabel \"Area\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/area\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n"
         }
       ]
     }

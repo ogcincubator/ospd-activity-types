@@ -34,6 +34,7 @@ This family has 6 activity types. It is a profile of the OSPD Activity Type core
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -48,7 +49,11 @@ ospd:climate-downscaling a skos:Concept,
     skos:definition "Transforms georeferenced climate fields to a finer-resolution target grid."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     skos:prefLabel "Climate-variable downscaling"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/climate-downscaling"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ```
 
