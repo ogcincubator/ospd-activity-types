@@ -1,5 +1,5 @@
 Validation report for ogc.ospd.activity-type.terrain-and-hydrology - Terrain and hydrology
-Generated 2026-11-24T11:34:40.055019+00:00
+Generated 2026-11-24T12:01:50.921952+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl kept as provided
@@ -7,11 +7,11 @@ Output Turtle example_1_1.ttl kept as provided
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl
+ - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl
+ - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl
  - /github/workspace/_sources/terrain-and-hydrology/data.ttl
  - /github/workspace/_sources/core/data.ttl
- - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl
- - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl
- - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl
 Validation result for _sources/core/shapes.shacl: 4 warnings
 
 ** Validation warning **
@@ -46,22 +46,22 @@ Focus nodes for _sources/core/shapes.shacl:
 
 Validation result for https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl: no results
 Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl:
- - Shape acttype:ActivityTypeShape: ospd:hillshading
  - Shape acttype:ActivityTypeItemClassShape: acttype:activityTypeItemClass
+ - Shape acttype:ActivityTypeShape: ospd:hillshading
 
 Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results
 Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
- - Shape rim:RegisterSpecificationShape: *none*
- - Shape rim:ConceptVersionShape: *none*
- - Shape rim:TextShape: *none*
- - Shape rim:TextShape/sh:or/rdf:first: *none*
- - Shape rim:RegisterItemClassShape: *none*
+ - Shape rim:RegisterActionShape: *none*
+ - Shape rim:CommitmentShape: *none*
  - Shape rim:RegisterShape: *none*
  - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape rim:ConceptShape: *none*
- - Shape rim:RegisterActionShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
  - Shape rim:RegisterItemShape: *none*
- - Shape rim:CommitmentShape: *none*
+ - Shape rim:ConceptShape: *none*
+ - Shape rim:RegisterSpecificationShape: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:ConceptVersionShape: *none*
+ - Shape rim:RegisterItemClassShape: *none*
 
 === End SHACL ===
 

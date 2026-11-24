@@ -218,7 +218,7 @@
   "abstract": "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under\nstable `https://w3id.org/ogc/ospd/activity-type/` URIs and grouped into families of related types.\n",
   "description": "A root *OSPD Activity type* block, a profile of the Registered Item Model's activity-type block, and one\nsub-block (profile of the root) per family of related activity types. Each family block carries the Turtle\ndefinitions of its activity types as a data resource, which is uploaded to the OSPD Prez instance when\nthe register is built.\n",
   "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
-  "modified": "2026-11-24T11:34:35.211402",
+  "modified": "2026-11-24T12:01:46.986782",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"61523b7930e440b7e6e6bc03cb1b104d5d01f3f5",
