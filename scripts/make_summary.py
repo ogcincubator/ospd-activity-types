@@ -63,13 +63,13 @@ L = []
 w = L.append
 w("# OSPD activity types: consolidation summary for discussion")
 w("")
-w("*Draft of 2026-11-23, for discussion between Rob Atkinson and Alejandro Villar. Numbers in this document are generated from the analysis tables in the `ospd-activity-types` repository.*")
+w("*Draft of 2026-11-24, for discussion between Rob Atkinson and Alejandro Villar. Numbers in this document are generated from the analysis tables in the `ospd-activity-types` repository.*")
 w("")
 w("## 1. Purpose and status")
 w("")
 w("Provenance traces should work as linked data: the activity types they cite must resolve to descriptions. The plan is to gather every activity type used across the OSPD material, rebase them onto stable `https://w3id.org/ogc/ospd/activity-type/<slug>` URIs, deduplicate them, package them as building blocks per family, and publish them from the OSPD-only Prez instance (`defs-hosted.opengis.net/prez-ospd`).")
 w("")
-w("Done so far: a scan of 33 repositories (Turtle only), a deduplication pass, a draft family structure, a mapping table of every old IRI to its new IRI, a local building blocks register (`ospd-activity-types`, 10 blocks, validating cleanly), and a w3id.org redirect PR (perma-id/w3id.org#7269, awaiting merge). Not done: per-repository PRs, loading the data into Prez, the missing RIM profile blocks, and the non-Turtle sources.")
+w("Done so far: a scan of 33 repositories (Turtle only), a deduplication pass, a draft family structure, a mapping table of every old IRI to its new IRI, a building blocks register (`ospd-activity-types`, 10 blocks, validating cleanly), published at <https://github.com/ogcincubator/ospd-activity-types> with its data uploaded to the OSPD Prez, the w3id.org redirects (perma-id/w3id.org#7269, merged; #7280 is a small follow-up for `/ogc/rim/`), and the three RIM profile blocks, restored in `registered-item-model` (so `core` is now a profile of `ogc.rim.activity-type`). Not done: per-repository PRs and the non-Turtle sources (JSON/JSON-LD examples are covered, since the build uplifts them to Turtle).")
 w("")
 w("## 2. What we scanned and found")
 w("")
@@ -92,14 +92,15 @@ w("")
 w("## 3. URI scheme and the RIM namespace")
 w("")
 w("- **Activity types:** `https://w3id.org/ogc/ospd/activity-type/<slug>`. Slugs reuse each source's own slug (`GA001`, GeoLabs slugs, ...). Where a generic and an implementation type collide, the generic keeps the bare slug and the implementation gets a group prefix (for example `sqlmm-buffer`). " + f"{renames} slugs were renamed this way. Every old IRI, new IRI and reason is recorded in `analysis/mapping.csv`, so any choice can be rebound later.")
-w("- **Registers (`http://w3id.org/ogc/reg/<id>`):** to move to `https://w3id.org/ogc/ospd/register/<id>`, fixing the `ogcactivites` typo.")
-w("- **RIM (`https://w3id.org/ogc/rim/`):** we propose to keep it where it is. It is the Registered Item Model (ISO 19135:2026), and its README says the prefix is designed to stay stable. We would add a `/ogc/rim` redirect to the OSPD Prez (already in PR #7269) and retrofit `registered-item-model` to publish its ontology data to the same instance through the new bblocks SPARQL data loading. `rim:` terms in our data are therefore left unchanged.")
-w("- **Missing RIM profile blocks:** the README of `registered-item-model` describes `activity-type`, `geoprocessing-activity-types` and `ml-activity-types` profile blocks that are not in the repository's master. The data uses `acttype:ActivityType`, `rim/geoprocessing/GeoprocessingActivityType` and `rim/ml-activity/...`, so these need to exist. We propose to add them by PR, and to make our core block a profile of the `activity-type` one once it is published.")
-w("- **Vocabulary of the generated data:** SKOS (`skos:prefLabel`, `skos:definition`, `skos:broader`, `skos:related`), `owl:versionInfo`, `dcterms:modified`/`source`/`replaces`, `rdfs:seeAlso`, `prov:qualifiedAttribution` with `foaf:name` agents (no e-mail addresses). Aliases are `skos:exactMatch`, probable duplicates `skos:closeMatch`.")
+w("- **Slug style:** left as the sources have it (CamelCase and kebab-case coexist). The mapping table makes a later normalisation cheap if we change our minds.\n- **Registers (`http://w3id.org/ogc/reg/<id>`):** not part of this change. If we revisit them, the idea is to move them to `https://w3id.org/ogc/ospd/register/<id>`, fixing the `ogcactivites` typo.")
+w("- **RIM (`https://w3id.org/ogc/rim/`):** we propose to keep it where it is. It is the Registered Item Model (ISO 19135:2026), and its README says the prefix is designed to stay stable. The `/ogc/rim` redirects to the OSPD Prez are live (#7269; #7280 makes `/ogc/rim/` resolve to the ontology itself), and `registered-item-model` now publishes its ontology and a top-level catalog (`https://w3id.org/ogc/rim/catalog`) to the same instance through the bblocks SPARQL data loading. `rim:` terms in our data are left unchanged.")
+w("- **RIM profile blocks:** the README of `registered-item-model` describes `activity-type`, `geoprocessing-activity-types` and `ml-activity-types` profile blocks. They existed on the `pre-geonovum-refactor` branch but were dropped from `master` by the refactor. We restored them (identifiers moved to `ogc.rim.*`; one example fixed for the updated MLM shapes). Our `core` block is a profile of `ogc.rim.activity-type`.")
+w("- **Register item metadata and default statuses:** profiling the RIM activity-type block makes every activity type a `rim:RegisterItem`, which requires `rim:itemClass` (`acttype:activityTypeItemClass`), `rim:objectIdentifier` (its own IRI), `rim:validityStatus` and `rim:publicationStatus`. We set **`rim:valid` and `rim:published` on every type as defaults**; this is a governance statement that should be confirmed (one line in `scripts/generate.py`).")
+w("- **Vocabulary of the generated data:** SKOS (`skos:prefLabel`, `skos:definition`, `skos:broader`, `skos:related`), `owl:versionInfo`, `dcterms:modified`/`source`/`replaces`, `rdfs:seeAlso`, `prov:qualifiedAttribution` with agents that are either a real IRI or a blank node with a `foaf:name` (no e-mail addresses). Aliases are `skos:exactMatch`, probable duplicates `skos:closeMatch`.")
 w("")
 w("## 4. Families and building blocks")
 w("")
-w("The register `ogc.ospd.activity-type.` has a `core` block (concept scheme, catalog, one `skos:Collection` per family) and one leaf block per family, each a profile of `core` carrying its activity types as a Turtle data resource that the build uploads to Prez.")
+w("The register `ogc.ospd.activity-type.` has a `core` block (the `dcat:Catalog`, which lists the families) and one leaf block per family, each a profile of `core`. Each family block carries its own `skos:ConceptScheme` (`.../activity-type/families/<slug>`) and its activity types as `skos:Concept`s in it, as a Turtle data resource that the build uploads to Prez. Concepts with no broader concept in the family are marked as top concepts (`skos:topConceptOf` / `skos:hasTopConcept`), which Prez uses as entry points. The previous single scheme for all types was dropped.")
 w("")
 w("| Family block | Types | Scope |")
 w("|---|---|---|")
@@ -121,7 +122,17 @@ for gid, rs in groups.items():
         if r["role"] == "duplicate":
             w(f"| {gid} | {short(r['iri'])} | {canon[0] if canon else ''} | {r['confidence']} |")
 w("")
-w("Open calls for a human: GA003 Envelope vs generic `geometry-extent` (one geometry vs a set), GA039 Geolocate vs GA041 Geotag, GA009 vs CRIM climate-downscaling (CRIM has no description), GA029 vs GA036 (GA036 has no description), whether workflow-level types are duplicates or related. Full groups in appendix B.")
+w("Open calls for a human, each with our suggestion (for Rob to confirm or overrule):")
+w("")
+w("| Case | What differs | Suggestion |")
+w("|---|---|---|")
+w("| GA003 Envelope vs `geometry-extent` | GA003 returns the bounding rectangle of one geometry; `geometry-extent` computes it for a set of geometries | Keep both, as `skos:related` (currently flagged as a duplicate, medium) |")
+w("| GA039 Geolocate vs GA041 Geotag | Both resolve place names against a gazetteer; GA039 takes a country or place name and is the terminal step of the connector chain, GA041 resolves place mentions produced by entity extraction | Keep both, as related; merge only if Rob sees them as the same operation |")
+w("| GA009 vs CRIM climate-downscaling | CRIM's type has no description, so it can't be told apart from GA009 (ML climate downscaling) | Keep the `skos:closeMatch` for now and ask CRIM for a description; then decide between exact match and separate types |")
+w("| GA029 vs GA036 | GA036 (polygon to DGGS cells) has no description; GA029 indexes positions or geometries to DGGS cells | Keep both: GA036 looks like a more specific case of GA029; ask HARTIS for a definition |")
+w("| Workflow-level types | Same workflow realised by different tools or steps | Keep as related, not duplicates |")
+w("")
+w("Full groups in appendix B.")
 w("")
 w("## 6. Potential errors in the source data")
 w("")
@@ -136,7 +147,7 @@ for t in [
  "Katerina's examples cite GA001 and GA016-GA020 by Kurrawong catalog URLs instead of `http://ospd/demo/GAnnn`.",
  "Geonovum uses process-endpoint URLs as activity types, with no names or descriptions. Its `ldv-prov.rml.ttl` example does not parse (prefix `rdfs:` unbound).",
  "CRIM's `geolabs.github.io/.../process-type/...` IRIs are a stale snapshot of GeoLabs, and its climate-downscaling types have no descriptions.",
- "The attribution data in ospd-data points to agent IRIs under `http://ospd/demo/` (for example one contributor) that do not resolve; the generated data keeps names only."]:
+ "The attribution data in ospd-data points to agent IRIs under `http://ospd/demo/` (one contributor, on nine types) that do not resolve; the generated data keeps the name only, as a blank node."]:
     w(f"- {t}")
 w("")
 w("## 7. Remapping plan")
@@ -147,7 +158,7 @@ for t in [
  "**Source-data fixes** as separate PRs (section 6), not mixed with the IRI rewrite.",
  "**Gaps:** define the 7 openscience process types and `rim/activity-type/WorkflowRun` (or map them to existing definitions); decide what to do with example-local types; fill the missing descriptions.",
  "**Publishing:** the register's build uploads each block's `data.ttl` to the OSPD Prez (the bblocks `sparql.resources.data` setting; each rebuild replaces that graph). The w3id.org redirects then resolve each URI through `prez-ospd-b/object`.",
- "**RIM:** PR to `registered-item-model` adding the three profile blocks and publishing its ontology data to the same Prez; then `isProfileOf` from our core block.",
+ "**RIM:** done: the three profile blocks are restored, the model's ontology and a catalog are published to the same Prez, and our core block is a profile of `ogc.rim.activity-type`.",
  "**Later:** the vocabulary validator that checks activity-type markers in uplifted resources resolve to definitions (Katerina's `unknown-activity-type-fail` test is a starting point), and a smoke test of a trace in the viewer."]:
     w(f"- {t}")
 w("")
@@ -155,18 +166,19 @@ w("## 8. Questions for discussion")
 w("")
 for t in [
  "Keep `rim:` as is and register `/ogc/rim` (our proposal), or move the model terms under `ogc/ospd`?",
- "Does the `activity-type`, `geoprocessing-activity-types`, `ml-activity-types` chain already exist somewhere unpublished, or should we write the blocks?",
- "Slug style: keep each source's own (CamelCase and kebab-case coexist), or normalise to kebab-case?",
- "IRIs for the families (`.../activity-type/families/<slug>`) and the catalog (`.../activity-type/catalog`) are our proposal: acceptable? What does the OSPD Prez expect for the catalog and concept scheme to render?",
+ "The three RIM profile blocks were restored from `pre-geonovum-refactor`: was their removal from `master` deliberate?",
+ "Are `rim:valid` and `rim:published` the right default statuses for the consolidated types?",
+ "Slug style: we keep each source's own for now (CamelCase and kebab-case coexist); do you want them normalised to kebab-case?",
+ "IRIs for the families (`.../activity-type/families/<slug>`) and the catalog (`.../activity-type/catalog`) are our proposal and render well in Prez as catalog and concept schemes: acceptable?",
  "GeoLabs implementation types and generic types are both register items. Is the generic/implementation tier distinction something Prez or the register should expose, or is `skos:broader` enough?",
  "Are the family boundaries right, in particular earth-observation and workflow-and-scoring?",
- "Which of the medium and low confidence duplicates should be merged, and which kept as related?",
+ "Do you agree with our suggestions for the open duplicate calls in section 5?",
  "Terminology: process type vs activity type, and the \"registered term\" wording in Katerina's register."]:
     w(f"- {t}")
 w("")
 w("## 9. Artifacts")
 w("")
-w("Everything is in the `ospd-activity-types` repository (local, no remote yet): `analysis/` (CSV tables, prompts), `scripts/` (scan, mapping, family, generation and block scripts; run order in `scripts/analysis/README.md`), `_sources/` (the building blocks), `docs/` (the notes of the 2026-11-20 call and this summary).")
+w("Everything is in the `ospd-activity-types` repository (<https://github.com/ogcincubator/ospd-activity-types>): `analysis/` (CSV tables, prompts), `scripts/` (scan, mapping, family, generation and block scripts; run order in `scripts/analysis/README.md`), `_sources/` (the building blocks), `docs/` (the notes of the 2026-11-20 call and this summary).")
 w("")
 w("## Appendix A. All activity types by family")
 w("")
