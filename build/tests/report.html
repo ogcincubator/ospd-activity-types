@@ -1,0 +1,887 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Building Blocks validation report</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            .entry-message.text-warning-emphasis,
+            .entry-message.text-danger {
+                border-left: 3px solid var(--bs-warning);
+                padding-left: .4rem;
+            }
+            .entry-message.text-danger {
+                border-left-color: var(--bs-danger);
+            }
+            .entry-message {
+                white-space: pre-wrap;
+                font-size: 80%;
+                line-height: 1.1;
+            }
+            *[data-bs-toggle] .caret {
+                display: inline-block;
+                transform: rotate(90deg);
+                transition: transform 0.25s;
+            }
+            *[data-bs-toggle].collapsed .caret {
+                transform: rotate(0deg);
+            }
+            .highlighted {
+                animation: highlight-border 3500ms ease-out;
+            }
+            .highlighted h2 button {
+                animation: highlight 3500ms ease-out;
+            }
+            @keyframes highlight {
+                0% {
+                    background: #ffff90;
+                }
+                100% {
+                    background: var(--bs-accordion-active-bg);
+                }
+            }
+            @keyframes highlight-border {
+                0% {
+                    border-color: red;
+                    border-width: 2px;
+                }
+                100% {
+                    border-color: var(--bs-accordion-border-color);
+                    border-width: var(--bs-accordion-border-width);
+                }
+            }
+            .anchor {
+                color: black;
+                opacity: 0;
+                text-decoration: none;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+            }
+            .anchor-container:hover .anchor {
+                opacity: 60%;
+            }
+            .anchor-container:hover .anchor:hover {
+                opacity: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Building blocks validation report</h1>
+            <small class="datetime">Generated at 2026-11-24T07:30:18.328811+00:00</small>
+                <p class="summary fw-semibold text-success">
+                    Number of passing building blocks: 10 / 10 (100%)
+                </p>
+            <div class="text-end small" id="expand-collapse">
+                <a href="#" class="expand-all">Expand all</a>
+                <a href="#" class="collapse-all">Collapse all</a>
+            </div>
+                <div class="accordion mt-2" id="bblock-reports">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.core" id="bblock-ogc.ospd.activity-type.core">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.core">
+                                    <div class="flex-fill">
+                                        OSPD Activity Type
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.core</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.core">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.core">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.core-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-1"
+                                                            aria-expanded="false" aria-controls="uid-1"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/core/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.core-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-1">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: no results</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.earth-observation" id="bblock-ogc.ospd.activity-type.earth-observation">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.earth-observation">
+                                    <div class="flex-fill">
+                                        Earth observation
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.earth-observation</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.earth-observation">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-warning me-2">
+                                            Passed with warnings
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.earth-observation">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.earth-observation-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-2"
+                                                            aria-expanded="false" aria-controls="uid-2"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/earth-observation/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.earth-observation-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-warning me-2">Passed with warnings</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-2">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/earth-observation/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: 2 warnings</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA014
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA015
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:workflow-copernicus
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.information-extraction-and-retrieval" id="bblock-ogc.ospd.activity-type.information-extraction-and-retrieval">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.information-extraction-and-retrieval">
+                                    <div class="flex-fill">
+                                        Information extraction and retrieval
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.information-extraction-and-retrieval</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.information-extraction-and-retrieval">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.information-extraction-and-retrieval">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.information-extraction-and-retrieval-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-3"
+                                                            aria-expanded="false" aria-controls="uid-3"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/information-extraction-and-retrieval/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.information-extraction-and-retrieval-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-3">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/information-extraction-and-retrieval/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: no results</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:GA042
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.ml-and-statistical-modeling" id="bblock-ogc.ospd.activity-type.ml-and-statistical-modeling">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.ml-and-statistical-modeling">
+                                    <div class="flex-fill">
+                                        Machine learning and statistical modeling
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.ml-and-statistical-modeling</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.ml-and-statistical-modeling">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.ml-and-statistical-modeling">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.ml-and-statistical-modeling-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-4"
+                                                            aria-expanded="false" aria-controls="uid-4"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/ml-and-statistical-modeling/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.ml-and-statistical-modeling-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-4">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/ml-and-statistical-modeling/data.ttl
+ - /github/workspace/_sources/core/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: no results</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:climate-downscaling
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.point-cloud-processing" id="bblock-ogc.ospd.activity-type.point-cloud-processing">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.point-cloud-processing">
+                                    <div class="flex-fill">
+                                        Point-cloud processing
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.point-cloud-processing</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.point-cloud-processing">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.point-cloud-processing">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.point-cloud-processing-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-5"
+                                                            aria-expanded="false" aria-controls="uid-5"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/point-cloud-processing/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.point-cloud-processing-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-5">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/point-cloud-processing/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: no results</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:pointcloud-point-cloud-thinning
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.raster-coverage-processing" id="bblock-ogc.ospd.activity-type.raster-coverage-processing">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.raster-coverage-processing">
+                                    <div class="flex-fill">
+                                        Raster and coverage processing
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.raster-coverage-processing</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.raster-coverage-processing">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-warning me-2">
+                                            Passed with warnings
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.raster-coverage-processing">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.raster-coverage-processing-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-6"
+                                                            aria-expanded="false" aria-controls="uid-6"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/raster-coverage-processing/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.raster-coverage-processing-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-warning me-2">Passed with warnings</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-6">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/raster-coverage-processing/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: 1 warning</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA032
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:GA008
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.spatial-indexing" id="bblock-ogc.ospd.activity-type.spatial-indexing">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.spatial-indexing">
+                                    <div class="flex-fill">
+                                        Spatial indexing
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.spatial-indexing</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.spatial-indexing">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-warning me-2">
+                                            Passed with warnings
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.spatial-indexing">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.spatial-indexing-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-7"
+                                                            aria-expanded="false" aria-controls="uid-7"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/spatial-indexing/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.spatial-indexing-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-warning me-2">Passed with warnings</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-7">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/spatial-indexing/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: 2 warnings</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA033
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA036
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:GA029
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.terrain-and-hydrology" id="bblock-ogc.ospd.activity-type.terrain-and-hydrology">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.terrain-and-hydrology">
+                                    <div class="flex-fill">
+                                        Terrain and hydrology
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.terrain-and-hydrology</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.terrain-and-hydrology">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-warning me-2">
+                                            Passed with warnings
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.terrain-and-hydrology">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.terrain-and-hydrology-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-8"
+                                                            aria-expanded="false" aria-controls="uid-8"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/terrain-and-hydrology/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.terrain-and-hydrology-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-warning me-2">Passed with warnings</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-8">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/terrain-and-hydrology/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: 4 warnings</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA030
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA031
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA034
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl text-warning-emphasis">Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA035
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:hillshading
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.vector-geometry-processing" id="bblock-ogc.ospd.activity-type.vector-geometry-processing">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.vector-geometry-processing">
+                                    <div class="flex-fill">
+                                        Vector geometry processing
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.vector-geometry-processing</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.vector-geometry-processing">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.vector-geometry-processing">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.vector-geometry-processing-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-9"
+                                                            aria-expanded="false" aria-controls="uid-9"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/vector-geometry-processing/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.vector-geometry-processing-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-9">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/vector-geometry-processing/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: no results</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:area
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.ospd.activity-type.workflow-and-scoring" id="bblock-ogc.ospd.activity-type.workflow-and-scoring">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.ospd\.activity-type\.workflow-and-scoring">
+                                    <div class="flex-fill">
+                                        Workflow and scoring
+                                        <small class="ms-2 bblock-id">ogc.ospd.activity-type.workflow-and-scoring</small>
+                                        <a class="anchor" href="#bblock-ogc.ospd.activity-type.workflow-and-scoring">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.ospd.activity-type.workflow-and-scoring">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.ospd.activity-type.workflow-and-scoring-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-10"
+                                                            aria-expanded="false" aria-controls="uid-10"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="ospd/activity-type/workflow-and-scoring/example_1_1.ttl" target="_blank">example_1_1.ttl</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.ospd.activity-type.workflow-and-scoring-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-10">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.ttl from examples</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl kept as provided</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/workflow-and-scoring/data.ttl</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for _sources/core/shapes.shacl: no results</div>
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:ScoringAndProgressTracking
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            window.addEventListener('load', () => {
+                const accordionEntries = [...document.querySelectorAll('#bblock-reports .accordion-collapse')];
+                document.querySelector('#expand-collapse').addEventListener('click', ev => {
+                    ev.preventDefault();
+                    if (ev.target.matches('.expand-all')) {
+                        accordionEntries.forEach(e => e.classList.add('show'));
+                    } else if (ev.target.matches('.collapse-all')) {
+                        accordionEntries.forEach(e => e.classList.remove('show'));
+                    }
+                });
+                if (/^#(bblock|item)-/.test(location.hash)) {
+                    const highlight = document.querySelector(location.hash.replaceAll('.', '\\.'));
+                    if (highlight) {
+                        highlight.querySelector('.accordion-collapse').classList.add('show');
+                        highlight.classList.add('highlighted');
+                    }
+                }
+                document.addEventListener('click', ev => {
+                    if (!ev.target.classList.contains('anchor') || !ev.target.href) {
+                      return;
+                    }
+                    ev.stopPropagation();
+                    navigator?.clipboard?.writeText(ev.target.href);
+                });
+            });
+        </script>
+    </body>
+</html>

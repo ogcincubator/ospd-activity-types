@@ -1,0 +1,17 @@
+Validation report for ogc.ospd.activity-type.workflow-and-scoring - Workflow and scoring
+Generated 2026-11-24T07:30:18.303403+00:00
+=== Files ===
+Using example_1_1.ttl from examples
+Output Turtle example_1_1.ttl kept as provided
+=== End Files ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/workflow-and-scoring/data.ttl
+Validation result for _sources/core/shapes.shacl: no results
+Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:ScoringAndProgressTracking
+
+=== End SHACL ===
+

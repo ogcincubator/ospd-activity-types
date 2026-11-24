@@ -1,0 +1,17 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ospd:area a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;
+    dcterms:source [ ],
+        [ ] ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "The area of this Surface, as measured in the spatial reference system of this Surface."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Area"@en .
+
+ospd: a skos:ConceptScheme .

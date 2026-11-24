@@ -1,0 +1,78 @@
+{
+  "title": "Validation report for ogc.ospd.activity-type.information-extraction-and-retrieval - Information extraction and retrieval",
+  "bblockName": "Information extraction and retrieval",
+  "bblockId": "ogc.ospd.activity-type.information-extraction-and-retrieval",
+  "generated": "2026-11-24T07:30:17.923434+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/ospd/activity-type/information-extraction-and-retrieval/example_1_1.ttl",
+        "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/information-extraction-and-retrieval/example_1_1.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 22,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl kept as provided"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/information-extraction-and-retrieval/data.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/core/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/core/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "_sources/core/shapes.shacl",
+              "focusNodes": {
+                "ex:ActivityTypeShape": {
+                  "nodes": [
+                    "ospd:GA042"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/core/shapes.shacl:\n - Shape ex:ActivityTypeShape: ospd:GA042\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  }
+}

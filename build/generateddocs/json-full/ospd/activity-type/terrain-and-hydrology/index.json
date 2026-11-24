@@ -1,0 +1,57 @@
+
+
+{
+  "itemIdentifier": "ogc.ospd.activity-type.terrain-and-hydrology",
+  "name": "Terrain and hydrology",
+  "abstract": "Terrain derivatives (slope, hillshading, ruggedness and position indices) and hydrological analysis (flow direction and accumulation, watersheds, stream networks, wetness index).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "terrain-and-hydrology"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/terrain-and-hydrology/data.ttl",
+      "format": "text/turtle",
+      "title": "Terrain and hydrology: activity type definitions"
+    }
+  ],
+  "shaclShapes": {
+    "ogc.ospd.activity-type.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "dateOfLastChange": "2026-11-24",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/terrain-and-hydrology/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/terrain-and-hydrology/",
+  "description": "# Terrain and hydrology\n\nTerrain derivatives (slope, hillshading, ruggedness and position indices) and hydrological analysis (flow direction and accumulation, watersheds, stream networks, wetness index).\n\nThis family has 17 activity types. It is a profile of the OSPD Activity Type core block and its data resource\n(`data.ttl`) is uploaded to the OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Analytical Hillshading](https://w3id.org/ogc/ospd/activity-type/hillshading) (`hillshading`)\n- [Analytical hillshading](https://w3id.org/ogc/ospd/activity-type/analytical-hillshading) (`analytical-hillshading`)\n- [D8 flow-accumulation derivation](https://w3id.org/ogc/ospd/activity-type/GA023) (`GA023`)\n- [D8 flow-direction derivation](https://w3id.org/ogc/ospd/activity-type/GA022) (`GA022`)\n- [Hydrological analysis](https://w3id.org/ogc/ospd/activity-type/GA031) (`GA031`)\n- [Hydrological DEM conditioning](https://w3id.org/ogc/ospd/activity-type/GA034) (`GA034`)\n- [Slope](https://w3id.org/ogc/ospd/activity-type/slope) (`slope`)\n- [Slope derivation](https://w3id.org/ogc/ospd/activity-type/GA021) (`GA021`)\n- [Slope, Aspect, Curvature](https://w3id.org/ogc/ospd/activity-type/terrain-slope) (`terrain-slope`)\n- [Stream-network extraction](https://w3id.org/ogc/ospd/activity-type/GA025) (`GA025`)\n- [Terrain analysis](https://w3id.org/ogc/ospd/activity-type/GA030) (`GA030`)\n- [Terrain ruggedness index](https://w3id.org/ogc/ospd/activity-type/terrain-ruggedness-index) (`terrain-ruggedness-index`)\n- [Terrain Ruggedness Index (TRI)](https://w3id.org/ogc/ospd/activity-type/terrain-terrain-ruggedness-index) (`terrain-terrain-ruggedness-index`)\n- [Topographic position index](https://w3id.org/ogc/ospd/activity-type/topographic-position-index) (`topographic-position-index`)\n- [Topographic Position Index (TPI)](https://w3id.org/ogc/ospd/activity-type/terrain-topographic-position-index) (`terrain-topographic-position-index`)\n- [Topographic Wetness Index calculation](https://w3id.org/ogc/ospd/activity-type/GA035) (`GA035`)\n- [Watershed/catchment delineation](https://w3id.org/ogc/ospd/activity-type/GA024) (`GA024`)\n",
+  "examples": [
+    {
+      "title": "Analytical Hillshading",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/terrain-and-hydrology/example_1_1.ttl",
+          "sizeBytes": 1347,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd:hillshading a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading> ;\n    skos:broader ospd:analytical-hillshading ;\n    skos:definition \"This tool performs an analytical hillshade computation for an elevation grid. The 'Standard' method simply calculates the angle at which light coming from the position of the light source would hit the surface. This method can produce angles greater than 90 degree. With the second method all values are kept within the range of 0-90 degree. It can be enhanced with shadowing effects, where shadowed cells will be marked with a value of exactly 90 degree. 'Shadows Only' creates a mask for the shadowed areas and sets all other cells to no-data. 'Combined Shading' takes the values of the standard method and multiplies these with the normalized slope. 'Ambient Occlusion' is based on the concepts of Tarini et al. (2006), but only the northern half-space is considered here.\"@en ;\n    skos:inScheme ospd: ;\n    skos:prefLabel \"Analytical Hillshading\"@en .\n\nospd: a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/terrain-and-hydrology"
+}

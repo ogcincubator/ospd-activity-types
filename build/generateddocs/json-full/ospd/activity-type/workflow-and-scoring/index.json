@@ -1,0 +1,57 @@
+
+
+{
+  "itemIdentifier": "ogc.ospd.activity-type.workflow-and-scoring",
+  "name": "Workflow and scoring",
+  "abstract": "Workflow runs and scoring or classification activities used in the model-of-models and workflow examples.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "workflow-and-scoring"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/workflow-and-scoring/data.ttl",
+      "format": "text/turtle",
+      "title": "Workflow and scoring: activity type definitions"
+    }
+  ],
+  "shaclShapes": {
+    "ogc.ospd.activity-type.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "dateOfLastChange": "2026-11-24",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/workflow-and-scoring/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/workflow-and-scoring/",
+  "description": "# Workflow and scoring\n\nWorkflow runs and scoring or classification activities used in the model-of-models and workflow examples.\n\nThis family has 3 activity types. It is a profile of the OSPD Activity Type core block and its data resource\n(`data.ttl`) is uploaded to the OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Scoring and progress tracking](https://w3id.org/ogc/ospd/activity-type/ScoringAndProgressTracking) (`ScoringAndProgressTracking`)\n- [Weighted scoring and classification](https://w3id.org/ogc/ospd/activity-type/WeightedScoringAndClassification) (`WeightedScoringAndClassification`)\n- [Workflow run](https://w3id.org/ogc/ospd/activity-type/WorkflowRun) (`WorkflowRun`)\n",
+  "examples": [
+    {
+      "title": "Scoring and progress tracking",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/workflow-and-scoring/example_1_1.ttl",
+          "sizeBytes": 832,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd:ScoringAndProgressTracking a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;\n    rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;\n    skos:definition \"Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded).\"@en ;\n    skos:inScheme ospd: ;\n    skos:prefLabel \"Scoring and progress tracking\"@en .\n\nospd: a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/workflow-and-scoring"
+}

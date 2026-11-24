@@ -1,0 +1,31 @@
+Validation report for ogc.ospd.activity-type.spatial-indexing - Spatial indexing
+Generated 2026-11-24T07:30:18.106866+00:00
+=== Files ===
+Using example_1_1.ttl from examples
+Output Turtle example_1_1.ttl kept as provided
+=== End Files ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core/data.ttl
+ - /github/workspace/_sources/spatial-indexing/data.ttl
+Validation result for _sources/core/shapes.shacl: 2 warnings
+
+** Validation warning **
+Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA033
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.
+
+** Validation warning **
+Warning (sh:MinCountConstraintComponent):
+  Source shape: ex:ActivityTypeShape/sh:property (path skos:definition)
+  Focus node: ospd:GA036
+  Result path: skos:definition
+  Message: An activity type should have a skos:definition.
+Focus nodes for _sources/core/shapes.shacl:
+ - Shape ex:ActivityTypeShape: ospd:GA029
+
+=== End SHACL ===
+

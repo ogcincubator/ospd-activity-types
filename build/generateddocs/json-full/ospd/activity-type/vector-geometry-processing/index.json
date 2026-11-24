@@ -1,0 +1,57 @@
+
+
+{
+  "itemIdentifier": "ogc.ospd.activity-type.vector-geometry-processing",
+  "name": "Vector geometry processing",
+  "abstract": "Operations and tests on vector geometries: buffers, hulls, envelopes, set operations, spatial predicates and extents (including the SQL/MM implementations).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "vector-geometry-processing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/vector-geometry-processing/data.ttl",
+      "format": "text/turtle",
+      "title": "Vector geometry processing: activity type definitions"
+    }
+  ],
+  "shaclShapes": {
+    "ogc.ospd.activity-type.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "dateOfLastChange": "2026-11-24",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/vector-geometry-processing/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/vector-geometry-processing/",
+  "description": "# Vector geometry processing\n\nOperations and tests on vector geometries: buffers, hulls, envelopes, set operations, spatial predicates and extents (including the SQL/MM implementations).\n\nThis family has 42 activity types. It is a profile of the OSPD Activity Type core block and its data resource\n(`data.ttl`) is uploaded to the OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Area](https://w3id.org/ogc/ospd/activity-type/area) (`area`)\n- [Boundary](https://w3id.org/ogc/ospd/activity-type/GA002) (`GA002`)\n- [Bounding Circle](https://w3id.org/ogc/ospd/activity-type/GA004) (`GA004`)\n- [Buffer](https://w3id.org/ogc/ospd/activity-type/GA001) (`GA001`)\n- [Buffer](https://w3id.org/ogc/ospd/activity-type/buffer) (`buffer`)\n- [Centroid](https://w3id.org/ogc/ospd/activity-type/centroid) (`centroid`)\n- [Compute convex hull.](https://w3id.org/ogc/ospd/activity-type/sqlmm-convex-hull) (`sqlmm-convex-hull`)\n- [Compute difference.](https://w3id.org/ogc/ospd/activity-type/sqlmm-difference) (`sqlmm-difference`)\n- [Compute geometry area.](https://w3id.org/ogc/ospd/activity-type/sqlmm-area) (`sqlmm-area`)\n- [Compute intersection.](https://w3id.org/ogc/ospd/activity-type/sqlmm-intersection) (`sqlmm-intersection`)\n- [Compute intersection.](https://w3id.org/ogc/ospd/activity-type/sqlmm-touches) (`sqlmm-touches`)\n- [Compute symmetric difference.](https://w3id.org/ogc/ospd/activity-type/sqlmm-symdifference) (`sqlmm-symdifference`)\n- [Compute union.](https://w3id.org/ogc/ospd/activity-type/sqlmm-union) (`sqlmm-union`)\n- [Computes the centroid of a polygon.](https://w3id.org/ogc/ospd/activity-type/sqlmm-centroid) (`sqlmm-centroid`)\n- [Concave Hull](https://w3id.org/ogc/ospd/activity-type/GA005) (`GA005`)\n- [Contains](https://w3id.org/ogc/ospd/activity-type/sqlmm-contains) (`sqlmm-contains`)\n- [Contains](https://w3id.org/ogc/ospd/activity-type/contains) (`contains`)\n- [Convex Hull](https://w3id.org/ogc/ospd/activity-type/GA006) (`GA006`)\n- [Convex hull](https://w3id.org/ogc/ospd/activity-type/convex-hull) (`convex-hull`)\n- [Create a buffer around a polygon.](https://w3id.org/ogc/ospd/activity-type/sqlmm-buffer) (`sqlmm-buffer`)\n- [Crosses](https://w3id.org/ogc/ospd/activity-type/crosses) (`crosses`)\n- [Crosses test](https://w3id.org/ogc/ospd/activity-type/sqlmm-crosses) (`sqlmm-crosses`)\n- [Difference](https://w3id.org/ogc/ospd/activity-type/GA019) (`GA019`)\n- [Difference](https://w3id.org/ogc/ospd/activity-type/difference) (`difference`)\n- [Disjoint](https://w3id.org/ogc/ospd/activity-type/sqlmm-disjoint) (`sqlmm-disjoint`)\n- [Disjoint](https://w3id.org/ogc/ospd/activity-type/disjoint) (`disjoint`)\n- [Envelope](https://w3id.org/ogc/ospd/activity-type/GA003) (`GA003`)\n- [Equals](https://w3id.org/ogc/ospd/activity-type/sqlmm-equals) (`sqlmm-equals`)\n- [Equals](https://w3id.org/ogc/ospd/activity-type/equals) (`equals`)\n- [Filter geometries](https://w3id.org/ogc/ospd/activity-type/GA020) (`GA020`)\n- [Geometry extent](https://w3id.org/ogc/ospd/activity-type/geometry-extent) (`geometry-extent`)\n- [Get Shapes Extents](https://w3id.org/ogc/ospd/activity-type/vector-geometry-extent) (`vector-geometry-extent`)\n- [Intersection](https://w3id.org/ogc/ospd/activity-type/intersection) (`intersection`)\n- [Intersects](https://w3id.org/ogc/ospd/activity-type/intersects) (`intersects`)\n- [Intersects test](https://w3id.org/ogc/ospd/activity-type/sqlmm-intersects) (`sqlmm-intersects`)\n- [Is simple](https://w3id.org/ogc/ospd/activity-type/is-simple) (`is-simple`)\n- [IsSimple test](https://w3id.org/ogc/ospd/activity-type/sqlmm-is-simple) (`sqlmm-is-simple`)\n- [Symmetric difference](https://w3id.org/ogc/ospd/activity-type/symdifference) (`symdifference`)\n- [Touches](https://w3id.org/ogc/ospd/activity-type/touches) (`touches`)\n- [Union](https://w3id.org/ogc/ospd/activity-type/union) (`union`)\n- [Within](https://w3id.org/ogc/ospd/activity-type/within) (`within`)\n- [Within test](https://w3id.org/ogc/ospd/activity-type/sqlmm-within) (`sqlmm-within`)\n",
+  "examples": [
+    {
+      "title": "Area",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/vector-geometry-processing/example_1_1.ttl",
+          "sizeBytes": 755,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd:area a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;\n    dcterms:source [ ],\n        [ ] ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    skos:definition \"The area of this Surface, as measured in the spatial reference system of this Surface.\"@en ;\n    skos:inScheme ospd: ;\n    skos:prefLabel \"Area\"@en .\n\nospd: a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/vector-geometry-processing"
+}

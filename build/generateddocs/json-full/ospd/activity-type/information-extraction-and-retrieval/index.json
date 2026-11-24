@@ -1,0 +1,57 @@
+
+
+{
+  "itemIdentifier": "ogc.ospd.activity-type.information-extraction-and-retrieval",
+  "name": "Information extraction and retrieval",
+  "abstract": "Source acquisition, text metadata enrichment (entity extraction, geotagging, classification, normalization) and retrieval-augmented generation.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "information-extraction-and-retrieval"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/information-extraction-and-retrieval/data.ttl",
+      "format": "text/turtle",
+      "title": "Information extraction and retrieval: activity type definitions"
+    }
+  ],
+  "shaclShapes": {
+    "ogc.ospd.activity-type.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.ospd.activity-type.core"
+  ],
+  "dateOfLastChange": "2026-11-24",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/information-extraction-and-retrieval/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/information-extraction-and-retrieval/",
+  "description": "# Information extraction and retrieval\n\nSource acquisition, text metadata enrichment (entity extraction, geotagging, classification, normalization) and retrieval-augmented generation.\n\nThis family has 13 activity types. It is a profile of the OSPD Activity Type core block and its data resource\n(`data.ttl`) is uploaded to the OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Commodity Classification](https://w3id.org/ogc/ospd/activity-type/GA042) (`GA042`)\n- [Data Acquisition](https://w3id.org/ogc/ospd/activity-type/GA047) (`GA047`)\n- [FAS Code Decode](https://w3id.org/ogc/ospd/activity-type/GA038) (`GA038`)\n- [FAS Geolocate](https://w3id.org/ogc/ospd/activity-type/GA039) (`GA039`)\n- [FAS Source Fetch](https://w3id.org/ogc/ospd/activity-type/GA037) (`GA037`)\n- [Field Normalization](https://w3id.org/ogc/ospd/activity-type/GA044) (`GA044`)\n- [Generate](https://w3id.org/ogc/ospd/activity-type/GA046) (`GA046`)\n- [Geotag](https://w3id.org/ogc/ospd/activity-type/GA041) (`GA041`)\n- [NLP Entity Extraction](https://w3id.org/ogc/ospd/activity-type/GA040) (`GA040`)\n- [Region Classification](https://w3id.org/ogc/ospd/activity-type/GA043) (`GA043`)\n- [Retrieval-Augmented Generation](https://w3id.org/ogc/ospd/activity-type/GA049) (`GA049`)\n- [Retrieve](https://w3id.org/ogc/ospd/activity-type/GA045) (`GA045`)\n- [Text Metadata Enrichment](https://w3id.org/ogc/ospd/activity-type/GA048) (`GA048`)\n",
+  "examples": [
+    {
+      "title": "Commodity Classification",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/information-extraction-and-retrieval/example_1_1.ttl",
+          "sizeBytes": 1461,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd:GA042 a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:modified \"2026-09-23\"^^xsd:date ;\n    dcterms:replaces <http://ospd/demo/GA042> ;\n    dcterms:source <https://github.com/voyagersearch/voyager-prov-ts/blob/dev/docs/ospd-register-proposal.md> ;\n    rdfs:seeAlso <http://ospd/demo/classify-commodity> ;\n    owl:versionInfo \"v1\" ;\n    skos:broader ospd:GA048 ;\n    skos:definition \"Text \u2192 commodity-taxonomy classifier (dictionary matcher over normalized labels). Domain-specific to agricultural / commodity data.\"@en ;\n    skos:inScheme ospd: ;\n    skos:prefLabel \"Commodity Classification\"@en ;\n    skos:related ospd:GA043,\n        ospd:GA044 ;\n    prov:qualifiedAttribution [ prov:agent [ foaf:name \"Alex Bostic\" ] ;\n            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],\n        [ prov:agent [ foaf:name \"Voyager Search\" ] ;\n            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .\n\nospd: a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/information-extraction-and-retrieval"
+}

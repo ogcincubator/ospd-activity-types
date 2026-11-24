@@ -1,0 +1,561 @@
+{
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
+  "name": "OSPD Activity Types",
+  "abstract": "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under\nstable `https://w3id.org/ogc/ospd/activity-type/` URIs and grouped into families of related types.\n",
+  "description": "A root *OSPD Activity type* block, a profile of the Registered Item Model's activity-type block, and one\nsub-block (profile of the root) per family of related activity types. Each family block carries the Turtle\ndefinitions of its activity types as a data resource, which is uploaded to the OSPD Prez instance when\nthe register is built.\n",
+  "modified": "2026-11-24T07:30:16.344068",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"61523b7930e440b7e6e6bc03cb1b104d5d01f3f5",
+      "shortCommitId": "\"61523b",
+      "date": "2026-11-23T13:04:26+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitHubRepository": "https://github.com/ogcincubator/ospd-activity-types/blob/main/",
+  "baseURL": "https://ogcincubator.github.io/ospd-activity-types/",
+  "viewerURL": "https://ogcincubator.github.io/ospd-activity-types/",
+  "validationReport": "https://ogcincubator.github.io/ospd-activity-types/build/tests/report.html",
+  "validationReportJson": "https://ogcincubator.github.io/ospd-activity-types/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json",
+    "https://ogcincubator.github.io/registered-item-model/build/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.core",
+      "name": "OSPD Activity Type",
+      "abstract": "Root of the OSPD activity types: the concept scheme, catalog and family collections under https://w3id.org/ogc/ospd/activity-type/.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "provenance"
+      ],
+      "group": "OSPD Activity Types",
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD activity types concept scheme, catalog and family collections"
+        }
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/core/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/core/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/core/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.core"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.earth-observation",
+      "name": "Earth observation",
+      "abstract": "Earth-observation data access and applications: Sentinel-2 band retrieval and product selection, cloud and best-available-pixel handling, and the water-bodies, algae-bloom and mangrove-biomass workflows.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "earth-observation"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/earth-observation/data.ttl",
+          "format": "text/turtle",
+          "title": "Earth observation: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/earth-observation/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/earth-observation/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/earth-observation/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/earth-observation/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.earth-observation"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.information-extraction-and-retrieval",
+      "name": "Information extraction and retrieval",
+      "abstract": "Source acquisition, text metadata enrichment (entity extraction, geotagging, classification, normalization) and retrieval-augmented generation.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "information-extraction-and-retrieval"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/information-extraction-and-retrieval/data.ttl",
+          "format": "text/turtle",
+          "title": "Information extraction and retrieval: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/information-extraction-and-retrieval/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/information-extraction-and-retrieval/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/information-extraction-and-retrieval/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/information-extraction-and-retrieval/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.information-extraction-and-retrieval"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.ml-and-statistical-modeling",
+      "name": "Machine learning and statistical modeling",
+      "abstract": "Machine-learning and statistical activities: regression, climate-variable downscaling, super-resolution and trend analysis, and inference executions.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "ml-and-statistical-modeling"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/ml-and-statistical-modeling/data.ttl",
+          "format": "text/turtle",
+          "title": "Machine learning and statistical modeling: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/ml-and-statistical-modeling/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/ml-and-statistical-modeling/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/ml-and-statistical-modeling/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/ml-and-statistical-modeling/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.ml-and-statistical-modeling"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.point-cloud-processing",
+      "name": "Point-cloud processing",
+      "abstract": "Point-cloud thinning, gridding and conversion to shapes.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "point-cloud-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/point-cloud-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "Point-cloud processing: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/point-cloud-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/point-cloud-processing/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/point-cloud-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/point-cloud-processing/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.point-cloud-processing"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.raster-coverage-processing",
+      "name": "Raster and coverage processing",
+      "abstract": "Operations on rasters and coverages: reprojection, resampling, cropping, mosaicking, format conversion, rendering, band math, spectral indices and zonal analysis.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "raster-coverage-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/raster-coverage-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "Raster and coverage processing: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/raster-coverage-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/raster-coverage-processing/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/raster-coverage-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/raster-coverage-processing/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.raster-coverage-processing"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.spatial-indexing",
+      "name": "Spatial indexing",
+      "abstract": "Discrete global grid system (DGGS) indexing and conversion of geometries to grid cells.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "spatial-indexing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/spatial-indexing/data.ttl",
+          "format": "text/turtle",
+          "title": "Spatial indexing: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/spatial-indexing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/spatial-indexing/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/spatial-indexing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/spatial-indexing/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.spatial-indexing"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.terrain-and-hydrology",
+      "name": "Terrain and hydrology",
+      "abstract": "Terrain derivatives (slope, hillshading, ruggedness and position indices) and hydrological analysis (flow direction and accumulation, watersheds, stream networks, wetness index).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "terrain-and-hydrology"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/terrain-and-hydrology/data.ttl",
+          "format": "text/turtle",
+          "title": "Terrain and hydrology: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/terrain-and-hydrology/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/terrain-and-hydrology/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/terrain-and-hydrology/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/terrain-and-hydrology/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.terrain-and-hydrology"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.vector-geometry-processing",
+      "name": "Vector geometry processing",
+      "abstract": "Operations and tests on vector geometries: buffers, hulls, envelopes, set operations, spatial predicates and extents (including the SQL/MM implementations).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "vector-geometry-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/vector-geometry-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "Vector geometry processing: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/vector-geometry-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/vector-geometry-processing/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/vector-geometry-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/vector-geometry-processing/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.vector-geometry-processing"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.ospd.activity-type.workflow-and-scoring",
+      "name": "Workflow and scoring",
+      "abstract": "Workflow runs and scoring or classification activities used in the model-of-models and workflow examples.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "workflow-and-scoring"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/workflow-and-scoring/data.ttl",
+          "format": "text/turtle",
+          "title": "Workflow and scoring: activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.ospd.activity-type.core": [
+          "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.ospd.activity-type.core"
+      ],
+      "dateOfLastChange": "2026-11-24",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/workflow-and-scoring/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/workflow-and-scoring/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/workflow-and-scoring/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/workflow-and-scoring/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.workflow-and-scoring"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/ospd-activity-types/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/ospd-activity-types/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/ospd-activity-types/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}
