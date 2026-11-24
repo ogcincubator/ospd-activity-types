@@ -3,8 +3,8 @@
 Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under stable URIs of the
 form `https://w3id.org/ogc/ospd/activity-type/<slug>`.
 
-This block holds the concept scheme (`https://w3id.org/ogc/ospd/activity-type/`), the catalog and one `skos:Collection` per family of related activity types.
-Each family is a building block that profiles this one and carries the Turtle definitions of its activity types.
+This block holds the catalog (`https://w3id.org/ogc/ospd/activity-type/catalog`), which lists one `skos:ConceptScheme` per family of related activity types.
+Each family is a building block that profiles this one and carries its concept scheme and the Turtle definitions of its activity types.
 
 Every activity type is a `skos:Concept` and an `acttype:ActivityType` (Registered Item Model), has a `skos:prefLabel`, and
 records the IRIs it replaces (`dcterms:replaces`), equivalent aliases (`skos:exactMatch`) and likely duplicates

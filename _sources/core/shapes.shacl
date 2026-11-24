@@ -13,8 +13,9 @@ ex:ActivityTypeShape a sh:NodeShape ;
     ] ;
     sh:property [
         sh:path skos:inScheme ;
-        sh:hasValue ospd: ;
-        sh:message "An activity type must be in the OSPD activity types concept scheme."
+        sh:class skos:ConceptScheme ;
+        sh:minCount 1 ;
+        sh:message "An activity type must be in a concept scheme (its family)."
     ] ;
     sh:property [
         sh:path skos:definition ;

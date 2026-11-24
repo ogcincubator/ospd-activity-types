@@ -72,13 +72,13 @@ core = os.path.join(SRC, "core")
 fam_list = "\n".join(f"- **{n}** (`ogc.ospd.activity-type.{k}`): {a}" for k, (n, a) in FAMILIES.items())
 write_if_missing(os.path.join(core, "bblock.json"), json.dumps({
     "name": "OSPD Activity Type",
-    "abstract": "Root of the OSPD activity types: the concept scheme, catalog and family collections under https://w3id.org/ogc/ospd/activity-type/.",
+    "abstract": "Root of the OSPD activity types: the catalog listing one concept scheme per family, under https://w3id.org/ogc/ospd/activity-type/.",
     "status": "under-development", "dateTimeAddition": ADDED, "itemClass": "model", "version": "0.1",
     "tags": ["ospd", "activity-type", "provenance"],
     "group": "OSPD Activity Types",
     "shaclShapes": ["shapes.shacl"],
     "resources": [{"role": "data", "ref": "data.ttl", "format": "text/turtle",
-                   "title": "OSPD activity types concept scheme, catalog and family collections"}],
+                   "title": "OSPD activity types catalog"}],
 }, indent=2) + "\n")
 write_if_missing(os.path.join(core, "shapes.shacl"), '''@prefix sh:      <http://www.w3.org/ns/shacl#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
@@ -95,8 +95,9 @@ ex:ActivityTypeShape a sh:NodeShape ;
     ] ;
     sh:property [
         sh:path skos:inScheme ;
-        sh:hasValue ospd: ;
-        sh:message "An activity type must be in the OSPD activity types concept scheme."
+        sh:class skos:ConceptScheme ;
+        sh:minCount 1 ;
+        sh:message "An activity type must be in a concept scheme (its family)."
     ] ;
     sh:property [
         sh:path skos:definition ;
@@ -111,8 +112,8 @@ open(os.path.join(core, "description.md"), "w").write(f"""# OSPD Activity Type
 Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under stable URIs of the
 form `https://w3id.org/ogc/ospd/activity-type/<slug>`.
 
-This block holds the concept scheme (`{BASE}`), the catalog and one `skos:Collection` per family of related activity types.
-Each family is a building block that profiles this one and carries the Turtle definitions of its activity types.
+This block holds the catalog (`{BASE}catalog`), which lists one `skos:ConceptScheme` per family of related activity types.
+Each family is a building block that profiles this one and carries its concept scheme and the Turtle definitions of its activity types.
 
 Every activity type is a `skos:Concept` and an `acttype:ActivityType` (Registered Item Model), has a `skos:prefLabel`, and
 records the IRIs it replaces (`dcterms:replaces`), equivalent aliases (`skos:exactMatch`) and likely duplicates
@@ -123,14 +124,16 @@ records the IRIs it replaces (`dcterms:replaces`), equivalent aliases (`skos:exa
 {fam_list}
 """)
 open(os.path.join(core, "examples.yaml"), "w").write(yaml_block([(
-    "Concept scheme with a family collection",
-    f"""@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ospd: <{BASE}> .
+    "Catalog with a family concept scheme",
+    f"""@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-ospd: a skos:ConceptScheme ;
-    skos:prefLabel "OSPD Activity Types"@en .
+<{BASE}catalog> a dcat:Catalog ;
+    dcterms:title "OSPD Activity Types"@en ;
+    dcterms:hasPart <{BASE}families/vector-geometry-processing> .
 
-<{BASE}families/vector-geometry-processing> a skos:Collection ;
+<{BASE}families/vector-geometry-processing> a skos:ConceptScheme ;
     skos:prefLabel "Vector geometry processing"@en .
 """)]))
 

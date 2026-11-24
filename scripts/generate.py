@@ -5,12 +5,12 @@ Usage: generate.py <repos-dir> [<analysis-dir>]
 
 Reads the source Turtle files in <repos-dir> (clones of the OSPD repositories) and the analysis tables
 (mapping.csv, family-assignment.csv, duplicates.csv) and writes, under _sources/:
-  core/data.ttl                    root concept scheme, catalog and family collections
+  core/data.ttl                    catalog (hasPart: one concept scheme per family)
   <family>/data.ttl                one data resource per family
 
 Vocabulary: SKOS (no schema.org). Everything is derived from the tables, so rerun after editing them.
 """
-import csv, os, sys, collections
+import json, csv, os, sys, collections
 from rdflib import Graph, URIRef, Literal, BNode, Namespace, RDF, RDFS, OWL, XSD
 from rdflib.namespace import SKOS, DCTERMS, PROV, FOAF
 
@@ -92,7 +92,7 @@ for r in sorted(defs, key=lambda r: r["new_iri"]):
     out = per_family[fam]
     out.add((s, RDF.type, SKOS.Concept))
     out.add((s, RDF.type, ACTTYPE.ActivityType))
-    out.add((s, SKOS.inScheme, ROOT))
+    out.add((s, SKOS.inScheme, URIRef(FAMILY_NS + fam)))
     label = first(old, [SKOS.prefLabel, SCHEMA.name, RDFS.label, DCTERMS.title])
     if label is None:
         label = Literal(r["new_iri"].rsplit("/", 1)[1].replace("-", " "), lang="en")
@@ -163,30 +163,36 @@ for r in sorted(defs, key=lambda r: r["new_iri"]):
         if c in new_of:
             out.add((s, SKOS.closeMatch, URIRef(new_of[c])))
 
-# root: concept scheme, catalog, family collections
+# core: the catalog only; each family is a skos:ConceptScheme defined in the family's own data.ttl
+FAMILY_LABELS = {"ml-and-statistical-modeling": "ML and statistical modeling"}
+
+def family_abstract(fam):
+    try:
+        with open(os.path.join(OUT, fam, "bblock.json"), encoding="utf-8") as f:
+            return json.load(f).get("abstract")
+    except (OSError, ValueError):
+        return None
+
 root = Graph(); bind(root)
-root.add((ROOT, RDF.type, SKOS.ConceptScheme))
-root.add((ROOT, SKOS.prefLabel, Literal("OSPD Activity Types", lang="en")))
-root.add((ROOT, SKOS.definition, Literal(
-    "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under stable URIs "
-    "and grouped into families of related types.", lang="en")))
 root.add((CATALOG, RDF.type, DCAT.Catalog))
 root.add((CATALOG, DCTERMS.title, Literal("OSPD Activity Types", lang="en")))
-root.add((CATALOG, DCTERMS.description, Literal("Catalog of the OSPD activity types and their families.", lang="en")))
-root.add((CATALOG, DCTERMS.hasPart, ROOT))
+root.add((CATALOG, DCTERMS.description, Literal(
+    "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under stable "
+    "URIs and grouped into families of related types. Each family is a concept scheme.", lang="en")))
 for fam in sorted(per_family):
     c = URIRef(FAMILY_NS + fam)
-    root.add((c, RDF.type, SKOS.Collection))
-    root.add((c, SKOS.prefLabel, Literal(fam.replace("-", " ").capitalize(), lang="en")))
-    root.add((c, SKOS.inScheme, ROOT)) if False else None
-    for r in defs:
-        if r["family"] == fam:
-            root.add((c, SKOS.member, URIRef(r["new_iri"])))
-    for r in defs:  # top concepts: no in-scheme parent
+    root.add((CATALOG, DCTERMS.hasPart, c))
+    out = per_family[fam]
+    out.add((c, RDF.type, SKOS.ConceptScheme))
+    out.add((c, SKOS.prefLabel, Literal(FAMILY_LABELS.get(fam, fam.replace("-", " ").capitalize()), lang="en")))
+    ab = family_abstract(fam)
+    if ab:
+        out.add((c, SKOS.definition, Literal(ab, lang="en")))
+    for r in defs:  # top concepts: no in-scheme parent (needs both directions for Prez entry points)
         if r["family"] == fam and not any(str(p) in in_set for p in g.objects(URIRef(r["old_iri"]), SKOS.broader)) \
                 and not any(str(p) in in_set for p in g.objects(URIRef(r["old_iri"]), RDFS.subClassOf)):
-            root.add((ROOT, SKOS.hasTopConcept, URIRef(r["new_iri"])))
-            root.add((URIRef(r["new_iri"]), SKOS.topConceptOf, ROOT))
+            out.add((c, SKOS.hasTopConcept, URIRef(r["new_iri"])))
+            out.add((URIRef(r["new_iri"]), SKOS.topConceptOf, c))
 
 def write(gr, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)

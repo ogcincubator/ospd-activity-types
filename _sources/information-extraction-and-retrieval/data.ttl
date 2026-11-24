@@ -17,7 +17,7 @@ ospd:GA040 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA048 ;
     skos:definition "Named-entity recognition over document text. Emits structured entity mentions (persons, organizations, places, events, products). Semantically upstream of Geotag."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "NLP Entity Extraction"@en ;
     skos:related ospd:GA041 ;
     prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
@@ -34,7 +34,7 @@ ospd:GA044 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA048 ;
     skos:definition "Field concatenation / normalization to a common schema across heterogeneous inputs. Produces uniform fields for downstream indexing and retrieval."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Field Normalization"@en ;
     skos:related ospd:GA042,
         ospd:GA043 ;
@@ -52,13 +52,13 @@ ospd:GA045 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA049 ;
     skos:definition "Hybrid Solr search over the enriched index (semantic + lexical). Emitted by the mastra voyager-search tool as the first activity of a Retrieval-Augmented Generation cycle."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Retrieve"@en ;
     skos:related ospd:GA046 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
-        [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
+        [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
 
 ospd:GA046 a skos:Concept,
         acttype:ActivityType ;
@@ -69,7 +69,7 @@ ospd:GA046 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA049 ;
     skos:definition "LLM answer synthesis over retrieved chunks. Terminal step of a Retrieval-Augmented Generation workflow; produces the natural-language answer plus a PROV bundle citation trail."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Generate"@en ;
     skos:related ospd:GA045 ;
     prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
@@ -86,14 +86,14 @@ ospd:GA037 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA047 ;
     skos:definition "External catalog API pull. Retrieves source records from an authoritative external endpoint via a Voyager HQ Python connector, generating raw source records as the connector-chain start."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "FAS Source Fetch"@en ;
     skos:related ospd:GA038,
         ospd:GA039 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
-        [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
+        [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
 
 ospd:GA038 a skos:Concept,
         acttype:ActivityType ;
@@ -104,14 +104,14 @@ ospd:GA038 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA047 ;
     skos:definition "Numeric-code → human-readable-string lookup against a compiled taxonomy. Turns FAS unit IDs, attribute IDs, and ISO country codes into descriptive fields."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "FAS Code Decode"@en ;
     skos:related ospd:GA037,
         ospd:GA039 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
 
 ospd:GA042 a skos:Concept,
         acttype:ActivityType ;
@@ -122,14 +122,14 @@ ospd:GA042 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA048 ;
     skos:definition "Text → commodity-taxonomy classifier (dictionary matcher over normalized labels). Domain-specific to agricultural / commodity data."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Commodity Classification"@en ;
     skos:related ospd:GA043,
         ospd:GA044 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
-        [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
+        [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
 
 ospd:GA043 a skos:Concept,
         acttype:ActivityType ;
@@ -140,7 +140,7 @@ ospd:GA043 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA048 ;
     skos:definition "Text → region-taxonomy classifier. Emitted in the pipeline for canonical region classification and cross-repository tagging."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Region Classification"@en ;
     skos:related ospd:GA041,
         ospd:GA042 ;
@@ -158,7 +158,7 @@ ospd:GA039 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA047 ;
     skos:definition "Country / place-name → GeoJSON geometry lookup via a gazetteer service. Terminal step of the connector chain; produces the indexed-doc entity that bridges to the pipeline chain."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "FAS Geolocate"@en ;
     skos:related ospd:GA037,
         ospd:GA038,
@@ -177,7 +177,7 @@ ospd:GA041 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA048 ;
     skos:definition "Place-name mention → coordinate lookup. Consumes the place mentions produced by NLP Entity Extraction and resolves each against an external gazetteer. Produces spatial features from text-derived input, complementing pixel-derived geometry ops."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Geotag"@en ;
     skos:related ospd:GA039,
         ospd:GA040 ;
@@ -194,13 +194,14 @@ ospd:GA049 a skos:Concept,
     rdfs:seeAlso <http://ospd/demo/retrieval-augmented-generation> ;
     owl:versionInfo "v1" ;
     skos:definition "Umbrella Geoprocessing Activity type for RAG-layer operations that retrieve indexed content and synthesize answers using an LLM, producing PROV-traceable outputs. Groups Retrieve, Generate."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Retrieval-Augmented Generation"@en ;
     skos:related ospd:GA048 ;
-    prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
-        [ prov:agent [ foaf:name "Voyager Search" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
+        [ prov:agent [ foaf:name "Alex Bostic" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
 
 ospd:GA047 a skos:Concept,
         acttype:ActivityType ;
@@ -210,9 +211,10 @@ ospd:GA047 a skos:Concept,
     rdfs:seeAlso <http://ospd/demo/data-acquisition> ;
     owl:versionInfo "v1" ;
     skos:definition "Umbrella Geoprocessing Activity type for connector-side operations that pull, decode, and geolocate external source records into an indexing pipeline. Groups FAS Source Fetch, FAS Code Decode, FAS Geolocate."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Data Acquisition"@en ;
     skos:related ospd:GA048 ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     prov:qualifiedAttribution [ prov:agent [ foaf:name "Alex Bostic" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
         [ prov:agent [ foaf:name "Voyager Search" ] ;
@@ -226,12 +228,20 @@ ospd:GA048 a skos:Concept,
     rdfs:seeAlso <http://ospd/demo/text-metadata-enrichment> ;
     owl:versionInfo "v1" ;
     skos:definition "Umbrella Geoprocessing Activity type for pipeline-side operations that extract, classify, geotag, and normalize document metadata for downstream discovery. Groups NLP Entity Extraction, Geotag, Commodity Classification, Region Classification, Field Normalization."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Text Metadata Enrichment"@en ;
     skos:related ospd:GA047,
         ospd:GA049 ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
         [ prov:agent [ foaf:name "Alex Bostic" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+
+<https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> a skos:ConceptScheme ;
+    skos:definition "Source acquisition, text metadata enrichment (entity extraction, geotagging, classification, normalization) and retrieval-augmented generation."@en ;
+    skos:hasTopConcept ospd:GA047,
+        ospd:GA048,
+        ospd:GA049 ;
+    skos:prefLabel "Information extraction and retrieval"@en .
 

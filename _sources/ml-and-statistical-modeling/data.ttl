@@ -8,6 +8,16 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ospd:climate-downscaling-inference a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-10-15"^^xsd:date ;
+    dcterms:replaces <https://crim-ca.github.io/bblocks-process-profiles/def/activity-type/climate-downscaling-inference> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/ml-activity/InferenceActivityType> ;
+    skos:broader ospd:climate-downscaling ;
+    skos:definition "Runs the Resoterre U-Net on meteorological and static geophysical inputs."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    skos:prefLabel "U-Net RDPS-to-HRDPS downscaling inference"@en .
+
 ospd:GA007 a skos:Concept,
         acttype:ActivityType ;
     dcterms:modified "2026-09-17"^^xsd:date ;
@@ -16,8 +26,9 @@ ospd:GA007 a skos:Concept,
     rdfs:seeAlso <https://w3id.org/ogc/stac/mlm/regression> ;
     owl:versionInfo "2" ;
     skos:definition "Predicting a continuous numeric value from input data."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     skos:prefLabel "Regression"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     prov:qualifiedAttribution [ prov:agent [ foaf:name "STAC MLM?" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
 
@@ -29,9 +40,10 @@ ospd:GA017 a skos:Concept,
     owl:versionInfo "2" ;
     skos:definition "A non-parametric trend detection method designed to measure monotonic trends in time series data that exhibit a seasonal structure."@en ;
     skos:exactMatch <https://catalog.ospd.dev.kurrawong.ai/catalogs/demo:geoacs/collections/demo:ospd-geoacs/items/demo:GA017> ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     skos:prefLabel "Seasonal Sen’s Slope"@en ;
     skos:related ospd:GA016 ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
 
@@ -39,18 +51,9 @@ ospd:InferenceExecution a skos:Concept,
         acttype:ActivityType ;
     dcterms:replaces <https://crim-ca.github.io/bblocks-process-profiles/def/InferenceExecution> ;
     skos:definition "A PROV execution classified by a candidate activity type using dct:type."@en ;
-    skos:inScheme ospd: ;
-    skos:prefLabel "Inference execution without an asserted register action"@en .
-
-ospd:climate-downscaling-inference a skos:Concept,
-        acttype:ActivityType ;
-    dcterms:modified "2026-10-15"^^xsd:date ;
-    dcterms:replaces <https://crim-ca.github.io/bblocks-process-profiles/def/activity-type/climate-downscaling-inference> ;
-    rdfs:subClassOf <https://w3id.org/ogc/rim/ml-activity/InferenceActivityType> ;
-    skos:broader ospd:climate-downscaling ;
-    skos:definition "Runs the Resoterre U-Net on meteorological and static geophysical inputs."@en ;
-    skos:inScheme ospd: ;
-    skos:prefLabel "U-Net RDPS-to-HRDPS downscaling inference"@en .
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    skos:prefLabel "Inference execution without an asserted register action"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> .
 
 ospd:GA009 a skos:Concept,
         acttype:ActivityType ;
@@ -59,8 +62,9 @@ ospd:GA009 a skos:Concept,
     rdfs:seeAlso <https://hirondelle.crim.ca/weaver/processes/ogc-ospd2026-downscaling-unet> ;
     owl:versionInfo "0.1.3.dev10" ;
     skos:definition "Performs climate variable downscaling used to transform coarse-scale climate model outputs into high-resolution, locally relevant climate data, using a machine learning algorithm described through STAC MLM."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     skos:prefLabel "ML Climate Variable Downscaling"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
 
@@ -71,6 +75,16 @@ ospd:climate-downscaling a skos:Concept,
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:closeMatch ospd:GA009 ;
     skos:definition "Transforms georeferenced climate fields to a finer-resolution target grid."@en ;
-    skos:inScheme ospd: ;
-    skos:prefLabel "Climate-variable downscaling"@en .
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    skos:prefLabel "Climate-variable downscaling"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> .
+
+<https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> a skos:ConceptScheme ;
+    skos:definition "Machine-learning and statistical activities: regression, climate-variable downscaling, super-resolution and trend analysis, and inference executions."@en ;
+    skos:hasTopConcept ospd:GA007,
+        ospd:GA009,
+        ospd:GA017,
+        ospd:InferenceExecution,
+        ospd:climate-downscaling ;
+    skos:prefLabel "ML and statistical modeling"@en .
 

@@ -1,13 +1,15 @@
 examples:
-  - title: Concept scheme with a family collection
+  - title: Catalog with a family concept scheme
     snippets:
       - language: turtle
         code: |
+          @prefix dcat: <http://www.w3.org/ns/dcat#> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
           @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-          @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 
-          ospd: a skos:ConceptScheme ;
-              skos:prefLabel "OSPD Activity Types"@en .
+          <https://w3id.org/ogc/ospd/activity-type/catalog> a dcat:Catalog ;
+              dcterms:title "OSPD Activity Types"@en ;
+              dcterms:hasPart <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .
 
-          <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> a skos:Collection ;
+          <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> a skos:ConceptScheme ;
               skos:prefLabel "Vector geometry processing"@en .

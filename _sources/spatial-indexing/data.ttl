@@ -14,7 +14,7 @@ ospd:GA029 a skos:Concept,
     owl:versionInfo "2" ;
     skos:broader ospd:GA033 ;
     skos:definition "Quantizes input spatial positions or geometries to cells at a specified resolution in a Discrete Global Grid System and returns the corresponding cell identifiers."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> ;
     skos:prefLabel "DGGS cell indexing"@en ;
     skos:related ospd:GA027,
         ospd:GA028 ;
@@ -26,8 +26,9 @@ ospd:GA036 a skos:Concept,
     dcterms:modified "2026-09-17"^^xsd:date ;
     dcterms:replaces <http://ospd/demo/GA036> ;
     owl:versionInfo "2" ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> ;
     skos:prefLabel "Polygon-to-DGGS cell conversion"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
 
@@ -36,8 +37,15 @@ ospd:GA033 a skos:Concept,
     dcterms:modified "2026-09-17"^^xsd:date ;
     dcterms:replaces <http://ospd/demo/GA033> ;
     owl:versionInfo "2" ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> ;
     skos:prefLabel "Spatial indexing"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+<https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> a skos:ConceptScheme ;
+    skos:definition "Discrete global grid system (DGGS) indexing and conversion of geometries to grid cells."@en ;
+    skos:hasTopConcept ospd:GA033,
+        ospd:GA036 ;
+    skos:prefLabel "Spatial indexing"@en .
 
