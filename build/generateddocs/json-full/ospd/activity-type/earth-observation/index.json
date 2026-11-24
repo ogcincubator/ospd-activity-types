@@ -4,6 +4,7 @@
   "itemIdentifier": "ogc.ospd.activity-type.earth-observation",
   "name": "Earth observation",
   "abstract": "Earth-observation data access and applications: Sentinel-2 band retrieval and product selection, cloud and best-available-pixel handling, and the water-bodies, algae-bloom and mangrove-biomass workflows.",
+  "highlighted": true,
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",

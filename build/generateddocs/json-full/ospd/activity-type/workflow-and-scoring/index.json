@@ -4,6 +4,7 @@
   "itemIdentifier": "ogc.ospd.activity-type.workflow-and-scoring",
   "name": "Workflow and scoring",
   "abstract": "Workflow runs and scoring or classification activities used in the model-of-models and workflow examples.",
+  "highlighted": true,
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",

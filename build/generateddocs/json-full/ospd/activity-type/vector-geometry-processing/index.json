@@ -4,6 +4,7 @@
   "itemIdentifier": "ogc.ospd.activity-type.vector-geometry-processing",
   "name": "Vector geometry processing",
   "abstract": "Operations and tests on vector geometries: buffers, hulls, envelopes, set operations, spatial predicates and extents (including the SQL/MM implementations).",
+  "highlighted": true,
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",

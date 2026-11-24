@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.ospd.activity-type.core - OSPD Activity Type",
       "bblockName": "OSPD Activity Type",
       "bblockId": "ogc.ospd.activity-type.core",
-      "generated": "2026-11-24T11:27:49.166826+00:00",
+      "generated": "2026-11-24T11:34:37.478151+00:00",
       "result": true,
       "items": [
         {
@@ -50,7 +50,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -101,42 +101,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
+                    "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
                     "rim:ConceptVersionShape": {
                       "nodes": []
                     },
-                    "rim:TextShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "rim:RegisterSpecificationShape": {
-                      "nodes": []
-                    },
                     "rim:TextShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemClassShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterShape": {
+                      "nodes": []
+                    },
+                    "rim:ConceptShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
-                    "rim:RegisterShape": {
+                    "rim:TextShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemShape": {
+                      "nodes": []
+                    },
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -155,7 +155,7 @@
       "title": "Validation report for ogc.ospd.activity-type.earth-observation - Earth observation",
       "bblockName": "Earth observation",
       "bblockId": "ogc.ospd.activity-type.earth-observation",
-      "generated": "2026-11-24T11:27:49.748014+00:00",
+      "generated": "2026-11-24T11:34:37.975726+00:00",
       "result": true,
       "items": [
         {
@@ -195,12 +195,12 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/earth-observation/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/earth-observation/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
                   "shaclFile": "_sources/core/shapes.shacl",
-                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA014 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nd790bc4df32345f48cc5ba0037028cadb3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA015 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nd790bc4df32345f48cc5ba0037028cadb3 ] .\n\n_:nd790bc4df32345f48cc5ba0037028cadb3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
+                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA015 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:ne3a86166ad374b888732bf255269ba03b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA014 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:ne3a86166ad374b888732bf255269ba03b3 ] .\n\n_:ne3a86166ad374b888732bf255269ba03b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
                   "isError": false,
                   "message": "Validation result for _sources/core/shapes.shacl: 2 warnings"
                 },
@@ -280,10 +280,28 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
+                    "rim:RegisterSpecificationShape": {
+                      "nodes": []
+                    },
+                    "rim:ConceptVersionShape": {
+                      "nodes": []
+                    },
+                    "rim:TextShape": {
+                      "nodes": []
+                    },
                     "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
-                    "rim:CommitmentShape": {
+                    "rim:RegisterItemClassShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterShape": {
+                      "nodes": []
+                    },
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:first": {
@@ -292,30 +310,12 @@
                     "rim:RegisterItemShape": {
                       "nodes": []
                     },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptVersionShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterSpecificationShape": {
-                      "nodes": []
-                    },
-                    "rim:TextShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterShape": {
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -334,7 +334,7 @@
       "title": "Validation report for ogc.ospd.activity-type.information-extraction-and-retrieval - Information extraction and retrieval",
       "bblockName": "Information extraction and retrieval",
       "bblockId": "ogc.ospd.activity-type.information-extraction-and-retrieval",
-      "generated": "2026-11-24T11:27:50.239802+00:00",
+      "generated": "2026-11-24T11:34:38.476473+00:00",
       "result": true,
       "items": [
         {
@@ -374,7 +374,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - /github/workspace/_sources/information-extraction-and-retrieval/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - /github/workspace/_sources/information-extraction-and-retrieval/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -429,42 +429,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:TextShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
+                    "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
                     "rim:ConceptVersionShape": {
                       "nodes": []
                     },
-                    "rim:RegisterSpecificationShape": {
+                    "rim:TextShape": {
                       "nodes": []
                     },
-                    "rim:TextShape": {
+                    "rim:TextShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemClassShape": {
+                      "nodes": []
+                    },
+                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
                     "rim:RegisterShape": {
                       "nodes": []
                     },
-                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemShape": {
+                      "nodes": []
+                    },
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -483,7 +483,7 @@
       "title": "Validation report for ogc.ospd.activity-type.ml-and-statistical-modeling - Machine learning and statistical modeling",
       "bblockName": "Machine learning and statistical modeling",
       "bblockId": "ogc.ospd.activity-type.ml-and-statistical-modeling",
-      "generated": "2026-11-24T11:27:50.646015+00:00",
+      "generated": "2026-11-24T11:34:38.923937+00:00",
       "result": true,
       "items": [
         {
@@ -523,7 +523,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - /github/workspace/_sources/ml-and-statistical-modeling/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/ml-and-statistical-modeling/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -578,42 +578,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
+                    "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
                     "rim:ConceptVersionShape": {
                       "nodes": []
                     },
+                    "rim:TextShape": {
+                      "nodes": []
+                    },
                     "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
-                    "rim:RegisterSpecificationShape": {
+                    "rim:RegisterItemClassShape": {
                       "nodes": []
                     },
-                    "rim:TextShape": {
+                    "rim:RegisterShape": {
+                      "nodes": []
+                    },
+                    "rim:ConceptShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "rim:RegisterShape": {
+                    "rim:RegisterActionShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemShape": {
+                      "nodes": []
+                    },
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -632,7 +632,7 @@
       "title": "Validation report for ogc.ospd.activity-type.point-cloud-processing - Point-cloud processing",
       "bblockName": "Point-cloud processing",
       "bblockId": "ogc.ospd.activity-type.point-cloud-processing",
-      "generated": "2026-11-24T11:27:51.012222+00:00",
+      "generated": "2026-11-24T11:34:39.179664+00:00",
       "result": true,
       "items": [
         {
@@ -672,7 +672,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/point-cloud-processing/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/point-cloud-processing/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -727,42 +727,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
+                    "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
                     "rim:ConceptVersionShape": {
                       "nodes": []
                     },
-                    "rim:RegisterSpecificationShape": {
+                    "rim:TextShape": {
+                      "nodes": []
+                    },
+                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemClassShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterShape": {
+                      "nodes": []
+                    },
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "rim:TextShape": {
+                    "rim:RegisterItemShape": {
                       "nodes": []
                     },
-                    "rim:RegisterShape": {
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -781,7 +781,7 @@
       "title": "Validation report for ogc.ospd.activity-type.raster-coverage-processing - Raster and coverage processing",
       "bblockName": "Raster and coverage processing",
       "bblockId": "ogc.ospd.activity-type.raster-coverage-processing",
-      "generated": "2026-11-24T11:27:51.585021+00:00",
+      "generated": "2026-11-24T11:34:39.575881+00:00",
       "result": true,
       "items": [
         {
@@ -821,7 +821,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - /github/workspace/_sources/raster-coverage-processing/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - /github/workspace/_sources/raster-coverage-processing/data.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -891,42 +891,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
+                    "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
                     "rim:ConceptVersionShape": {
                       "nodes": []
                     },
-                    "rim:RegisterSpecificationShape": {
+                    "rim:TextShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemClassShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "rim:TextShape": {
+                    "rim:RegisterShape": {
                       "nodes": []
                     },
-                    "rim:RegisterShape": {
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
+                      "nodes": []
+                    },
+                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemShape": {
+                      "nodes": []
+                    },
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -945,7 +945,7 @@
       "title": "Validation report for ogc.ospd.activity-type.spatial-indexing - Spatial indexing",
       "bblockName": "Spatial indexing",
       "bblockId": "ogc.ospd.activity-type.spatial-indexing",
-      "generated": "2026-11-24T11:27:51.899410+00:00",
+      "generated": "2026-11-24T11:34:39.779887+00:00",
       "result": true,
       "items": [
         {
@@ -985,12 +985,12 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/spatial-indexing/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/spatial-indexing/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
                   "shaclFile": "_sources/core/shapes.shacl",
-                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA036 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n5ed6a7579d0d412c97b36e4ee75625f8b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA033 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n5ed6a7579d0d412c97b36e4ee75625f8b3 ] .\n\n_:n5ed6a7579d0d412c97b36e4ee75625f8b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
+                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA036 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nb8460d946c5f422b8545aa4e7ba41919b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA033 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nb8460d946c5f422b8545aa4e7ba41919b3 ] .\n\n_:nb8460d946c5f422b8545aa4e7ba41919b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
                   "isError": false,
                   "message": "Validation result for _sources/core/shapes.shacl: 2 warnings"
                 },
@@ -1070,42 +1070,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
+                    "rim:RegisterSpecificationShape": {
+                      "nodes": []
+                    },
                     "rim:TextShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
                       "nodes": []
                     },
                     "rim:ConceptVersionShape": {
                       "nodes": []
                     },
-                    "rim:RegisterSpecificationShape": {
+                    "rim:TextShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
-                    "rim:TextShape": {
+                    "rim:RegisterItemClassShape": {
                       "nodes": []
                     },
                     "rim:RegisterShape": {
                       "nodes": []
+                    },
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemShape": {
+                      "nodes": []
+                    },
+                    "rim:CommitmentShape": {
+                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -1124,7 +1124,7 @@
       "title": "Validation report for ogc.ospd.activity-type.terrain-and-hydrology - Terrain and hydrology",
       "bblockName": "Terrain and hydrology",
       "bblockId": "ogc.ospd.activity-type.terrain-and-hydrology",
-      "generated": "2026-11-24T11:27:52.350488+00:00",
+      "generated": "2026-11-24T11:34:40.055098+00:00",
       "result": true,
       "items": [
         {
@@ -1164,12 +1164,12 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/terrain-and-hydrology/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/terrain-and-hydrology/data.ttl\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
                   "shaclFile": "_sources/core/shapes.shacl",
-                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA035 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nf039f67b3ec04b96b81ce70bedea651fb3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA034 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nf039f67b3ec04b96b81ce70bedea651fb3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA031 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nf039f67b3ec04b96b81ce70bedea651fb3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA030 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nf039f67b3ec04b96b81ce70bedea651fb3 ] .\n\n_:nf039f67b3ec04b96b81ce70bedea651fb3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
+                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA035 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n58a9523fef8d48beb413b401d45b80c0b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA030 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n58a9523fef8d48beb413b401d45b80c0b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA034 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n58a9523fef8d48beb413b401d45b80c0b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA031 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n58a9523fef8d48beb413b401d45b80c0b3 ] .\n\n_:n58a9523fef8d48beb413b401d45b80c0b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
                   "isError": false,
                   "message": "Validation result for _sources/core/shapes.shacl: 4 warnings"
                 },
@@ -1279,42 +1279,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
+                    "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
                     "rim:ConceptVersionShape": {
                       "nodes": []
                     },
-                    "rim:RegisterSpecificationShape": {
+                    "rim:TextShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "rim:TextShape": {
+                    "rim:RegisterItemClassShape": {
                       "nodes": []
                     },
                     "rim:RegisterShape": {
                       "nodes": []
+                    },
+                    "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemShape": {
+                      "nodes": []
+                    },
+                    "rim:CommitmentShape": {
+                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -1333,7 +1333,7 @@
       "title": "Validation report for ogc.ospd.activity-type.vector-geometry-processing - Vector geometry processing",
       "bblockName": "Vector geometry processing",
       "bblockId": "ogc.ospd.activity-type.vector-geometry-processing",
-      "generated": "2026-11-24T11:27:52.739412+00:00",
+      "generated": "2026-11-24T11:34:40.419766+00:00",
       "result": true,
       "items": [
         {
@@ -1373,7 +1373,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - /github/workspace/_sources/vector-geometry-processing/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/vector-geometry-processing/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -1428,28 +1428,13 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:CommitmentShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterActionShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterItemClassShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptVersionShape": {
-                      "nodes": []
-                    },
                     "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
                     "rim:TextShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "rim:ConceptVersionShape": {
                       "nodes": []
                     },
                     "rim:TextShape": {
@@ -1458,12 +1443,27 @@
                     "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
+                    "rim:RegisterItemClassShape": {
+                      "nodes": []
+                    },
                     "rim:RegisterShape": {
+                      "nodes": []
+                    },
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterActionShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemShape": {
+                      "nodes": []
+                    },
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }
@@ -1482,7 +1482,7 @@
       "title": "Validation report for ogc.ospd.activity-type.workflow-and-scoring - Workflow and scoring",
       "bblockName": "Workflow and scoring",
       "bblockId": "ogc.ospd.activity-type.workflow-and-scoring",
-      "generated": "2026-11-24T11:27:53.083071+00:00",
+      "generated": "2026-11-24T11:34:40.625292+00:00",
       "result": true,
       "items": [
         {
@@ -1522,7 +1522,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/workflow-and-scoring/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/workflow-and-scoring/data.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/activity-type/ontology.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -1577,10 +1577,25 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
                   "focusNodes": {
-                    "rim:CommitmentShape": {
+                    "rim:RegisterSpecificationShape": {
                       "nodes": []
                     },
-                    "rim:RegisterItemShape": {
+                    "rim:ConceptVersionShape": {
+                      "nodes": []
+                    },
+                    "rim:TextShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterItemClassShape": {
+                      "nodes": []
+                    },
+                    "rim:RegisterShape": {
+                      "nodes": []
+                    },
+                    "rim:ConceptShape": {
+                      "nodes": []
+                    },
+                    "rim:TextShape/sh:or/rdf:first": {
                       "nodes": []
                     },
                     "rim:RegisterActionShape": {
@@ -1589,30 +1604,15 @@
                     "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
-                    "rim:ConceptShape": {
+                    "rim:RegisterItemShape": {
                       "nodes": []
                     },
-                    "rim:RegisterItemClassShape": {
-                      "nodes": []
-                    },
-                    "rim:ConceptVersionShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterSpecificationShape": {
-                      "nodes": []
-                    },
-                    "rim:TextShape": {
-                      "nodes": []
-                    },
-                    "rim:RegisterShape": {
-                      "nodes": []
-                    },
-                    "rim:TextShape/sh:or/rdf:first": {
+                    "rim:CommitmentShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
                 }
               ]
             }

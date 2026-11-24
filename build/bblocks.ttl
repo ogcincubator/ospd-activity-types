@@ -38,22 +38,22 @@
         "ospd" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:format "text/turtle" ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/earth-observation/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
             prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
             prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:validation ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/earth-observation/data.ttl> ;
+            prof:hasRole <https://ogcincubator.github.io/data> ] ;
     prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -68,10 +68,10 @@
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.information-extraction-and-retrieval> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/information-extraction-and-retrieval/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/information-extraction-and-retrieval/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/information-extraction-and-retrieval/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/information-extraction-and-retrieval/index.md> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-11-24"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/ospd-activity-types/> ;
@@ -82,13 +82,13 @@
         "ospd" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
-            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:format "text/turtle" ;
             prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/information-extraction-and-retrieval/data.ttl> ;
@@ -110,10 +110,10 @@
     rdfs:label "Machine learning and statistical modeling" ;
     dct:abstract "Machine-learning and statistical activities: regression, climate-variable downscaling, super-resolution and trend analysis, and inference executions."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/ml-and-statistical-modeling/index.md> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.ml-and-statistical-modeling> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/ml-and-statistical-modeling/index.md> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/ml-and-statistical-modeling/index.json> ] ;
     dct:hasVersion "0.1" ;
@@ -154,12 +154,12 @@
     rdfs:label "Point-cloud processing" ;
     dct:abstract "Point-cloud thinning, gridding and conversion to shapes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.point-cloud-processing> ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/point-cloud-processing/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/point-cloud-processing/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.point-cloud-processing> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/point-cloud-processing/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-11-24"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/ospd-activity-types/> ;
@@ -170,9 +170,12 @@
         "point-cloud-processing" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/point-cloud-processing/data.ttl> ;
+            prof:hasRole <https://ogcincubator.github.io/data> ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
@@ -180,12 +183,9 @@
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
-            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:format "text/turtle" ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/point-cloud-processing/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ] ;
+            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
     prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -212,9 +212,11 @@
     dcat:keyword "activity-type",
         "ospd",
         "raster-coverage-processing" ;
-    prof:hasResource [ dct:format "text/turtle" ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/raster-coverage-processing/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ],
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
@@ -225,11 +227,9 @@
             rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
             prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/raster-coverage-processing/data.ttl> ;
+            prof:hasRole <https://ogcincubator.github.io/data> ] ;
     prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -242,10 +242,10 @@
     rdfs:label "Spatial indexing" ;
     dct:abstract "Discrete global grid system (DGGS) indexing and conversion of geometries to grid cells."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/spatial-indexing/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.spatial-indexing> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/spatial-indexing/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/spatial-indexing/index.md> ] ;
     dct:hasVersion "0.1" ;
@@ -258,21 +258,21 @@
         "spatial-indexing" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
-            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
-            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:format "text/turtle" ;
             prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/spatial-indexing/data.ttl> ;
             prof:hasRole <https://ogcincubator.github.io/data> ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
             prof:hasRole role:validation ] ;
     prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
@@ -286,12 +286,12 @@
     rdfs:label "Terrain and hydrology" ;
     dct:abstract "Terrain derivatives (slope, hillshading, ruggedness and position indices) and hydrological analysis (flow direction and accumulation, watersheds, stream networks, wetness index)."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/terrain-and-hydrology/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/terrain-and-hydrology/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.terrain-and-hydrology> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.terrain-and-hydrology> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/terrain-and-hydrology/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-11-24"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/ospd-activity-types/> ;
@@ -301,6 +301,11 @@
         "ospd",
         "terrain-and-hydrology" ;
     prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
             prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
@@ -312,12 +317,7 @@
             prof:hasRole role:validation ],
         [ dct:format "text/turtle" ;
             prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/terrain-and-hydrology/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
-            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole <https://ogcincubator.github.io/data> ] ;
     prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -330,10 +330,10 @@
     rdfs:label "Vector geometry processing" ;
     dct:abstract "Operations and tests on vector geometries: buffers, hulls, envelopes, set operations, spatial predicates and extents (including the SQL/MM implementations)."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/vector-geometry-processing/index.md> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.vector-geometry-processing> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/vector-geometry-processing/index.md> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/vector-geometry-processing/index.json> ] ;
     dct:hasVersion "0.1" ;
@@ -346,22 +346,22 @@
         "vector-geometry-processing" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
-            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
             prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:format "text/turtle" ;
             prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/vector-geometry-processing/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ] ;
+            prof:hasRole <https://ogcincubator.github.io/data> ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
     prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -374,10 +374,10 @@
     rdfs:label "Workflow and scoring" ;
     dct:abstract "Workflow runs and scoring or classification activities used in the model-of-models and workflow examples."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/workflow-and-scoring/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.workflow-and-scoring> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/workflow-and-scoring/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/workflow-and-scoring/index.md> ] ;
     dct:hasVersion "0.1" ;
@@ -413,18 +413,18 @@
 
 <https://ogcincubator.github.io/ospd-activity-types/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N612caaec0ffb4e13a155cac189547cf0 ;
+    prov:wasAttributedTo _:Nf8c593e2626942a4af3e27e925f58937 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-11-24T11:27:53.307675"^^xsd:dateTime ;
-            prov:startedAtTime "2026-11-24T11:27:53.110683"^^xsd:dateTime ;
+            prov:endedAtTime "2026-11-24T11:34:40.821712"^^xsd:dateTime ;
+            prov:startedAtTime "2026-11-24T11:34:40.647134"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
                 [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:f9f21175ef39d9cb686d97a146440822583abfd7" ;
+                    dct:hasVersion "git:7b0745f39b27513689c20148a6abeb23b1f6f273" ;
                     rdfs:seeAlso <https://ogcincubator.github.io/ospd-activity-types/build/register.json> ] ;
-            prov:wasAssociatedWith _:N612caaec0ffb4e13a155cac189547cf0 ] .
+            prov:wasAssociatedWith _:Nf8c593e2626942a4af3e27e925f58937 ] .
 
 <https://ogcincubator.github.io/ospd-activity-types/> a skos:ConceptScheme,
         dcat:Catalog,
@@ -438,7 +438,7 @@ sub-block (profile of the root) per family of related activity types. Each famil
 definitions of its activity types as a data resource, which is uploaded to the OSPD Prez instance when
 the register is built.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-11-24T11:27:46.709547"^^xsd:dateTime ;
+    dct:modified "2026-11-24T11:34:35.211402"^^xsd:dateTime ;
     void:sparqlEndpoint <https://defs-hosted.opengis.net/fuseki-ospd/query> ;
     owl:imports <https://ogcincubator.github.io/registered-item-model/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> ;
@@ -453,14 +453,14 @@ the register is built.
         <bblocks://ogc.ospd.activity-type.vector-geometry-processing>,
         <bblocks://ogc.ospd.activity-type.workflow-and-scoring> ;
     skos:prefLabel "Building Blocks - OSPD Activity Types" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/register.json> ],
-        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
             ns1:relation <http://www.iana.org/assignments/relation/self> ;
             ns2:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/bblocks.jsonld> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/register.json> ],
         [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
             ns1:relation <http://www.iana.org/assignments/relation/self> ;
@@ -494,6 +494,9 @@ the register is built.
             rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
             prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/data.ttl> ;
+            prof:hasRole <https://ogcincubator.github.io/data> ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.rim.activity-type> ;
@@ -503,16 +506,13 @@ the register is built.
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
             prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:format "text/turtle" ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ] ;
+            prof:hasRole role:validation ] ;
     prof:isProfileOf <bblocks://ogc.rim.activity-type> ;
     bblocks:dependsOn <bblocks://ogc.rim.activity-type> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-_:N612caaec0ffb4e13a155cac189547cf0 a prov:Agent,
+_:Nf8c593e2626942a4af3e27e925f58937 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.6.0" ;

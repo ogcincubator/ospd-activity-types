@@ -4,6 +4,7 @@
   "itemIdentifier": "ogc.ospd.activity-type.information-extraction-and-retrieval",
   "name": "Information extraction and retrieval",
   "abstract": "Source acquisition, text metadata enrichment (entity extraction, geotagging, classification, normalization) and retrieval-augmented generation.",
+  "highlighted": true,
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",
