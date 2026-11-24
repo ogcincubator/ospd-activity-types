@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.ospd.activity-type.core - OSPD Activity Type",
       "bblockName": "OSPD Activity Type",
       "bblockId": "ogc.ospd.activity-type.core",
-      "generated": "2026-11-24T07:30:17.785239+00:00",
+      "generated": "2026-11-24T11:05:56.314733+00:00",
       "result": true,
       "items": [
         {
@@ -38,7 +38,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 4,
+                  "size": 5,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl kept as provided"
                 }
@@ -86,7 +86,7 @@
       "title": "Validation report for ogc.ospd.activity-type.earth-observation - Earth observation",
       "bblockName": "Earth observation",
       "bblockId": "ogc.ospd.activity-type.earth-observation",
-      "generated": "2026-11-24T07:30:17.871941+00:00",
+      "generated": "2026-11-24T11:05:56.390183+00:00",
       "result": true,
       "items": [
         {
@@ -114,7 +114,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 8,
+                  "size": 9,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl kept as provided"
                 }
@@ -126,12 +126,12 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/earth-observation/data.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/earth-observation/data.ttl\n - /github/workspace/_sources/core/data.ttl"
                 },
                 {
                   "op": "shacl-report",
                   "shaclFile": "_sources/core/shapes.shacl",
-                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA014 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nefd2f1b808e74e189321e883acea913db3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA015 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nefd2f1b808e74e189321e883acea913db3 ] .\n\n_:nefd2f1b808e74e189321e883acea913db3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
+                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA014 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n2b055d0a79ac423b95f7a931799cea4ab3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA015 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n2b055d0a79ac423b95f7a931799cea4ab3 ] .\n\n_:n2b055d0a79ac423b95f7a931799cea4ab3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
                   "isError": false,
                   "message": "Validation result for _sources/core/shapes.shacl: 2 warnings"
                 },
@@ -194,7 +194,7 @@
       "title": "Validation report for ogc.ospd.activity-type.information-extraction-and-retrieval - Information extraction and retrieval",
       "bblockName": "Information extraction and retrieval",
       "bblockId": "ogc.ospd.activity-type.information-extraction-and-retrieval",
-      "generated": "2026-11-24T07:30:17.923434+00:00",
+      "generated": "2026-11-24T11:05:56.431517+00:00",
       "result": true,
       "items": [
         {
@@ -272,7 +272,7 @@
       "title": "Validation report for ogc.ospd.activity-type.ml-and-statistical-modeling - Machine learning and statistical modeling",
       "bblockName": "Machine learning and statistical modeling",
       "bblockId": "ogc.ospd.activity-type.ml-and-statistical-modeling",
-      "generated": "2026-11-24T07:30:17.964552+00:00",
+      "generated": "2026-11-24T11:05:56.461829+00:00",
       "result": true,
       "items": [
         {
@@ -300,7 +300,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 10,
+                  "size": 11,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl kept as provided"
                 }
@@ -350,7 +350,7 @@
       "title": "Validation report for ogc.ospd.activity-type.point-cloud-processing - Point-cloud processing",
       "bblockName": "Point-cloud processing",
       "bblockId": "ogc.ospd.activity-type.point-cloud-processing",
-      "generated": "2026-11-24T07:30:18.003914+00:00",
+      "generated": "2026-11-24T11:05:56.489519+00:00",
       "result": true,
       "items": [
         {
@@ -390,7 +390,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/point-cloud-processing/data.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/point-cloud-processing/data.ttl\n - /github/workspace/_sources/core/data.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -428,7 +428,7 @@
       "title": "Validation report for ogc.ospd.activity-type.raster-coverage-processing - Raster and coverage processing",
       "bblockName": "Raster and coverage processing",
       "bblockId": "ogc.ospd.activity-type.raster-coverage-processing",
-      "generated": "2026-11-24T07:30:18.063751+00:00",
+      "generated": "2026-11-24T11:05:56.539121+00:00",
       "result": true,
       "items": [
         {
@@ -456,7 +456,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 14,
+                  "size": 15,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl kept as provided"
                 }
@@ -521,7 +521,7 @@
       "title": "Validation report for ogc.ospd.activity-type.spatial-indexing - Spatial indexing",
       "bblockName": "Spatial indexing",
       "bblockId": "ogc.ospd.activity-type.spatial-indexing",
-      "generated": "2026-11-24T07:30:18.106963+00:00",
+      "generated": "2026-11-24T11:05:56.567929+00:00",
       "result": true,
       "items": [
         {
@@ -566,7 +566,7 @@
                 {
                   "op": "shacl-report",
                   "shaclFile": "_sources/core/shapes.shacl",
-                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA036 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n1a426a41e7f541c8a769a52f1a93e07db3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA033 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n1a426a41e7f541c8a769a52f1a93e07db3 ] .\n\n_:n1a426a41e7f541c8a769a52f1a93e07db3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
+                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA036 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nd1455225614b4955a67f5104857edfc4b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA033 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nd1455225614b4955a67f5104857edfc4b3 ] .\n\n_:nd1455225614b4955a67f5104857edfc4b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
                   "isError": false,
                   "message": "Validation result for _sources/core/shapes.shacl: 2 warnings"
                 },
@@ -629,7 +629,7 @@
       "title": "Validation report for ogc.ospd.activity-type.terrain-and-hydrology - Terrain and hydrology",
       "bblockName": "Terrain and hydrology",
       "bblockId": "ogc.ospd.activity-type.terrain-and-hydrology",
-      "generated": "2026-11-24T07:30:18.158636+00:00",
+      "generated": "2026-11-24T11:05:56.608535+00:00",
       "result": true,
       "items": [
         {
@@ -669,12 +669,12 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/terrain-and-hydrology/data.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/terrain-and-hydrology/data.ttl\n - /github/workspace/_sources/core/data.ttl"
                 },
                 {
                   "op": "shacl-report",
                   "shaclFile": "_sources/core/shapes.shacl",
-                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA034 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n8586ed0da00d48528f0661c2bfbce031b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA035 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n8586ed0da00d48528f0661c2bfbce031b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA031 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n8586ed0da00d48528f0661c2bfbce031b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA030 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n8586ed0da00d48528f0661c2bfbce031b3 ] .\n\n_:n8586ed0da00d48528f0661c2bfbce031b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
+                  "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA031 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n3071202bbecf4bfd8e7a1ee2b3211456b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA035 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n3071202bbecf4bfd8e7a1ee2b3211456b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA030 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n3071202bbecf4bfd8e7a1ee2b3211456b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA034 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n3071202bbecf4bfd8e7a1ee2b3211456b3 ] .\n\n_:n3071202bbecf4bfd8e7a1ee2b3211456b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
                   "isError": false,
                   "message": "Validation result for _sources/core/shapes.shacl: 4 warnings"
                 },
@@ -767,7 +767,7 @@
       "title": "Validation report for ogc.ospd.activity-type.vector-geometry-processing - Vector geometry processing",
       "bblockName": "Vector geometry processing",
       "bblockId": "ogc.ospd.activity-type.vector-geometry-processing",
-      "generated": "2026-11-24T07:30:18.220637+00:00",
+      "generated": "2026-11-24T11:05:56.660215+00:00",
       "result": true,
       "items": [
         {
@@ -795,7 +795,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 10,
+                  "size": 11,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl kept as provided"
                 }
@@ -807,7 +807,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/vector-geometry-processing/data.ttl"
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/vector-geometry-processing/data.ttl\n - /github/workspace/_sources/core/data.ttl"
                 },
                 {
                   "op": "shacl-report",
@@ -845,7 +845,7 @@
       "title": "Validation report for ogc.ospd.activity-type.workflow-and-scoring - Workflow and scoring",
       "bblockName": "Workflow and scoring",
       "bblockId": "ogc.ospd.activity-type.workflow-and-scoring",
-      "generated": "2026-11-24T07:30:18.303480+00:00",
+      "generated": "2026-11-24T11:05:56.684756+00:00",
       "result": true,
       "items": [
         {
@@ -873,7 +873,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 8,
+                  "size": 9,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl kept as provided"
                 }

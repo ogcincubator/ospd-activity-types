@@ -217,7 +217,8 @@
   "name": "Building Blocks - OSPD Activity Types",
   "abstract": "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under\nstable `https://w3id.org/ogc/ospd/activity-type/` URIs and grouped into families of related types.\n",
   "description": "A root *OSPD Activity type* block, a profile of the Registered Item Model's activity-type block, and one\nsub-block (profile of the root) per family of related activity types. Each family block carries the Turtle\ndefinitions of its activity types as a data resource, which is uploaded to the OSPD Prez instance when\nthe register is built.\n",
-  "modified": "2026-11-24T07:30:16.344068",
+  "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
+  "modified": "2026-11-24T11:05:54.383029",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"61523b7930e440b7e6e6bc03cb1b104d5d01f3f5",
@@ -266,7 +267,7 @@
     {
       "itemIdentifier": "ogc.ospd.activity-type.core",
       "name": "OSPD Activity Type",
-      "abstract": "Root of the OSPD activity types: the concept scheme, catalog and family collections under https://w3id.org/ogc/ospd/activity-type/.",
+      "abstract": "Root of the OSPD activity types: the catalog listing one concept scheme per family, under https://w3id.org/ogc/ospd/activity-type/.",
       "status": "under-development",
       "dateTimeAddition": "2026-11-23T00:00:00Z",
       "itemClass": "model",
@@ -293,7 +294,7 @@
           "role": "data",
           "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/data.ttl",
           "format": "text/turtle",
-          "title": "OSPD activity types concept scheme, catalog and family collections"
+          "title": "OSPD activity types catalog"
         }
       ],
       "dateOfLastChange": "2026-11-24",

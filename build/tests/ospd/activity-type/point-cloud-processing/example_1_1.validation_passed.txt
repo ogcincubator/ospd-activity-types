@@ -1,5 +1,5 @@
 Validation report for ogc.ospd.activity-type.point-cloud-processing - Point-cloud processing
-Generated 2026-11-24T07:30:18.003836+00:00
+Generated 2026-11-24T11:05:56.489438+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl kept as provided
@@ -7,8 +7,8 @@ Output Turtle example_1_1.ttl kept as provided
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - /github/workspace/_sources/core/data.ttl
  - /github/workspace/_sources/point-cloud-processing/data.ttl
+ - /github/workspace/_sources/core/data.ttl
 Validation result for _sources/core/shapes.shacl: no results
 Focus nodes for _sources/core/shapes.shacl:
  - Shape ex:ActivityTypeShape: ospd:pointcloud-point-cloud-thinning

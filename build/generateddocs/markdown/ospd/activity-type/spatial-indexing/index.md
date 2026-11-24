@@ -35,6 +35,8 @@ This family has 3 activity types. It is a profile of the OSPD Activity Type core
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ospd: a skos:ConceptScheme .
+
 ospd:GA029 a skos:Concept,
         acttype:ActivityType ;
     dcterms:modified "2026-09-17"^^xsd:date ;
@@ -43,14 +45,12 @@ ospd:GA029 a skos:Concept,
     owl:versionInfo "2" ;
     skos:broader ospd:GA033 ;
     skos:definition "Quantizes input spatial positions or geometries to cells at a specified resolution in a Discrete Global Grid System and returns the corresponding cell identifiers."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> ;
     skos:prefLabel "DGGS cell indexing"@en ;
     skos:related ospd:GA027,
         ospd:GA028 ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
-
-ospd: a skos:ConceptScheme .
 
 ```
 

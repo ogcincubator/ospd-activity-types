@@ -5,6 +5,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ospd: a skos:ConceptScheme .
+
 ospd:climate-downscaling a skos:Concept,
         acttype:ActivityType ;
     dcterms:modified "2026-10-15"^^xsd:date ;
@@ -12,7 +14,6 @@ ospd:climate-downscaling a skos:Concept,
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:closeMatch ospd:GA009 ;
     skos:definition "Transforms georeferenced climate fields to a finer-resolution target grid."@en ;
-    skos:inScheme ospd: ;
-    skos:prefLabel "Climate-variable downscaling"@en .
-
-ospd: a skos:ConceptScheme .
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    skos:prefLabel "Climate-variable downscaling"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> .

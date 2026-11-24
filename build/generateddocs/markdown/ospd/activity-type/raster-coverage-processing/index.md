@@ -68,6 +68,8 @@ This family has 35 activity types. It is a profile of the OSPD Activity Type cor
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ospd: a skos:ConceptScheme .
+
 ospd:GA008 a skos:Concept,
         acttype:ActivityType ;
     dcterms:modified "2026-10-09"^^xsd:date ;
@@ -76,12 +78,11 @@ ospd:GA008 a skos:Concept,
     owl:versionInfo "2" ;
     skos:closeMatch ospd:raster-band-math ;
     skos:definition "Performs a calculation over imagery bands and returns the resulting raster using the specified band arithmetic."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Band Calculation"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
-
-ospd: a skos:ConceptScheme .
 
 ```
 

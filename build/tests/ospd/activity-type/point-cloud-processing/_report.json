@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.ospd.activity-type.point-cloud-processing - Point-cloud processing",
   "bblockName": "Point-cloud processing",
   "bblockId": "ogc.ospd.activity-type.point-cloud-processing",
-  "generated": "2026-11-24T07:30:18.003914+00:00",
+  "generated": "2026-11-24T11:05:56.489519+00:00",
   "result": true,
   "items": [
     {
@@ -42,7 +42,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/point-cloud-processing/data.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/point-cloud-processing/data.ttl\n - /github/workspace/_sources/core/data.ttl"
             },
             {
               "op": "shacl-report",

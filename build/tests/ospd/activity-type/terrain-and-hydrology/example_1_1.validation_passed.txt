@@ -1,5 +1,5 @@
 Validation report for ogc.ospd.activity-type.terrain-and-hydrology - Terrain and hydrology
-Generated 2026-11-24T07:30:18.158542+00:00
+Generated 2026-11-24T11:05:56.608447+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl kept as provided
@@ -7,8 +7,8 @@ Output Turtle example_1_1.ttl kept as provided
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - /github/workspace/_sources/core/data.ttl
  - /github/workspace/_sources/terrain-and-hydrology/data.ttl
+ - /github/workspace/_sources/core/data.ttl
 Validation result for _sources/core/shapes.shacl: 4 warnings
 
 ** Validation warning **

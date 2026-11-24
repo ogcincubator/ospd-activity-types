@@ -16,7 +16,7 @@ the register is built.
 
 **Type:** model
 
-Root of the OSPD activity types: the concept scheme, catalog and family collections under https://w3id.org/ogc/ospd/activity-type/.
+Root of the OSPD activity types: the catalog listing one concept scheme per family, under https://w3id.org/ogc/ospd/activity-type/.
 
 ### `ogc.ospd.activity-type.earth-observation` — Earth observation
 

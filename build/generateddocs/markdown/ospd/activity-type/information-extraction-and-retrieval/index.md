@@ -47,6 +47,8 @@ This family has 13 activity types. It is a profile of the OSPD Activity Type cor
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ospd: a skos:ConceptScheme .
+
 ospd:GA042 a skos:Concept,
         acttype:ActivityType ;
     dcterms:modified "2026-09-23"^^xsd:date ;
@@ -56,7 +58,7 @@ ospd:GA042 a skos:Concept,
     owl:versionInfo "v1" ;
     skos:broader ospd:GA048 ;
     skos:definition "Text → commodity-taxonomy classifier (dictionary matcher over normalized labels). Domain-specific to agricultural / commodity data."@en ;
-    skos:inScheme ospd: ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:prefLabel "Commodity Classification"@en ;
     skos:related ospd:GA043,
         ospd:GA044 ;
@@ -64,8 +66,6 @@ ospd:GA042 a skos:Concept,
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ],
         [ prov:agent [ foaf:name "Voyager Search" ] ;
             prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
-
-ospd: a skos:ConceptScheme .
 
 ```
 

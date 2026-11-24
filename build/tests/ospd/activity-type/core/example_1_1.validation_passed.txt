@@ -1,5 +1,5 @@
 Validation report for ogc.ospd.activity-type.core - OSPD Activity Type
-Generated 2026-11-24T07:30:17.785155+00:00
+Generated 2026-11-24T11:05:56.314655+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl kept as provided

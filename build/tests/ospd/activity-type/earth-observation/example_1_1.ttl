@@ -3,12 +3,13 @@
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+ospd: a skos:ConceptScheme .
+
 ospd:workflow-copernicus a skos:Concept,
         acttype:ActivityType ;
     dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/workflow-copernicus> ;
     skos:definition "Finds Sentinel-2 products on Copernicus using filtering parameters and performs band calculation on retrieved Sentinel-2 products to evaluate algae bloom for water quality assessment."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus> ;
-    skos:inScheme ospd: ;
-    skos:prefLabel "Algae bloom for water quality assessment on Sentinel-2 imagery offered by Copernicus platform."@en .
-
-ospd: a skos:ConceptScheme .
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    skos:prefLabel "Algae bloom for water quality assessment on Sentinel-2 imagery offered by Copernicus platform."@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .

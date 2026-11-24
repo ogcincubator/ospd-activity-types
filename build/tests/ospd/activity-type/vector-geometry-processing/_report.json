@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.ospd.activity-type.vector-geometry-processing - Vector geometry processing",
   "bblockName": "Vector geometry processing",
   "bblockId": "ogc.ospd.activity-type.vector-geometry-processing",
-  "generated": "2026-11-24T07:30:18.220637+00:00",
+  "generated": "2026-11-24T11:05:56.660215+00:00",
   "result": true,
   "items": [
     {
@@ -30,7 +30,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 10,
+              "size": 11,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl kept as provided"
             }
@@ -42,7 +42,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core/data.ttl\n - /github/workspace/_sources/vector-geometry-processing/data.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/vector-geometry-processing/data.ttl\n - /github/workspace/_sources/core/data.ttl"
             },
             {
               "op": "shacl-report",

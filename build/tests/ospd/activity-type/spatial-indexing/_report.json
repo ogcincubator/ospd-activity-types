@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.ospd.activity-type.spatial-indexing - Spatial indexing",
   "bblockName": "Spatial indexing",
   "bblockId": "ogc.ospd.activity-type.spatial-indexing",
-  "generated": "2026-11-24T07:30:18.106963+00:00",
+  "generated": "2026-11-24T11:05:56.567929+00:00",
   "result": true,
   "items": [
     {
@@ -47,7 +47,7 @@
             {
               "op": "shacl-report",
               "shaclFile": "_sources/core/shapes.shacl",
-              "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA036 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n1a426a41e7f541c8a769a52f1a93e07db3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA033 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n1a426a41e7f541c8a769a52f1a93e07db3 ] .\n\n_:n1a426a41e7f541c8a769a52f1a93e07db3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
+              "graph": "@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA036 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nd1455225614b4955a67f5104857edfc4b3 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode ospd:GA033 ;\n            sh:resultMessage \"An activity type should have a skos:definition.\" ;\n            sh:resultPath skos:definition ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:nd1455225614b4955a67f5104857edfc4b3 ] .\n\n_:nd1455225614b4955a67f5104857edfc4b3 sh:message \"An activity type should have a skos:definition.\" ;\n    sh:minCount 1 ;\n    sh:path skos:definition ;\n    sh:severity sh:Warning .\n\n",
               "isError": false,
               "message": "Validation result for _sources/core/shapes.shacl: 2 warnings"
             },

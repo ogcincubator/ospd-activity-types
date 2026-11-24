@@ -45,8 +45,8 @@
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/vector-geometry-processing/example_1_1.ttl",
-          "sizeBytes": 755,
-          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd:area a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;\n    dcterms:source [ ],\n        [ ] ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    skos:definition \"The area of this Surface, as measured in the spatial reference system of this Surface.\"@en ;\n    skos:inScheme ospd: ;\n    skos:prefLabel \"Area\"@en .\n\nospd: a skos:ConceptScheme .\n"
+          "sizeBytes": 929,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd: a skos:ConceptScheme .\n\nospd:area a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;\n    dcterms:source [ ],\n        [ ] ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    skos:definition \"The area of this Surface, as measured in the spatial reference system of this Surface.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;\n    skos:prefLabel \"Area\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .\n"
         }
       ]
     }

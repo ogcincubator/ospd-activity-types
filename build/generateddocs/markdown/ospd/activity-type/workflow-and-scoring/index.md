@@ -33,15 +33,16 @@ This family has 3 activity types. It is a profile of the OSPD Activity Type core
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+ospd: a skos:ConceptScheme .
+
 ospd:ScoringAndProgressTracking a skos:Concept,
         acttype:ActivityType ;
     dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;
     rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;
     skos:definition "Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded)."@en ;
-    skos:inScheme ospd: ;
-    skos:prefLabel "Scoring and progress tracking"@en .
-
-ospd: a skos:ConceptScheme .
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    skos:prefLabel "Scoring and progress tracking"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> .
 
 ```
 

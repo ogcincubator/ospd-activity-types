@@ -45,8 +45,8 @@
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/workflow-and-scoring/example_1_1.ttl",
-          "sizeBytes": 832,
-          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd:ScoringAndProgressTracking a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;\n    rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;\n    skos:definition \"Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded).\"@en ;\n    skos:inScheme ospd: ;\n    skos:prefLabel \"Scoring and progress tracking\"@en .\n\nospd: a skos:ConceptScheme .\n"
+          "sizeBytes": 994,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\nospd: a skos:ConceptScheme .\n\nospd:ScoringAndProgressTracking a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;\n    rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;\n    skos:definition \"Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded).\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;\n    skos:prefLabel \"Scoring and progress tracking\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> .\n"
         }
       ]
     }

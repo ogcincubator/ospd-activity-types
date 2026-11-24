@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.ospd.activity-type.raster-coverage-processing - Raster and coverage processing",
   "bblockName": "Raster and coverage processing",
   "bblockId": "ogc.ospd.activity-type.raster-coverage-processing",
-  "generated": "2026-11-24T07:30:18.063751+00:00",
+  "generated": "2026-11-24T11:05:56.539121+00:00",
   "result": true,
   "items": [
     {
@@ -30,7 +30,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 14,
+              "size": 15,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl kept as provided"
             }

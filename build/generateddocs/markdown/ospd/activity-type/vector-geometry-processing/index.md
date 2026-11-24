@@ -72,6 +72,8 @@ This family has 42 activity types. It is a profile of the OSPD Activity Type cor
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+ospd: a skos:ConceptScheme .
+
 ospd:area a skos:Concept,
         acttype:ActivityType ;
     dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;
@@ -79,10 +81,9 @@ ospd:area a skos:Concept,
         [ ] ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "The area of this Surface, as measured in the spatial reference system of this Surface."@en ;
-    skos:inScheme ospd: ;
-    skos:prefLabel "Area"@en .
-
-ospd: a skos:ConceptScheme .
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
+    skos:prefLabel "Area"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .
 
 ```
 
