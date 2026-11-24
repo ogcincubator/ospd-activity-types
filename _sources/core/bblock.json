@@ -11,6 +11,7 @@
     "provenance"
   ],
   "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.rim.activity-type",
   "shaclShapes": [
     "shapes.shacl"
   ],

@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -14,7 +15,11 @@ ospd:crop a skos:Concept,
     skos:definition "Cloud-native windowed read of one Sentinel-2 COG band asset of a STAC item, cropped to the area of interest, whose CRS is given by `epsg`; the output keeps the CRS of the asset."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/crop> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    skos:prefLabel "Crop a Sentinel-2 COG band to an area of interest"@en .
+    skos:prefLabel "Crop a Sentinel-2 COG band to an area of interest"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/crop"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:download-band a skos:Concept,
         acttype:ActivityType ;
@@ -23,7 +28,11 @@ ospd:download-band a skos:Concept,
     skos:definition "Downloads one Sentinel-2 band over a bounding box from a STAC Item."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/download-band> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    skos:prefLabel "Download one Sentinel-2 band over a bounding box"@en .
+    skos:prefLabel "Download one Sentinel-2 band over a bounding box"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/download-band"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:download-band-sentinel2-stac-item a skos:Concept,
         acttype:ActivityType ;
@@ -32,7 +41,11 @@ ospd:download-band-sentinel2-stac-item a skos:Concept,
     skos:definition "Downloads the GeoTiff band from the Sentinel-2 product STAC Item using the requested band selection criteria. It is assumed that the referenced STAC Item contains the desired GeoTiff Asset with the 'common band name' associated to the band (see https://github.com/stac-extensions/eo#common-band-names)."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/download-band-sentinel2-stac-item> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    skos:prefLabel "Downloads Sentinel-2 GeoTiff from STAC Item."@en .
+    skos:prefLabel "Downloads Sentinel-2 GeoTiff from STAC Item."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/download-band-sentinel2-stac-item"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:select-products-sentinel2 a skos:Concept,
         acttype:ActivityType ;
@@ -41,7 +54,11 @@ ospd:select-products-sentinel2 a skos:Concept,
     skos:definition "Searches a catalog for Sentinel-2 products using filtering parameters and returns all matched locations. Returned matches will be either S3 or direct HTTPS references depending on the catalog."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/select-products-sentinel2> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    skos:prefLabel "Searches the specified catalog for Sentinel-2 products matching filtering criteria."@en .
+    skos:prefLabel "Searches the specified catalog for Sentinel-2 products matching filtering criteria."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/select-products-sentinel2"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:select-scene a skos:Concept,
         acttype:ActivityType ;
@@ -50,7 +67,11 @@ ospd:select-scene a skos:Concept,
     skos:definition "Selects the least cloudy Sentinel-2 L2A scene over a bounding box within a time window."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/select-scene> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    skos:prefLabel "Select the least cloudy Sentinel-2 L2A scene"@en .
+    skos:prefLabel "Select the least cloudy Sentinel-2 L2A scene"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/select-scene"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA016 a skos:Concept,
         acttype:ActivityType ;
@@ -67,7 +88,11 @@ ospd:GA016 a skos:Concept,
         ospd:GA015 ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA016"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:detect-water-body a skos:Concept,
         acttype:ActivityType ;
@@ -77,7 +102,11 @@ ospd:detect-water-body a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/detect-water-body> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Water body detection based on NDWI and otsu threshold"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/detect-water-body"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:download-band-sentinel2-product-safe a skos:Concept,
         acttype:ActivityType ;
@@ -86,7 +115,11 @@ ospd:download-band-sentinel2-product-safe a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/download-band-sentinel2-product-safe> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Downloads Copernicus products."@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/download-band-sentinel2-product-safe"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:estimate-biomass a skos:Concept,
         acttype:ActivityType ;
@@ -95,7 +128,11 @@ ospd:estimate-biomass a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/estimate-biomass> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Mangrove detection, allometric biomass and IPCC carbon stock"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/estimate-biomass"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:export-stac a skos:Concept,
         acttype:ActivityType ;
@@ -104,7 +141,11 @@ ospd:export-stac a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/export-stac> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Plot the biomass map and export a STAC catalog"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/export-stac"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:mangrove a skos:Concept,
         acttype:ActivityType ;
@@ -113,7 +154,11 @@ ospd:mangrove a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove/mangrove> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Mangrove biomass and carbon estimation"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/mangrove"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:mangrove-workflow-steps a skos:Concept,
         acttype:ActivityType ;
@@ -123,7 +168,11 @@ ospd:mangrove-workflow-steps a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/mangrove-workflow-steps> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Mangrove Biomass Workflow (step notebooks)"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/mangrove-workflow-steps"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:parse-aoi-steps a skos:Concept,
         acttype:ActivityType ;
@@ -133,7 +182,11 @@ ospd:parse-aoi-steps a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/parse-aoi-steps> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Parse area of interest"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/parse-aoi-steps"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:stac a skos:Concept,
         acttype:ActivityType ;
@@ -142,7 +195,11 @@ ospd:stac a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/stac> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Assemble a STAC catalog of detected water bodies"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/stac"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:workflow-copernicus a skos:Concept,
         acttype:ActivityType ;
@@ -151,7 +208,11 @@ ospd:workflow-copernicus a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Algae bloom for water quality assessment on Sentinel-2 imagery offered by Copernicus platform."@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/workflow-copernicus"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:workflow-copernicus-process a skos:Concept,
         acttype:ActivityType ;
@@ -160,7 +221,11 @@ ospd:workflow-copernicus-process a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus-process> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Processing on Sentinel-2 bands to evaluate algae bloom."@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/workflow-copernicus-process"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:workflow-earth-search a skos:Concept,
         acttype:ActivityType ;
@@ -169,7 +234,11 @@ ospd:workflow-earth-search a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-earth-search> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Algae bloom for water quality assessment on Sentinel-2 L2A imagery offered by Earth-Search platform."@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/workflow-earth-search"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:workflow-earth-search-process a skos:Concept,
         acttype:ActivityType ;
@@ -178,7 +247,11 @@ ospd:workflow-earth-search-process a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-earth-search-process> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Processing on Sentinel-2 L2A bands to evaluate algae bloom."@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/workflow-earth-search-process"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA014 a skos:Concept,
         acttype:ActivityType ;
@@ -189,7 +262,11 @@ ospd:GA014 a skos:Concept,
     skos:prefLabel "Cloud cover"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA014"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA015 a skos:Concept,
         acttype:ActivityType ;
@@ -200,7 +277,11 @@ ospd:GA015 a skos:Concept,
     skos:prefLabel "Cloud mask distance"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA015"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:mangrove-workflow a skos:Concept,
         acttype:ActivityType ;
@@ -209,7 +290,11 @@ ospd:mangrove-workflow a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove/mangrove-workflow> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Mangrove Biomass Workflow"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/mangrove-workflow"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:parse-aoi a skos:Concept,
         acttype:ActivityType ;
@@ -218,7 +303,11 @@ ospd:parse-aoi a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove/parse-aoi> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Parse area of interest"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/parse-aoi"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:water-bodies a skos:Concept,
         acttype:ActivityType ;
@@ -227,7 +316,11 @@ ospd:water-bodies a skos:Concept,
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/water-bodies> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Water bodies detection based on NDWI and otsu threshold"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/water-bodies"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:product-selection a skos:Concept,
         acttype:ActivityType ;
@@ -239,7 +332,11 @@ ospd:product-selection a skos:Concept,
     skos:definition "Selects, from a catalogue of Earth observation products, those of a collection whose footprint intersects an area of interest and whose acquisition time falls within a time interval, possibly filtered further on their metadata, such as their cloud cover."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Product selection"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/product-selection"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:band-retrieval a skos:Concept,
         acttype:ActivityType ;
@@ -250,7 +347,11 @@ ospd:band-retrieval a skos:Concept,
     skos:definition "Retrieves one band, one range component, of an Earth observation product as a raster, over the whole product or over an area of interest, with the values the product provides, possibly converted to physical units by the scale and offset the product declares."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     skos:prefLabel "Band retrieval"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/band-retrieval"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> a skos:ConceptScheme ;
     skos:definition "Earth-observation data access and applications: Sentinel-2 band retrieval and product selection, cloud and best-available-pixel handling, and the water-bodies, algae-bloom and mangrove-biomass workflows."@en ;

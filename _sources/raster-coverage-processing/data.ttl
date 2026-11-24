@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -18,7 +19,11 @@ ospd:GA012 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Soil-adjusted vegetation index (SAVI)"@en ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA012"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA013 a skos:Concept,
         acttype:ActivityType ;
@@ -31,7 +36,11 @@ ospd:GA013 a skos:Concept,
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "NDVI"@en ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA013"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:band-math a skos:Concept,
         acttype:ActivityType ;
@@ -39,7 +48,11 @@ ospd:band-math a skos:Concept,
     skos:broader ospd:raster-band-math ;
     skos:definition "This application performs a mathematical operation on several multi-band images and outputs the result into a monoband image. The given expression is computed at each pixel position. Evaluation of the mathematical formula is done by the muParser library.The formula can be written using:* numerical values ( 2.3, -5, 3.1e4, ...)* variables containing pixel values (e.g. ``im2b3`` is the pixel value in 2nd image, 3rd band)* binary operators: * ``+`` addition, ``-`` subtraction, ``*`` multiplication, ``/`` division * ``^`` raise x to the power of y * ``"@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Outputs a monoband image which is the result of a mathematical operation on several multi-band images."@en .
+    skos:prefLabel "Outputs a monoband image which is the result of a mathematical operation on several multi-band images."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/band-math"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:band-math-multiband a skos:Concept,
         acttype:ActivityType ;
@@ -47,7 +60,11 @@ ospd:band-math-multiband a skos:Concept,
     skos:broader ospd:raster-band-math-multiband ;
     skos:definition "This application performs a mathematical operation on several multi-band images and outputs the result into an image (multi- or mono-band, as opposed to the BandMath OTB-application). The mathematical formula is done by the muParserX library.The list of features and the syntax of muParserX is available at [1].As opposed to muParser (and thus the BandMath OTB-application [2]), muParserX supports vector expressions which allows outputting multi-band images.Hereafter is a brief reference of the muParserX syntaxFundamentals------------The formula can be written using:* numerical values ( 2.3, -5, 3.1e4, ...)* variables containing pixel values (please, note the indexing of inputs from 1 to N). Examples for the first input image: * ``im1`` a pixel from 1st input, made of n components (n bands) * ``im1b2`` the 2nd component of a pixel from 1st input (band index is 1-based) * ``im1b2N3x4`` a 3x4 pixels Neighbourhood of a pixel the 2nd component of a pixel from the 1st input * ``im1PhyX`` horizontal (X-axis) spacing of the 1st input. * ``im1PhyY`` vertical (Y-axis) spacing of the 1st input input. * ``im1b2Mean`` mean of the 2nd component of the 1st input (global statistics) * ``im1b2Mini`` minimum of the 2nd component of the 1st input (global statistics) * ``im1b2Maxi`` maximum of the 2nd component of the 1st input (global statistics) * ``im1b2Sum`` sum of the 2nd component of the 1st input (global statistics) * ``im1b2Var`` variance of the 2nd component of the 1st input (global statistics) * ``idxX`` and ``idxY`` are the indices of the current pixel (generic variables)* binary operators: * ``+`` addition, ``-`` subtraction, ``*`` multiplication, ``/`` division * ``^`` raise x to the power of y * ``"@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "This application performs mathematical operations on several multiband images."@en .
+    skos:prefLabel "This application performs mathematical operations on several multiband images."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/band-math-multiband"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:calculate-band a skos:Concept,
         acttype:ActivityType ;
@@ -56,7 +73,11 @@ ospd:calculate-band a skos:Concept,
     skos:definition "Performs a calculation over JPEG bands and returns the resulting GeoTiff."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/calculate-band> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Performs a calculation with bands."@en .
+    skos:prefLabel "Performs a calculation with bands."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/calculate-band"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:calculate-indices a skos:Concept,
         acttype:ActivityType ;
@@ -65,7 +86,11 @@ ospd:calculate-indices a skos:Concept,
     skos:definition "Computes NDVI, NDWI and SAVI from Sentinel-2 red, green and NIR bands."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/calculate-indices> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Compute NDVI, NDWI and SAVI"@en .
+    skos:prefLabel "Compute NDVI, NDWI and SAVI"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/calculate-indices"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:extent a skos:Concept,
         acttype:ActivityType ;
@@ -73,7 +98,11 @@ ospd:extent a skos:Concept,
     skos:broader ospd:raster-extent ;
     skos:definition "Build a vector data containing the image envelope polygon. Useful for some projection, you can set the polygon with more points with the sr parameter. This filter supports user-specified output projection. If no projection is defined, the standard WGS84 projection will be used."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Extracts an image envelope."@en .
+    skos:prefLabel "Extracts an image envelope."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/extent"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:extract-roi a skos:Concept,
         acttype:ActivityType ;
@@ -81,7 +110,11 @@ ospd:extract-roi a skos:Concept,
     skos:broader ospd:raster-crop ;
     skos:definition "This application extracts a Region Of Interest with user parameters. There are four mode of extraction. The standard mode allows the user to enter one point (upper left corner of the region to extract) and a size. The extent mode needs two points (upper left corner and lower right) and the radius mode need the center of the region and the radius: it will extract the rectangle containing the circle defined and limited by the image dimension. The fit mode needs a reference image or vector and the dimension of the extracted region will be the same as the extent of the reference. Different units are available such as pixel, image physical space or longitude and latitude."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Extract a ROI defined by the user."@en .
+    skos:prefLabel "Extract a ROI defined by the user."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/extract-roi"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:format-conversion a skos:Concept,
         acttype:ActivityType ;
@@ -89,7 +122,11 @@ ospd:format-conversion a skos:Concept,
     skos:broader ospd:raster-format-conversion ;
     skos:definition "http://www.gdal.org/gdal_translate.html"@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Convert raster data from one format to another."@en .
+    skos:prefLabel "Convert raster data from one format to another."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/format-conversion"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:norm-diff a skos:Concept,
         acttype:ActivityType ;
@@ -98,7 +135,11 @@ ospd:norm-diff a skos:Concept,
     skos:definition "Computes the normalized difference index ((A-B)/(A+B)) of two co-registered rasters."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/norm-diff> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Normalized difference between two rasters"@en .
+    skos:prefLabel "Normalized difference between two rasters"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/norm-diff"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:otsu a skos:Concept,
         acttype:ActivityType ;
@@ -107,7 +148,11 @@ ospd:otsu a skos:Concept,
     skos:definition "Thresholds a single-band raster into a binary mask using Otsu's method."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/otsu> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Otsu binary threshold"@en .
+    skos:prefLabel "Otsu binary threshold"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/otsu"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:plot-image a skos:Concept,
         acttype:ActivityType ;
@@ -116,7 +161,11 @@ ospd:plot-image a skos:Concept,
     skos:definition "Applies the specified color mapping with scaled bins to a geospatial image."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/plot-image> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Plots an image with colors."@en .
+    skos:prefLabel "Plots an image with colors."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/plot-image"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-radiometric-index a skos:Concept,
         acttype:ActivityType ;
@@ -124,7 +173,11 @@ ospd:raster-radiometric-index a skos:Concept,
     skos:broader ospd:radiometric-index ;
     skos:definition "This application computes radiometric indices using the relevant channels of the input image. The output is a multi band image into which each channel is one of the selected indices."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Compute radiometric indices."@en .
+    skos:prefLabel "Compute radiometric indices."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-radiometric-index"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:reproject-band a skos:Concept,
         acttype:ActivityType ;
@@ -133,7 +186,11 @@ ospd:reproject-band a skos:Concept,
     skos:definition "Reprojects a raster onto a regular grid covering a bounding box."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/reproject-band> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Reproject a raster onto a regular grid"@en .
+    skos:prefLabel "Reproject a raster onto a regular grid"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/reproject-band"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:reproject-image a skos:Concept,
         acttype:ActivityType ;
@@ -142,7 +199,11 @@ ospd:reproject-image a skos:Concept,
     skos:definition "Performs a reprojection over image bands and returns the resulting GeoTiff."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/reproject-image> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "Performs image reprojection."@en .
+    skos:prefLabel "Performs image reprojection."@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/reproject-image"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:reprojection a skos:Concept,
         acttype:ActivityType ;
@@ -150,7 +211,11 @@ ospd:reprojection a skos:Concept,
     skos:broader ospd:raster-reprojection ;
     skos:definition "The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is \"raw\" with control information."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
-    skos:prefLabel "GDAL Warp Tool"@en .
+    skos:prefLabel "GDAL Warp Tool"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/reprojection"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA010 a skos:Concept,
         acttype:ActivityType ;
@@ -160,7 +225,11 @@ ospd:GA010 a skos:Concept,
     skos:definition "A Geoprocessing Activity that enhances the spatial resolution of raster imagery."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "SEN2SR"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA010"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA011 a skos:Concept,
         acttype:ActivityType ;
@@ -171,7 +240,11 @@ ospd:GA011 a skos:Concept,
     skos:definition "A Geoprocessing Activity that combines multiple raster tiles into a single raster dataset."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Mosaic"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA011"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA018 a skos:Concept,
         acttype:ActivityType ;
@@ -185,7 +258,11 @@ ospd:GA018 a skos:Concept,
     skos:prefLabel "Reproject"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA018"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA026 a skos:Concept,
         acttype:ActivityType ;
@@ -200,7 +277,11 @@ ospd:GA026 a skos:Concept,
     skos:related ospd:GA025,
         ospd:GA028 ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA026"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:ZonalStatistics a skos:Concept,
         acttype:ActivityType ;
@@ -210,7 +291,11 @@ ospd:ZonalStatistics a skos:Concept,
     skos:definition "Aggregates a gridded source per zone, skipping nodata cells."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Zonal statistics"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/ZonalStatistics"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA027 a skos:Concept,
         acttype:ActivityType ;
@@ -225,7 +310,11 @@ ospd:GA027 a skos:Concept,
     skos:related ospd:GA028,
         ospd:GA036 ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA027"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA028 a skos:Concept,
         acttype:ActivityType ;
@@ -240,7 +329,11 @@ ospd:GA028 a skos:Concept,
     skos:related ospd:GA026,
         ospd:GA027 ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA028"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:otsu-thresholding a skos:Concept,
         acttype:ActivityType ;
@@ -249,7 +342,11 @@ ospd:otsu-thresholding a skos:Concept,
     skos:definition "Divides the cells of a single-band raster into two classes at the threshold computed from the histogram of the cell values by Otsu's method, which maximises the variance between the two classes, and returns the cells of the upper class as a binary mask."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Otsu thresholding"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/otsu-thresholding"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-band-math-multiband a skos:Concept,
         acttype:ActivityType ;
@@ -260,7 +357,11 @@ ospd:raster-band-math-multiband a skos:Concept,
     skos:definition "Evaluates a user-supplied, possibly vector-valued mathematical expression per pixel across one or more input rasters, producing an output raster with one or more bands."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster band math (multi-band output)"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-band-math-multiband"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-crop a skos:Concept,
         acttype:ActivityType ;
@@ -270,7 +371,11 @@ ospd:raster-crop a skos:Concept,
     skos:definition "Extracts the pixels of a raster coverage that fall within a region of interest."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster crop"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-crop"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-extent a skos:Concept,
         acttype:ActivityType ;
@@ -280,7 +385,11 @@ ospd:raster-extent a skos:Concept,
     skos:definition "Computes the bounding envelope of a raster coverage, as a vector polygon."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster extent"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-extent"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-format-conversion a skos:Concept,
         acttype:ActivityType ;
@@ -290,7 +399,11 @@ ospd:raster-format-conversion a skos:Concept,
     skos:definition "Re-encodes a raster coverage into another raster format, without altering its content."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster format conversion"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-format-conversion"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-rendering a skos:Concept,
         acttype:ActivityType ;
@@ -300,7 +413,11 @@ ospd:raster-rendering a skos:Concept,
     skos:definition "Depicts a raster as an image for viewing, giving each cell a colour from a colour map that associates values, or classes of values, with colours."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster rendering"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-rendering"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-resampling a skos:Concept,
         acttype:ActivityType ;
@@ -310,7 +427,11 @@ ospd:raster-resampling a skos:Concept,
     skos:definition "Changes the cell size of a raster coverage, or its number of cells along each axis, over the same extent and in the same coordinate reference system, computing each new cell value from the input cells by an interpolation method."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster resampling"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-resampling"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA008 a skos:Concept,
         acttype:ActivityType ;
@@ -324,7 +445,11 @@ ospd:GA008 a skos:Concept,
     skos:prefLabel "Band Calculation"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA008"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-reprojection a skos:Concept,
         acttype:ActivityType ;
@@ -334,7 +459,11 @@ ospd:raster-reprojection a skos:Concept,
     skos:definition "Reprojects a raster coverage to another coordinate reference system, resampling pixel values as needed, preserving the coverage's content."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster reprojection"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-reprojection"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA032 a skos:Concept,
         acttype:ActivityType ;
@@ -345,7 +474,11 @@ ospd:GA032 a skos:Concept,
     skos:prefLabel "Raster analysis"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA032"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:radiometric-index a skos:Concept,
         acttype:ActivityType ;
@@ -355,7 +488,11 @@ ospd:radiometric-index a skos:Concept,
     skos:definition "Computes one or more named radiometric indices (e.g. NDVI, NDWI, SAVI) from the relevant spectral channels of the input raster(s)."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Radiometric index"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/radiometric-index"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:raster-band-math a skos:Concept,
         acttype:ActivityType ;
@@ -365,7 +502,11 @@ ospd:raster-band-math a skos:Concept,
     skos:definition "Evaluates a user-supplied mathematical expression per pixel across one or more input rasters, producing a monoband output raster."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:prefLabel "Raster band math"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-band-math"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> a skos:ConceptScheme ;
     skos:definition "Operations on rasters and coverages: reprojection, resampling, cropping, mosaicking, format conversion, rendering, band math, spectral indices and zonal analysis."@en ;

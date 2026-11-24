@@ -76,6 +76,7 @@ write_if_missing(os.path.join(core, "bblock.json"), json.dumps({
     "status": "under-development", "dateTimeAddition": ADDED, "itemClass": "model", "version": "0.1",
     "tags": ["ospd", "activity-type", "provenance"],
     "group": "OSPD Activity Types",
+    "isProfileOf": "bblocks://ogc.rim.activity-type",
     "shaclShapes": ["shapes.shacl"],
     "resources": [{"role": "data", "ref": "data.ttl", "format": "text/turtle",
                    "title": "OSPD activity types catalog"}],

@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -16,7 +17,11 @@ ospd:climate-downscaling-inference a skos:Concept,
     skos:broader ospd:climate-downscaling ;
     skos:definition "Runs the Resoterre U-Net on meteorological and static geophysical inputs."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
-    skos:prefLabel "U-Net RDPS-to-HRDPS downscaling inference"@en .
+    skos:prefLabel "U-Net RDPS-to-HRDPS downscaling inference"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/climate-downscaling-inference"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA007 a skos:Concept,
         acttype:ActivityType ;
@@ -30,7 +35,11 @@ ospd:GA007 a skos:Concept,
     skos:prefLabel "Regression"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     prov:qualifiedAttribution [ prov:agent [ foaf:name "STAC MLM?" ] ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA007"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA017 a skos:Concept,
         acttype:ActivityType ;
@@ -45,7 +54,11 @@ ospd:GA017 a skos:Concept,
     skos:related ospd:GA016 ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA017"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:InferenceExecution a skos:Concept,
         acttype:ActivityType ;
@@ -53,7 +66,11 @@ ospd:InferenceExecution a skos:Concept,
     skos:definition "A PROV execution classified by a candidate activity type using dct:type."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     skos:prefLabel "Inference execution without an asserted register action"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/InferenceExecution"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:GA009 a skos:Concept,
         acttype:ActivityType ;
@@ -66,7 +83,11 @@ ospd:GA009 a skos:Concept,
     skos:prefLabel "ML Climate Variable Downscaling"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;
-            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA009"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 ospd:climate-downscaling a skos:Concept,
         acttype:ActivityType ;
@@ -77,7 +98,11 @@ ospd:climate-downscaling a skos:Concept,
     skos:definition "Transforms georeferenced climate fields to a finer-resolution target grid."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     skos:prefLabel "Climate-variable downscaling"@en ;
-    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> .
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/climate-downscaling"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
 
 <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> a skos:ConceptScheme ;
     skos:definition "Machine-learning and statistical activities: regression, climate-variable downscaling, super-resolution and trend analysis, and inference executions."@en ;

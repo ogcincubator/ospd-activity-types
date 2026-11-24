@@ -21,6 +21,7 @@ BASE = "https://w3id.org/ogc/ospd/activity-type/"
 SCHEMA = Namespace("https://schema.org/")
 ACTTYPE = Namespace("https://w3id.org/ogc/rim/activity-type/")
 DCAT = Namespace("http://www.w3.org/ns/dcat#")
+RIM = Namespace("https://w3id.org/ogc/rim/")
 ROOT = URIRef(BASE)
 CATALOG = URIRef(BASE + "catalog")
 FAMILY_NS = BASE + "families/"
@@ -83,7 +84,7 @@ per_family = collections.defaultdict(Graph)
 
 def bind(gr):
     for p, n in (("skos", SKOS), ("dcterms", DCTERMS), ("owl", OWL), ("rdfs", RDFS), ("prov", PROV),
-                 ("dcat", DCAT), ("foaf", FOAF), ("acttype", ACTTYPE), ("ospd", Namespace(BASE))):
+                 ("dcat", DCAT), ("foaf", FOAF), ("acttype", ACTTYPE), ("rim", RIM), ("ospd", Namespace(BASE))):
         gr.bind(p, n)
 
 for r in sorted(defs, key=lambda r: r["new_iri"]):
@@ -93,6 +94,12 @@ for r in sorted(defs, key=lambda r: r["new_iri"]):
     out.add((s, RDF.type, SKOS.Concept))
     out.add((s, RDF.type, ACTTYPE.ActivityType))
     out.add((s, SKOS.inScheme, URIRef(FAMILY_NS + fam)))
+    # Register item metadata required by the RIM activity-type profile (acttype:ActivityType is a rim:RegisterItem).
+    # Status values are a default; change here if the governance decision differs.
+    out.add((s, RIM.itemClass, ACTTYPE.activityTypeItemClass))
+    out.add((s, RIM.objectIdentifier, Literal(r["new_iri"], datatype=XSD.anyURI)))
+    out.add((s, RIM.validityStatus, RIM.valid))
+    out.add((s, RIM.publicationStatus, RIM.published))
     label = first(old, [SKOS.prefLabel, SCHEMA.name, RDFS.label, DCTERMS.title])
     if label is None:
         label = Literal(r["new_iri"].rsplit("/", 1)[1].replace("-", " "), lang="en")
