@@ -1,0 +1,54 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ospd:pointcloud-point-cloud-thinning a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-thinning> ;
+    skos:broader ospd:point-cloud-thinning ;
+    skos:definition "This simple thinning tool reduces the number of points in a point cloud by sequential point removal. It is therefore most suited for points stored in chronological order."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Point Cloud Thinning (Simple)"@en .
+
+ospd:pointcloud-point-cloud-to-grid a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-to-grid> ;
+    skos:broader ospd:point-cloud-to-grid ;
+    skos:definition "Point Cloud to Grid"@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Point Cloud to Grid"@en .
+
+ospd:pointcloud-point-cloud-to-shapes a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-to-shapes> ;
+    skos:broader ospd:point-cloud-to-shapes ;
+    skos:definition "Point Cloud to Shapes"@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Point Cloud to Shapes"@en .
+
+ospd:point-cloud-thinning a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-thinning> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Reduces the number of points to the given percentage by sequential point removal, which suits points stored in chronological order best."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Point cloud thinning (simple)"@en .
+
+ospd:point-cloud-to-grid a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-to-grid> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Writes one value per grid cell from the points falling in it -- by default the z value of the first point -- as a single-band raster."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Point cloud to grid"@en .
+
+ospd:point-cloud-to-shapes a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-to-shapes> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Converts a point cloud to a feature collection of points."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Point cloud to shapes"@en .
+

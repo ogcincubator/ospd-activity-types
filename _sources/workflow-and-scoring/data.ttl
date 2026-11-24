@@ -1,0 +1,29 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ospd:ScoringAndProgressTracking a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;
+    rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;
+    skos:definition "Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded)."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Scoring and progress tracking"@en .
+
+ospd:WeightedScoringAndClassification a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/WeightedScoringAndClassification> ;
+    rdfs:seeAlso <https://example.org/ospd/process-types/weighted-scoring-and-classification> ;
+    skos:definition "Combines weighted indicators, e.g. zonal statistics and extra model inputs, into a score and a level per zone; may carry state such as duration from the previous result."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Weighted scoring and classification"@en .
+
+ospd:WorkflowRun a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://rss-hydro.lu/ns/mom/WorkflowRun> ;
+    skos:definition "One execution of the MoM workflow."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Workflow run"@en .
+

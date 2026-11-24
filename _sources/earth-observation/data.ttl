@@ -1,0 +1,234 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:GA016 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA016> ;
+    owl:versionInfo "2" ;
+    skos:definition "BAP is a Geoprocessing Activity that determines the best available pixel in a satellite imagery time series."@en ;
+    skos:exactMatch <https://catalog.ospd.dev.kurrawong.ai/catalogs/demo:geoacs/collections/demo:ospd-geoacs/items/demo:GA016> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Best available pixel (BAP)"@en ;
+    skos:related ospd:GA012,
+        ospd:GA013,
+        ospd:GA014,
+        ospd:GA015 ;
+    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+
+ospd:crop a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/water-bodies/crop> ;
+    skos:broader ospd:band-retrieval ;
+    skos:definition "Cloud-native windowed read of one Sentinel-2 COG band asset of a STAC item, cropped to the area of interest, whose CRS is given by `epsg`; the output keeps the CRS of the asset."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/crop> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Crop a Sentinel-2 COG band to an area of interest"@en .
+
+ospd:detect-water-body a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/water-bodies/detect-water-body> ;
+    skos:closeMatch ospd:water-bodies ;
+    skos:definition "Water body detection based on NDWI and otsu threshold"@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/detect-water-body> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Water body detection based on NDWI and otsu threshold"@en .
+
+ospd:download-band a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove-steps/download-band> ;
+    skos:broader ospd:band-retrieval ;
+    skos:definition "Downloads one Sentinel-2 band over a bounding box from a STAC Item."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/download-band> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Download one Sentinel-2 band over a bounding box"@en .
+
+ospd:download-band-sentinel2-product-safe a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/download-band-sentinel2-product-safe> ;
+    skos:definition "Downloads the Copernicus product from S3 using the Sentinel-2 SAFE manifest."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/download-band-sentinel2-product-safe> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Downloads Copernicus products."@en .
+
+ospd:download-band-sentinel2-stac-item a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/download-band-sentinel2-stac-item> ;
+    skos:broader ospd:band-retrieval ;
+    skos:definition "Downloads the GeoTiff band from the Sentinel-2 product STAC Item using the requested band selection criteria. It is assumed that the referenced STAC Item contains the desired GeoTiff Asset with the 'common band name' associated to the band (see https://github.com/stac-extensions/eo#common-band-names)."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/download-band-sentinel2-stac-item> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Downloads Sentinel-2 GeoTiff from STAC Item."@en .
+
+ospd:estimate-biomass a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove-steps/estimate-biomass> ;
+    skos:definition "Detects mangrove pixels and estimates above-ground biomass and carbon stock from NDVI, NDWI and SAVI."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/estimate-biomass> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Mangrove detection, allometric biomass and IPCC carbon stock"@en .
+
+ospd:export-stac a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove-steps/export-stac> ;
+    skos:definition "Plots the biomass map and exports the mangrove analysis results as a STAC Catalog."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/export-stac> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Plot the biomass map and export a STAC catalog"@en .
+
+ospd:mangrove a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove/mangrove> ;
+    skos:definition "Detects mangroves from Sentinel-2 L2A vegetation indices within a bounding box and estimates above-ground biomass and carbon stock (ipython2cwl binary of the KindGrove notebook)."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove/mangrove> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Mangrove biomass and carbon estimation"@en .
+
+ospd:mangrove-workflow-steps a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove-steps/mangrove-workflow-steps> ;
+    skos:closeMatch ospd:mangrove-workflow ;
+    skos:definition "Mangrove above-ground biomass and carbon stock estimation from Sentinel-2 L2A, split into one CommandLineTool per processing step, aligned on the steps of the OSPD W1 Algae Bloom workflow: parse_aoi -> select_scene -> download_band (x3) -> reproject_band (x3) -> calculate_indices -> estimate_biomass -> export_stac."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/mangrove-workflow-steps> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Mangrove Biomass Workflow (step notebooks)"@en .
+
+ospd:parse-aoi-steps a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove-steps/parse-aoi-steps> ;
+    skos:closeMatch ospd:parse-aoi ;
+    skos:definition "Splits an OGC bounding box into its west, south, east and north coordinates."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/parse-aoi-steps> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Parse area of interest"@en .
+
+ospd:select-products-sentinel2 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/select-products-sentinel2> ;
+    skos:broader ospd:product-selection ;
+    skos:definition "Searches a catalog for Sentinel-2 products using filtering parameters and returns all matched locations. Returned matches will be either S3 or direct HTTPS references depending on the catalog."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/select-products-sentinel2> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Searches the specified catalog for Sentinel-2 products matching filtering criteria."@en .
+
+ospd:select-scene a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove-steps/select-scene> ;
+    skos:broader ospd:product-selection ;
+    skos:definition "Selects the least cloudy Sentinel-2 L2A scene over a bounding box within a time window."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove-steps/select-scene> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Select the least cloudy Sentinel-2 L2A scene"@en .
+
+ospd:stac a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/water-bodies/stac> ;
+    skos:definition "Writes a STAC Catalog with one Item per input identifier, each carrying the corresponding water-body raster as an asset."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/stac> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Assemble a STAC catalog of detected water bodies"@en .
+
+ospd:workflow-copernicus a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/workflow-copernicus> ;
+    skos:definition "Finds Sentinel-2 products on Copernicus using filtering parameters and performs band calculation on retrieved Sentinel-2 products to evaluate algae bloom for water quality assessment."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Algae bloom for water quality assessment on Sentinel-2 imagery offered by Copernicus platform."@en .
+
+ospd:workflow-copernicus-process a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/workflow-copernicus-process> ;
+    skos:definition "Performs band calculation on Sentinel-2 product bands to evaluate algae bloom for water quality assessment."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus-process> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Processing on Sentinel-2 bands to evaluate algae bloom."@en .
+
+ospd:workflow-earth-search a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/workflow-earth-search> ;
+    skos:definition "Searches for Sentinel-2 L2A products on Earth-Search using filtering parameters and performs band calculation on matched Sentinel-2 products to evaluate algae bloom for water quality assessment. For each match, reference bands are downloaded, processed, and returned as output with raw data, color map and plot visualization. Each output file will be named with the ID of the original product to distinguish them in case of multiple matches."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-earth-search> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Algae bloom for water quality assessment on Sentinel-2 L2A imagery offered by Earth-Search platform."@en .
+
+ospd:workflow-earth-search-process a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/workflow-earth-search-process> ;
+    skos:definition "Performs band calculation on Sentinel-2 L2A product bands to evaluate algae bloom for water quality assessment from a specific STAC Item reference from Earth-Search platform. Reference bands are downloaded, processed, and returned as output with raw data, color map and plot visualization."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-earth-search-process> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Processing on Sentinel-2 L2A bands to evaluate algae bloom."@en .
+
+ospd:GA014 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA014> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Cloud cover"@en ;
+    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+
+ospd:GA015 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA015> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Cloud mask distance"@en ;
+    prov:qualifiedAttribution [ prov:agent <http://ospd/demo/martin-pontius> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] .
+
+ospd:mangrove-workflow a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove/mangrove-workflow> ;
+    skos:definition "Workflow for Mangrove Biomass Analysis This workflow orchestrates the mangrove biomass estimation process using Sentinel-2 imagery. It wraps the mangrove_workflow.cwl tool to provide a reusable workflow for analyzing different study areas."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove/mangrove-workflow> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Mangrove Biomass Workflow"@en .
+
+ospd:parse-aoi a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/kindgrove/parse-aoi> ;
+    skos:definition "Unpacks an OGC bounding box (EOAP BBox custom type) into west, south, east and north coordinates."@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/kindgrove/parse-aoi> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Parse area of interest"@en .
+
+ospd:water-bodies a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/water-bodies/water-bodies> ;
+    skos:definition "Water bodies detection based on NDWI and otsu threshold applied to Sentinel-2 COG STAC items"@en ;
+    skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/water-bodies/water-bodies> ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Water bodies detection based on NDWI and otsu threshold"@en .
+
+ospd:product-selection a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/product-selection> ;
+    dcterms:source [ ],
+        [ ],
+        [ ] ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Selects, from a catalogue of Earth observation products, those of a collection whose footprint intersects an area of interest and whose acquisition time falls within a time interval, possibly filtered further on their metadata, such as their cloud cover."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Product selection"@en .
+
+ospd:band-retrieval a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/band-retrieval> ;
+    dcterms:source [ ],
+        [ ] ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Retrieves one band, one range component, of an Earth observation product as a raster, over the whole product or over an area of interest, with the values the product provides, possibly converted to physical units by the scale and offset the product declares."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Band retrieval"@en .
+

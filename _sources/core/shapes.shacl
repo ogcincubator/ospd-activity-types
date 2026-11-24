@@ -1,0 +1,24 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix ospd:    <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix ex:      <https://w3id.org/ogc/ospd/shapes/> .
+
+ex:ActivityTypeShape a sh:NodeShape ;
+    sh:targetClass acttype:ActivityType ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:message "An activity type needs a skos:prefLabel."
+    ] ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue ospd: ;
+        sh:message "An activity type must be in the OSPD activity types concept scheme."
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "An activity type should have a skos:definition."
+    ] .

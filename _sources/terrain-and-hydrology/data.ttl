@@ -1,0 +1,195 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:GA021 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA021> ;
+    dcterms:source <https://grass.osgeo.org/grass-stable/manuals/r.slope.aspect.html> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA030 ;
+    skos:closeMatch ospd:slope ;
+    skos:definition "Derives the rate of elevation change for each cell in an input elevation raster, expressed as degrees or percent."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Slope derivation"@en ;
+    skos:related ospd:GA022,
+        ospd:GA035 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:hillshading a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading> ;
+    skos:broader ospd:analytical-hillshading ;
+    skos:definition "This tool performs an analytical hillshade computation for an elevation grid. The 'Standard' method simply calculates the angle at which light coming from the position of the light source would hit the surface. This method can produce angles greater than 90 degree. With the second method all values are kept within the range of 0-90 degree. It can be enhanced with shadowing effects, where shadowed cells will be marked with a value of exactly 90 degree. 'Shadows Only' creates a mask for the shadowed areas and sets all other cells to no-data. 'Combined Shading' takes the values of the standard method and multiplies these with the normalized slope. 'Ambient Occlusion' is based on the concepts of Tarini et al. (2006), but only the northern half-space is considered here."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Analytical Hillshading"@en .
+
+ospd:terrain-slope a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/slope> ;
+    skos:broader ospd:slope ;
+    skos:definition "Calculates the local morphometric terrain parameters slope, aspect and if supported by the chosen method also the curvature. Besides tangential curvature also its horizontal and vertical components (i.e. plan and profile curvature) can be calculated."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Slope, Aspect, Curvature"@en .
+
+ospd:terrain-terrain-ruggedness-index a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/terrain-ruggedness-index> ;
+    skos:broader ospd:terrain-ruggedness-index ;
+    skos:definition "References:&lt;br/&gt;Riley, S.J., De Gloria, S.D., Elliot, R. (1999): A Terrain Ruggedness that Quantifies Topographic Heterogeneity. Intermountain Journal of Science, Vol.5, No.1-4, pp.23-27. &lt;a href=\"http://www.fw.msu.edu/~rileysh2/Terrain%20Ruggedness%20Index.pdf\"&gt;online&lt;/a&gt;.&lt;br/&gt;"@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Terrain Ruggedness Index (TRI)"@en .
+
+ospd:terrain-topographic-position-index a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/topographic-position-index> ;
+    skos:broader ospd:topographic-position-index ;
+    skos:definition "Topographic Position Index (TPI) calculation as proposed by Guisan et al. (1999). This is literally the same as the difference to the mean calculation (residual analysis) proposed by Wilson & Gallant (2000). The bandwidth parameter for distance weighting is given as percentage of the (outer) radius."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Topographic Position Index (TPI)"@en .
+
+ospd:GA030 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA030> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Terrain analysis"@en ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:GA034 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA034> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Hydrological DEM conditioning"@en ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:GA035 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA035> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Topographic Wetness Index calculation"@en ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:analytical-hillshading a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/analytical-hillshading> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "For each cell, the angle at which light coming from the position of the light source hits the terrain surface."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Analytical hillshading"@en .
+
+ospd:terrain-ruggedness-index a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/terrain-ruggedness-index> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "The terrain ruggedness index (TRI) of Riley et al. (1999): how much the elevation of each cell differs from that of its neighbourhood."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Terrain ruggedness index"@en .
+
+ospd:topographic-position-index a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/topographic-position-index> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "The topographic position index (TPI) of Guisan et al. (1999): the difference between the elevation of each cell and the mean elevation of its neighbourhood."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Topographic position index"@en .
+
+ospd:GA024 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA024> ;
+    dcterms:source <https://grass.osgeo.org/grass85/manuals/r.watershed.html> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA031 ;
+    skos:definition "Identifies the raster cells or polygon area draining to a specified outlet, using a flow-direction or flow-accumulation model."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Watershed/catchment delineation"@en ;
+    skos:related ospd:GA022,
+        ospd:GA023,
+        ospd:GA025 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:GA025 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA025> ;
+    dcterms:source <https://grass.osgeo.org/grass85/manuals/r.watershed.html> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA031 ;
+    skos:definition "Identifies likely stream cells or stream features from a flow-accumulation raster using a specified contributing-area threshold."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Stream-network extraction"@en ;
+    skos:related ospd:GA023,
+        ospd:GA024,
+        ospd:GA026 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:slope a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/slope> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "The slope gradient of an elevation model at each cell, from a local fit of the surface by the 9 parameter 2nd order polynom of Zevenbergen & Thorne (1987)."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Slope"@en .
+
+ospd:GA022 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA022> ;
+    dcterms:source <https://pro.arcgis.com/en/pro-app/3.3/tool-reference/spatial-analyst/how-flow-direction-works.htm> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA031 ;
+    skos:definition "Assigns each elevation-raster cell a flow direction toward the steepest downslope neighbour among its eight surrounding cells."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "D8 flow-direction derivation"@en ;
+    skos:related ospd:GA023,
+        ospd:GA034 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:GA023 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA023> ;
+    dcterms:source <https://pro.arcgis.com/en/pro-app/2.6/tool-reference/raster-analysis/an-overview-of-the-hydrology-toolset.htm> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA031 ;
+    skos:definition "Calculates the accumulated upstream contribution for each cell by following an input D8 flow-direction raster."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "D8 flow-accumulation derivation"@en ;
+    skos:related ospd:GA022,
+        ospd:GA024,
+        ospd:GA025 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:GA031 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA031> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Hydrological analysis"@en ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+

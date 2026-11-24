@@ -1,0 +1,23 @@
+{
+  "name": "Spatial indexing",
+  "abstract": "Discrete global grid system (DGGS) indexing and conversion of geometries to grid cells.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "spatial-indexing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.ospd.activity-type.core",
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "Spatial indexing: activity type definitions"
+    }
+  ]
+}

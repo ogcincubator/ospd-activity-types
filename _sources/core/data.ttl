@@ -1,0 +1,440 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ospd:catalog a dcat:Catalog ;
+    dcterms:description "Catalog of the OSPD activity types and their families."@en ;
+    dcterms:hasPart ospd: ;
+    dcterms:title "OSPD Activity Types"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/earth-observation> a skos:Collection ;
+    skos:member ospd:GA014,
+        ospd:GA015,
+        ospd:GA016,
+        ospd:band-retrieval,
+        ospd:crop,
+        ospd:detect-water-body,
+        ospd:download-band,
+        ospd:download-band-sentinel2-product-safe,
+        ospd:download-band-sentinel2-stac-item,
+        ospd:estimate-biomass,
+        ospd:export-stac,
+        ospd:mangrove,
+        ospd:mangrove-workflow,
+        ospd:mangrove-workflow-steps,
+        ospd:parse-aoi,
+        ospd:parse-aoi-steps,
+        ospd:product-selection,
+        ospd:select-products-sentinel2,
+        ospd:select-scene,
+        ospd:stac,
+        ospd:water-bodies,
+        ospd:workflow-copernicus,
+        ospd:workflow-copernicus-process,
+        ospd:workflow-earth-search,
+        ospd:workflow-earth-search-process ;
+    skos:prefLabel "Earth observation"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> a skos:Collection ;
+    skos:member ospd:GA037,
+        ospd:GA038,
+        ospd:GA039,
+        ospd:GA040,
+        ospd:GA041,
+        ospd:GA042,
+        ospd:GA043,
+        ospd:GA044,
+        ospd:GA045,
+        ospd:GA046,
+        ospd:GA047,
+        ospd:GA048,
+        ospd:GA049 ;
+    skos:prefLabel "Information extraction and retrieval"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> a skos:Collection ;
+    skos:member ospd:GA007,
+        ospd:GA009,
+        ospd:GA017,
+        ospd:InferenceExecution,
+        ospd:climate-downscaling,
+        ospd:climate-downscaling-inference ;
+    skos:prefLabel "Ml and statistical modeling"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> a skos:Collection ;
+    skos:member ospd:point-cloud-thinning,
+        ospd:point-cloud-to-grid,
+        ospd:point-cloud-to-shapes,
+        ospd:pointcloud-point-cloud-thinning,
+        ospd:pointcloud-point-cloud-to-grid,
+        ospd:pointcloud-point-cloud-to-shapes ;
+    skos:prefLabel "Point cloud processing"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> a skos:Collection ;
+    skos:member ospd:GA008,
+        ospd:GA010,
+        ospd:GA011,
+        ospd:GA012,
+        ospd:GA013,
+        ospd:GA018,
+        ospd:GA026,
+        ospd:GA027,
+        ospd:GA028,
+        ospd:GA032,
+        ospd:ZonalStatistics,
+        ospd:band-math,
+        ospd:band-math-multiband,
+        ospd:calculate-band,
+        ospd:calculate-indices,
+        ospd:extent,
+        ospd:extract-roi,
+        ospd:format-conversion,
+        ospd:norm-diff,
+        ospd:otsu,
+        ospd:otsu-thresholding,
+        ospd:plot-image,
+        ospd:radiometric-index,
+        ospd:raster-band-math,
+        ospd:raster-band-math-multiband,
+        ospd:raster-crop,
+        ospd:raster-extent,
+        ospd:raster-format-conversion,
+        ospd:raster-radiometric-index,
+        ospd:raster-rendering,
+        ospd:raster-reprojection,
+        ospd:raster-resampling,
+        ospd:reproject-band,
+        ospd:reproject-image,
+        ospd:reprojection ;
+    skos:prefLabel "Raster coverage processing"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> a skos:Collection ;
+    skos:member ospd:GA029,
+        ospd:GA033,
+        ospd:GA036 ;
+    skos:prefLabel "Spatial indexing"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/terrain-and-hydrology> a skos:Collection ;
+    skos:member ospd:GA021,
+        ospd:GA022,
+        ospd:GA023,
+        ospd:GA024,
+        ospd:GA025,
+        ospd:GA030,
+        ospd:GA031,
+        ospd:GA034,
+        ospd:GA035,
+        ospd:analytical-hillshading,
+        ospd:hillshading,
+        ospd:slope,
+        ospd:terrain-ruggedness-index,
+        ospd:terrain-slope,
+        ospd:terrain-terrain-ruggedness-index,
+        ospd:terrain-topographic-position-index,
+        ospd:topographic-position-index ;
+    skos:prefLabel "Terrain and hydrology"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> a skos:Collection ;
+    skos:member ospd:GA001,
+        ospd:GA002,
+        ospd:GA003,
+        ospd:GA004,
+        ospd:GA005,
+        ospd:GA006,
+        ospd:GA019,
+        ospd:GA020,
+        ospd:area,
+        ospd:buffer,
+        ospd:centroid,
+        ospd:contains,
+        ospd:convex-hull,
+        ospd:crosses,
+        ospd:difference,
+        ospd:disjoint,
+        ospd:equals,
+        ospd:geometry-extent,
+        ospd:intersection,
+        ospd:intersects,
+        ospd:is-simple,
+        ospd:sqlmm-area,
+        ospd:sqlmm-buffer,
+        ospd:sqlmm-centroid,
+        ospd:sqlmm-contains,
+        ospd:sqlmm-convex-hull,
+        ospd:sqlmm-crosses,
+        ospd:sqlmm-difference,
+        ospd:sqlmm-disjoint,
+        ospd:sqlmm-equals,
+        ospd:sqlmm-intersection,
+        ospd:sqlmm-intersects,
+        ospd:sqlmm-is-simple,
+        ospd:sqlmm-symdifference,
+        ospd:sqlmm-touches,
+        ospd:sqlmm-union,
+        ospd:sqlmm-within,
+        ospd:symdifference,
+        ospd:touches,
+        ospd:union,
+        ospd:vector-geometry-extent,
+        ospd:within ;
+    skos:prefLabel "Vector geometry processing"@en .
+
+<https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> a skos:Collection ;
+    skos:member ospd:ScoringAndProgressTracking,
+        ospd:WeightedScoringAndClassification,
+        ospd:WorkflowRun ;
+    skos:prefLabel "Workflow and scoring"@en .
+
+ospd:GA001 skos:topConceptOf ospd: .
+
+ospd:GA002 skos:topConceptOf ospd: .
+
+ospd:GA005 skos:topConceptOf ospd: .
+
+ospd:GA006 skos:topConceptOf ospd: .
+
+ospd:GA007 skos:topConceptOf ospd: .
+
+ospd:GA008 skos:topConceptOf ospd: .
+
+ospd:GA009 skos:topConceptOf ospd: .
+
+ospd:GA010 skos:topConceptOf ospd: .
+
+ospd:GA011 skos:topConceptOf ospd: .
+
+ospd:GA014 skos:topConceptOf ospd: .
+
+ospd:GA015 skos:topConceptOf ospd: .
+
+ospd:GA016 skos:topConceptOf ospd: .
+
+ospd:GA017 skos:topConceptOf ospd: .
+
+ospd:GA018 skos:topConceptOf ospd: .
+
+ospd:GA019 skos:topConceptOf ospd: .
+
+ospd:GA020 skos:topConceptOf ospd: .
+
+ospd:GA030 skos:topConceptOf ospd: .
+
+ospd:GA031 skos:topConceptOf ospd: .
+
+ospd:GA032 skos:topConceptOf ospd: .
+
+ospd:GA033 skos:topConceptOf ospd: .
+
+ospd:GA034 skos:topConceptOf ospd: .
+
+ospd:GA035 skos:topConceptOf ospd: .
+
+ospd:GA036 skos:topConceptOf ospd: .
+
+ospd:GA047 skos:topConceptOf ospd: .
+
+ospd:GA048 skos:topConceptOf ospd: .
+
+ospd:GA049 skos:topConceptOf ospd: .
+
+ospd:InferenceExecution skos:topConceptOf ospd: .
+
+ospd:ScoringAndProgressTracking skos:topConceptOf ospd: .
+
+ospd:WeightedScoringAndClassification skos:topConceptOf ospd: .
+
+ospd:WorkflowRun skos:topConceptOf ospd: .
+
+ospd:ZonalStatistics skos:topConceptOf ospd: .
+
+ospd:analytical-hillshading skos:topConceptOf ospd: .
+
+ospd:area skos:topConceptOf ospd: .
+
+ospd:band-retrieval skos:topConceptOf ospd: .
+
+ospd:buffer skos:topConceptOf ospd: .
+
+ospd:centroid skos:topConceptOf ospd: .
+
+ospd:climate-downscaling skos:topConceptOf ospd: .
+
+ospd:contains skos:topConceptOf ospd: .
+
+ospd:convex-hull skos:topConceptOf ospd: .
+
+ospd:crosses skos:topConceptOf ospd: .
+
+ospd:detect-water-body skos:topConceptOf ospd: .
+
+ospd:difference skos:topConceptOf ospd: .
+
+ospd:disjoint skos:topConceptOf ospd: .
+
+ospd:download-band-sentinel2-product-safe skos:topConceptOf ospd: .
+
+ospd:equals skos:topConceptOf ospd: .
+
+ospd:estimate-biomass skos:topConceptOf ospd: .
+
+ospd:export-stac skos:topConceptOf ospd: .
+
+ospd:geometry-extent skos:topConceptOf ospd: .
+
+ospd:intersection skos:topConceptOf ospd: .
+
+ospd:intersects skos:topConceptOf ospd: .
+
+ospd:is-simple skos:topConceptOf ospd: .
+
+ospd:mangrove skos:topConceptOf ospd: .
+
+ospd:mangrove-workflow skos:topConceptOf ospd: .
+
+ospd:mangrove-workflow-steps skos:topConceptOf ospd: .
+
+ospd:otsu-thresholding skos:topConceptOf ospd: .
+
+ospd:parse-aoi skos:topConceptOf ospd: .
+
+ospd:parse-aoi-steps skos:topConceptOf ospd: .
+
+ospd:point-cloud-thinning skos:topConceptOf ospd: .
+
+ospd:point-cloud-to-grid skos:topConceptOf ospd: .
+
+ospd:point-cloud-to-shapes skos:topConceptOf ospd: .
+
+ospd:product-selection skos:topConceptOf ospd: .
+
+ospd:radiometric-index skos:topConceptOf ospd: .
+
+ospd:raster-band-math skos:topConceptOf ospd: .
+
+ospd:raster-band-math-multiband skos:topConceptOf ospd: .
+
+ospd:raster-crop skos:topConceptOf ospd: .
+
+ospd:raster-extent skos:topConceptOf ospd: .
+
+ospd:raster-format-conversion skos:topConceptOf ospd: .
+
+ospd:raster-rendering skos:topConceptOf ospd: .
+
+ospd:raster-reprojection skos:topConceptOf ospd: .
+
+ospd:raster-resampling skos:topConceptOf ospd: .
+
+ospd:slope skos:topConceptOf ospd: .
+
+ospd:stac skos:topConceptOf ospd: .
+
+ospd:symdifference skos:topConceptOf ospd: .
+
+ospd:terrain-ruggedness-index skos:topConceptOf ospd: .
+
+ospd:topographic-position-index skos:topConceptOf ospd: .
+
+ospd:touches skos:topConceptOf ospd: .
+
+ospd:union skos:topConceptOf ospd: .
+
+ospd:water-bodies skos:topConceptOf ospd: .
+
+ospd:within skos:topConceptOf ospd: .
+
+ospd:workflow-copernicus skos:topConceptOf ospd: .
+
+ospd:workflow-copernicus-process skos:topConceptOf ospd: .
+
+ospd:workflow-earth-search skos:topConceptOf ospd: .
+
+ospd:workflow-earth-search-process skos:topConceptOf ospd: .
+
+ospd: a skos:ConceptScheme ;
+    skos:definition "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under stable URIs and grouped into families of related types."@en ;
+    skos:hasTopConcept ospd:GA001,
+        ospd:GA002,
+        ospd:GA005,
+        ospd:GA006,
+        ospd:GA007,
+        ospd:GA008,
+        ospd:GA009,
+        ospd:GA010,
+        ospd:GA011,
+        ospd:GA014,
+        ospd:GA015,
+        ospd:GA016,
+        ospd:GA017,
+        ospd:GA018,
+        ospd:GA019,
+        ospd:GA020,
+        ospd:GA030,
+        ospd:GA031,
+        ospd:GA032,
+        ospd:GA033,
+        ospd:GA034,
+        ospd:GA035,
+        ospd:GA036,
+        ospd:GA047,
+        ospd:GA048,
+        ospd:GA049,
+        ospd:InferenceExecution,
+        ospd:ScoringAndProgressTracking,
+        ospd:WeightedScoringAndClassification,
+        ospd:WorkflowRun,
+        ospd:ZonalStatistics,
+        ospd:analytical-hillshading,
+        ospd:area,
+        ospd:band-retrieval,
+        ospd:buffer,
+        ospd:centroid,
+        ospd:climate-downscaling,
+        ospd:contains,
+        ospd:convex-hull,
+        ospd:crosses,
+        ospd:detect-water-body,
+        ospd:difference,
+        ospd:disjoint,
+        ospd:download-band-sentinel2-product-safe,
+        ospd:equals,
+        ospd:estimate-biomass,
+        ospd:export-stac,
+        ospd:geometry-extent,
+        ospd:intersection,
+        ospd:intersects,
+        ospd:is-simple,
+        ospd:mangrove,
+        ospd:mangrove-workflow,
+        ospd:mangrove-workflow-steps,
+        ospd:otsu-thresholding,
+        ospd:parse-aoi,
+        ospd:parse-aoi-steps,
+        ospd:point-cloud-thinning,
+        ospd:point-cloud-to-grid,
+        ospd:point-cloud-to-shapes,
+        ospd:product-selection,
+        ospd:radiometric-index,
+        ospd:raster-band-math,
+        ospd:raster-band-math-multiband,
+        ospd:raster-crop,
+        ospd:raster-extent,
+        ospd:raster-format-conversion,
+        ospd:raster-rendering,
+        ospd:raster-reprojection,
+        ospd:raster-resampling,
+        ospd:slope,
+        ospd:stac,
+        ospd:symdifference,
+        ospd:terrain-ruggedness-index,
+        ospd:topographic-position-index,
+        ospd:touches,
+        ospd:union,
+        ospd:water-bodies,
+        ospd:within,
+        ospd:workflow-copernicus,
+        ospd:workflow-copernicus-process,
+        ospd:workflow-earth-search,
+        ospd:workflow-earth-search-process ;
+    skos:prefLabel "OSPD Activity Types"@en .
+

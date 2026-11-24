@@ -1,0 +1,23 @@
+{
+  "name": "Raster and coverage processing",
+  "abstract": "Operations on rasters and coverages: reprojection, resampling, cropping, mosaicking, format conversion, rendering, band math, spectral indices and zonal analysis.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "raster-coverage-processing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.ospd.activity-type.core",
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "Raster and coverage processing: activity type definitions"
+    }
+  ]
+}

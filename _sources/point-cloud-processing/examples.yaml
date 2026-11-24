@@ -1,0 +1,19 @@
+examples:
+  - title: Point Cloud Thinning (Simple)
+    snippets:
+      - language: turtle
+        code: |
+          @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
+          @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+          @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+          ospd:pointcloud-point-cloud-thinning a skos:Concept,
+                  acttype:ActivityType ;
+              dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-thinning> ;
+              skos:broader ospd:point-cloud-thinning ;
+              skos:definition "This simple thinning tool reduces the number of points in a point cloud by sequential point removal. It is therefore most suited for points stored in chronological order."@en ;
+              skos:inScheme ospd: ;
+              skos:prefLabel "Point Cloud Thinning (Simple)"@en .
+
+          ospd: a skos:ConceptScheme .

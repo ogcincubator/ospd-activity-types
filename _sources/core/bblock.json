@@ -1,0 +1,25 @@
+{
+  "name": "OSPD Activity Type",
+  "abstract": "Root of the OSPD activity types: the concept scheme, catalog and family collections under https://w3id.org/ogc/ospd/activity-type/.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "provenance"
+  ],
+  "group": "OSPD Activity Types",
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD activity types concept scheme, catalog and family collections"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:GA029 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA029> ;
+    dcterms:source <https://www.ogc.org/standards/dggs/> ;
+    owl:versionInfo "2" ;
+    skos:broader ospd:GA033 ;
+    skos:definition "Quantizes input spatial positions or geometries to cells at a specified resolution in a Discrete Global Grid System and returns the corresponding cell identifiers."@en ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "DGGS cell indexing"@en ;
+    skos:related ospd:GA027,
+        ospd:GA028 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:GA036 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA036> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Polygon-to-DGGS cell conversion"@en ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
+ospd:GA033 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA033> ;
+    owl:versionInfo "2" ;
+    skos:inScheme ospd: ;
+    skos:prefLabel "Spatial indexing"@en ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] .
+
