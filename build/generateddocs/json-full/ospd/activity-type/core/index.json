@@ -2,8 +2,8 @@
 
 {
   "itemIdentifier": "ogc.ospd.activity-type.core",
-  "name": "OSPD Activity Type",
-  "abstract": "Root of the OSPD activity types: the catalog listing one concept scheme per family, under https://w3id.org/ogc/ospd/activity-type/.",
+  "name": "OSPD Activity Types Register",
+  "abstract": "The catalog of the OSPD-specific activity types: tool- and example-specific specialisations of the generic activity types of the Activity Types Register.",
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",
@@ -15,14 +15,17 @@
   ],
   "group": "OSPD Activity Types",
   "isProfileOf": [
-    "ogc.rim.activity-type"
+    "ogc.register.activity-types"
   ],
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
     ],
-    "ogc.rim.activity-type": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+    "ogc.register.activity-types": [
+      "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
     ],
     "ogc.rim.core-ontology": [
       "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
@@ -33,26 +36,26 @@
       "role": "data",
       "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/data.ttl",
       "format": "text/turtle",
-      "title": "OSPD activity types catalog"
+      "title": "OSPD activity types register catalog"
     }
   ],
   "dependsOn": [
-    "ogc.rim.activity-type"
+    "ogc.register.activity-types"
   ],
-  "dateOfLastChange": "2026-11-24",
+  "dateOfLastChange": "2026-11-25",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/core/",
-  "description": "# OSPD Activity Type\n\nActivity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under stable URIs of the\nform `https://w3id.org/ogc/ospd/activity-type/<slug>`.\n\nThis block holds the catalog (`https://w3id.org/ogc/ospd/activity-type/catalog`), which lists one `skos:ConceptScheme` per family of related activity types.\nEach family is a building block that profiles this one and carries its concept scheme and the Turtle definitions of its activity types.\n\nEvery activity type is a `skos:Concept` and an `acttype:ActivityType` (Registered Item Model), has a `skos:prefLabel`, and\nrecords the IRIs it replaces (`dcterms:replaces`), equivalent aliases (`skos:exactMatch`) and likely duplicates\n(`skos:closeMatch`).\n\n## Families\n\n- **Vector geometry processing** (`ogc.ospd.activity-type.vector-geometry-processing`): Operations and tests on vector geometries: buffers, hulls, envelopes, set operations, spatial predicates and extents (including the SQL/MM implementations).\n- **Raster and coverage processing** (`ogc.ospd.activity-type.raster-coverage-processing`): Operations on rasters and coverages: reprojection, resampling, cropping, mosaicking, format conversion, rendering, band math, spectral indices and zonal analysis.\n- **Earth observation** (`ogc.ospd.activity-type.earth-observation`): Earth-observation data access and applications: Sentinel-2 band retrieval and product selection, cloud and best-available-pixel handling, and the water-bodies, algae-bloom and mangrove-biomass workflows.\n- **Terrain and hydrology** (`ogc.ospd.activity-type.terrain-and-hydrology`): Terrain derivatives (slope, hillshading, ruggedness and position indices) and hydrological analysis (flow direction and accumulation, watersheds, stream networks, wetness index).\n- **Spatial indexing** (`ogc.ospd.activity-type.spatial-indexing`): Discrete global grid system (DGGS) indexing and conversion of geometries to grid cells.\n- **Point-cloud processing** (`ogc.ospd.activity-type.point-cloud-processing`): Point-cloud thinning, gridding and conversion to shapes.\n- **Machine learning and statistical modeling** (`ogc.ospd.activity-type.ml-and-statistical-modeling`): Machine-learning and statistical activities: regression, climate-variable downscaling, super-resolution and trend analysis, and inference executions.\n- **Information extraction and retrieval** (`ogc.ospd.activity-type.information-extraction-and-retrieval`): Source acquisition, text metadata enrichment (entity extraction, geotagging, classification, normalization) and retrieval-augmented generation.\n- **Workflow and scoring** (`ogc.ospd.activity-type.workflow-and-scoring`): Workflow runs and scoring or classification activities used in the model-of-models and workflow examples.\n",
+  "description": "# OSPD Activity Types Register\n\nActivity types specific to the OGC Open Science Persistent Demonstrator (OSPD), under stable URIs of the form\n`https://w3id.org/ogc/ospd/activity-type/<slug>`: tool- and example-specific types, each specialising a generic activity type (`skos:broader`) of the\n[Activity Types Register](https://ogcincubator.github.io/activity-type-register/).\n\nThis block holds the catalog (`https://w3id.org/ogc/ospd/catalog`). The concept scheme and the activity types are in the `specific` block\n(`ogc.ospd.activity-type.specific`), a profile of this one.\n",
   "examples": [
     {
-      "title": "Catalog with a family concept scheme",
+      "title": "Catalog with the OSPD concept scheme",
       "snippets": [
         {
           "language": "turtle",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/ospd/activity-type/core/example_1_1.ttl",
-          "sizeBytes": 515,
-          "code": "@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n<https://w3id.org/ogc/ospd/activity-type/catalog> a dcat:Catalog ;\n    dcterms:title \"OSPD Activity Types\"@en ;\n    dcterms:hasPart <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .\n\n<https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> a skos:ConceptScheme ;\n    skos:prefLabel \"Vector geometry processing\"@en .\n"
+          "sizeBytes": 460,
+          "code": "@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n<https://w3id.org/ogc/ospd/catalog> a dcat:Catalog ;\n    dcterms:title \"OSPD Activity Types Register\"@en ;\n    dcterms:hasPart <https://w3id.org/ogc/ospd/specific-activity-types> .\n\n<https://w3id.org/ogc/ospd/specific-activity-types> a skos:ConceptScheme ;\n    skos:prefLabel \"OSPD specific activity types\"@en .\n"
         }
       ]
     }

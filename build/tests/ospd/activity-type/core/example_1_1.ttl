@@ -2,9 +2,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<https://w3id.org/ogc/ospd/activity-type/catalog> a dcat:Catalog ;
-    dcterms:title "OSPD Activity Types"@en ;
-    dcterms:hasPart <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .
+<https://w3id.org/ogc/ospd/catalog> a dcat:Catalog ;
+    dcterms:title "OSPD Activity Types Register"@en ;
+    dcterms:hasPart <https://w3id.org/ogc/ospd/specific-activity-types> .
 
-<https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> a skos:ConceptScheme ;
-    skos:prefLabel "Vector geometry processing"@en .
+<https://w3id.org/ogc/ospd/specific-activity-types> a skos:ConceptScheme ;
+    skos:prefLabel "OSPD specific activity types"@en .
