@@ -9,5 +9,6 @@ types: each type here specialises one of them (`skos:broader`).
 - Blocks: *OSPD Activity Types Register* (catalog) and *OSPD specific activity types* (the concept scheme and the types, as Turtle)
 - Data: uploaded to the OSPD Prez instance on build
 - Review tables: [`docs/analysis`](docs/analysis)
+- Guide to the layers, new projects and promotion: [in the Activity Types Register](https://github.com/ogcincubator/activity-type-register/blob/master/docs/activity-type-registers.md)
 
 See `SECURITY.md` and `USAGE.md` (from the bblock-template) for build and viewing instructions.
