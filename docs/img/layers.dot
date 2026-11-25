@@ -1,0 +1,14 @@
+digraph G {
+  rankdir=BT; nodesep=0.35; ranksep=0.55;
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11, margin="0.18,0.10"];
+  edge [fontname="DejaVu Sans", fontsize=9];
+  rim [fillcolor="#e8eef7", label=<<B>RIM: Registered Item Model</B><BR/>ISO 19135:2026 register model<BR/><FONT POINT-SIZE="9">registered-item-model · ogc.rim.*</FONT>>];
+  gen [fillcolor="#e6f2e6", label=<<B>Activity Types Register (generic)</B><BR/>activity-type profiles + 88 generic types in families<BR/><FONT POINT-SIZE="9">activity-type-register · ogc.register.*</FONT>>];
+  spec [fillcolor="#fbeedd", label=<<B>Project registers (specific)</B><BR/>e.g. OSPD: 65 tool- and example-specific types<BR/><FONT POINT-SIZE="9">ospd-activity-types · ogc.ospd.activity-type.*</FONT>>];
+  trace [fillcolor="#f4f4f4", style="rounded,filled,dashed", label=<<B>Provenance traces</B><BR/>prov:Activity typed with an activity type IRI>];
+  gen -> rim [label="  profiles the model\l  (isProfileOf, imports)"];
+  spec -> gen [label="  skos:broader, isProfileOf\l  (specialises generic types)"];
+  trace -> spec [label="  rdf:type"];
+  trace -> gen [label="  rdf:type"];
+  {rank=same; spec; trace}
+}
