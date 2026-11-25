@@ -100,6 +100,7 @@ This block has 65 activity types. Its data resource (`data.ttl`) is uploaded to 
 ospd:workflow-copernicus a skos:Concept,
         acttype:ActivityType ;
     dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/workflow-copernicus> ;
+    skos:broader ospd:workflow ;
     skos:definition "Finds Sentinel-2 products on Copernicus using filtering parameters and performs band calculation on retrieved Sentinel-2 products to evaluate algae bloom for water quality assessment."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus> ;
     skos:inScheme ospd-catalog:specific-activity-types ;
