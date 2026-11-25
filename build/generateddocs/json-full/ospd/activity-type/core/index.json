@@ -15,14 +15,14 @@
   ],
   "group": "OSPD Activity Types",
   "isProfileOf": [
-    "ogc.register.activity-types"
+    "ogc.register.profiles.activity-types"
   ],
   "shaclShapes": {
     "ogc.ospd.activity-type.core": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
     ],
-    "ogc.register.activity-types": [
-      "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+    "ogc.register.profiles.activity-types": [
+      "https://ogcincubator.github.io/activity-type-register/_sources/profiles/activity-types/shapes.shacl"
     ],
     "ogc.model.cross-domain.prov": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -40,7 +40,7 @@
     }
   ],
   "dependsOn": [
-    "ogc.register.activity-types"
+    "ogc.register.profiles.activity-types"
   ],
   "dateOfLastChange": "2026-11-25",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",

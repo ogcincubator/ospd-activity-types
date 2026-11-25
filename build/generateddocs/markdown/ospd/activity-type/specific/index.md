@@ -93,6 +93,7 @@ This block has 65 activity types. Its data resource (`data.ttl`) is uploaded to 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix ospd-catalog: <https://w3id.org/ogc/ospd/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -100,6 +101,7 @@ This block has 65 activity types. Its data resource (`data.ttl`) is uploaded to 
 ospd:workflow-copernicus a skos:Concept,
         acttype:ActivityType ;
     dcterms:replaces <https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/workflow-copernicus> ;
+    rdfs:subClassOf ospd:workflow ;
     skos:broader ospd:workflow ;
     skos:definition "Finds Sentinel-2 products on Copernicus using filtering parameters and performs band calculation on retrieved Sentinel-2 products to evaluate algae bloom for water quality assessment."@en ;
     skos:exactMatch <https://geolabs.github.io/bblocks-process-profiles/def/process-type/algae-bloom/workflow-copernicus> ;
