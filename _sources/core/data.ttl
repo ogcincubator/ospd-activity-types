@@ -1,17 +1,11 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix ospd-catalog: <https://w3id.org/ogc/ospd/> .
 
-ospd:catalog a dcat:Catalog ;
-    dcterms:description "Activity types used across the OGC Open Science Persistent Demonstrator (OSPD), consolidated under stable URIs and grouped into families of related types. Each family is a concept scheme."@en ;
-    dcterms:hasPart <https://w3id.org/ogc/ospd/activity-type/families/earth-observation>,
-        <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval>,
-        <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling>,
-        <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing>,
-        <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing>,
-        <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing>,
-        <https://w3id.org/ogc/ospd/activity-type/families/terrain-and-hydrology>,
-        <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing>,
-        <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
-    dcterms:title "OSPD Activity Types"@en .
+ospd-catalog:catalog a dcat:Catalog ;
+    dcterms:description "Activity types specific to the OGC Open Science Persistent Demonstrator (OSPD): tool- and example-specific types, each specialising a generic activity type of the Activity Types Register (skos:broader)."@en ;
+    dcterms:hasPart ospd-catalog:specific-activity-types ;
+    dcterms:references ospd:catalog ;
+    dcterms:title "OSPD Activity Types Register"@en .
 

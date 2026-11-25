@@ -1,6 +1,6 @@
 {
-  "name": "OSPD Activity Type",
-  "abstract": "Root of the OSPD activity types: the catalog listing one concept scheme per family, under https://w3id.org/ogc/ospd/activity-type/.",
+  "name": "OSPD Activity Types Register",
+  "abstract": "The catalog of the OSPD-specific activity types: tool- and example-specific specialisations of the generic activity types of the Activity Types Register.",
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",
@@ -11,7 +11,7 @@
     "provenance"
   ],
   "group": "OSPD Activity Types",
-  "isProfileOf": "bblocks://ogc.rim.activity-type",
+  "isProfileOf": "bblocks://ogc.register.activity-types",
   "shaclShapes": [
     "shapes.shacl"
   ],
@@ -20,7 +20,7 @@
       "role": "data",
       "ref": "data.ttl",
       "format": "text/turtle",
-      "title": "OSPD activity types catalog"
+      "title": "OSPD activity types register catalog"
     }
   ]
 }
