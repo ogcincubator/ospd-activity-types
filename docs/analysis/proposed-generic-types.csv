@@ -1,0 +1,4 @@
+slug,name,family,definition,rationale
+workflow,Workflow,workflow-and-scoring,"Orchestrates several activities, each consuming the outputs of earlier ones, as one executable whole. One execution of it is a workflow run.","Parent for the workflow-level types (mangrove, algae-bloom and MoM workflows, WorkflowRun); no generic type covered orchestration."
+catalog-export,Catalog export,workflow-and-scoring,"Assembles the results of an analysis into a catalog of items with their assets, for example a STAC Catalog.","Parent for the STAC catalog assembly steps of the water-bodies and mangrove workflows."
+model-inference,Model inference,ml-and-statistical-modeling,"Applies a trained model to input data to produce predictions or derived data; the counterpart of model training.","Parent for InferenceExecution (CRIM); referenced as an undefined type by other sources."
