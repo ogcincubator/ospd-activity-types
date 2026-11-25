@@ -11,7 +11,7 @@
     "provenance"
   ],
   "group": "OSPD Activity Types",
-  "isProfileOf": "bblocks://ogc.register.activity-types",
+  "isProfileOf": "bblocks://ogc.register.profiles.activity-types",
   "shaclShapes": [
     "shapes.shacl"
   ],
