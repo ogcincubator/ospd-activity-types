@@ -217,7 +217,7 @@
   "abstract": "Activity types specific to the OGC Open Science Persistent Demonstrator (OSPD), under stable\n`https://w3id.org/ogc/ospd/activity-type/` URIs, each specialising a generic activity type.\n",
   "description": "The OSPD-specific activity types (tool- and example-specific), as a federated register of the\n[Activity Types Register](https://ogcincubator.github.io/activity-type-register/): a root block (catalog)\nand a `specific` block carrying the Turtle definitions of the types, whose data is uploaded to the OSPD\nPrez instance when the register is built. Each type points to its generic parent with `skos:broader`.\n",
   "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
-  "modified": "2026-11-25T10:49:32.191056",
+  "modified": "2026-11-25T10:53:09.200540",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"009466f93d27bf23cb4832f43883f4f524ab5d30",
