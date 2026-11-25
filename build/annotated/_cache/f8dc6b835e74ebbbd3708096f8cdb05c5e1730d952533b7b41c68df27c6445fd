@@ -4,7 +4,7 @@
   "abstract": "A register of generic activity types, implemented as a profile of the Registered Item Model: the activity type,\ngeoprocessing and machine learning profiles, and the generic activity types grouped into families.\n",
   "description": "The profiles in this register are implemented as classes of the Registered Item Model, which lives in a separate [register](https://ogcincubator.github.io/registered-item-model/). \nThe intent for this register is to be the generic 'top level' register that federated registers can inherit from for specific activity profiles in the respective domains.\nThe generic activity types live under `https://w3id.org/ogc/ospd/activity-type/`; federated registers, such as the\n[OSPD activity types register](https://ogcincubator.github.io/ospd-activity-types/), specialise them with `skos:broader`.\n",
   "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
-  "modified": "2026-11-25T10:13:23.549285",
+  "modified": "2026-11-25T10:28:22.839314",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"009466f93d27bf23cb4832f43883f4f524ab5d30",
@@ -711,6 +711,67 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/activity-type-register/bblock/ogc.register.generic.vector-geometry-processing"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.generic.workflow-and-scoring",
+      "name": "Workflow and scoring",
+      "abstract": "Workflow runs and scoring or classification activities used in the model-of-models and workflow examples.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "workflow-and-scoring"
+      ],
+      "group": "Activity Types Register",
+      "isProfileOf": [
+        "bblocks://ogc.register.generic.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/activity-type-register/_sources/generic/workflow-and-scoring/data.ttl",
+          "format": "text/turtle",
+          "title": "Workflow and scoring: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": {
+        "ogc.register.generic.core": [
+          "https://ogcincubator.github.io/activity-type-register/_sources/generic/core/shapes.shacl"
+        ],
+        "ogc.register.activity-types": [
+          "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+        ],
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ],
+        "ogc.rim.core-ontology": [
+          "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+        ]
+      },
+      "dependsOn": [
+        "bblocks://ogc.register.generic.core"
+      ],
+      "dateOfLastChange": "2026-11-25",
+      "sourceFiles": "https://ogcincubator.github.io/activity-type-register/_sources/generic/workflow-and-scoring/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/activity-type-register/blob/master/build/tests/register/generic/workflow-and-scoring/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/activity-type-register/build/generateddocs/markdown/register/generic/workflow-and-scoring/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/activity-type-register/build/generateddocs/json-full/register/generic/workflow-and-scoring/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/activity-type-register/bblock/ogc.register.generic.workflow-and-scoring"
         }
       }
     },

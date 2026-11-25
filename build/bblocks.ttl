@@ -22,12 +22,12 @@
     rdfs:label "OSPD specific activity types" ;
     dct:abstract "Activity types specific to OSPD (tool- and example-specific), each specialising a generic activity type."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/specific/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.specific> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/specific/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/specific/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/specific/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-11-25"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/ospd-activity-types/> ;
@@ -36,6 +36,70 @@
     dcat:keyword "activity-type",
         "ospd",
         "specific" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov> ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data.ttl> ;
+            prof:hasRole <https://ogcincubator.github.io/data> ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.register.activity-types> ;
+            prof:hasArtifact <https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
+            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
+    bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://ogcincubator.github.io/ospd-activity-types/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N2e89db8714614f6aa9de123965beb9c9 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-11-25T10:49:36.832677"^^xsd:dateTime ;
+            prov:startedAtTime "2026-11-25T10:49:36.625097"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:2b5542d9ef88156d805be36ff5693710d3cd34c2" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/ospd-activity-types/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N2e89db8714614f6aa9de123965beb9c9 ] .
+
+<bblocks://ogc.ospd.activity-type.core> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "OSPD Activity Types Register" ;
+    dct:abstract "The catalog of the OSPD-specific activity types: tool- and example-specific specialisations of the generic activity types of the Activity Types Register."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/core/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/core/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.core> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-11-25"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/ospd-activity-types/> ;
+    skos:prefLabel "OSPD Activity Types Register" ;
+    skos:topConceptOf <https://ogcincubator.github.io/ospd-activity-types/> ;
+    dcat:keyword "activity-type",
+        "ospd",
+        "provenance" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
@@ -51,78 +115,14 @@
             rdfs:seeAlso <bblocks://ogc.register.activity-types> ;
             prof:hasArtifact <https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov> ;
+            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl> ;
+            prof:hasRole role:validation ],
         [ dct:format "text/turtle" ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov> ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
-    prof:isProfileOf <bblocks://ogc.ospd.activity-type.core> ;
-    bblocks:dependsOn <bblocks://ogc.ospd.activity-type.core> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
-<https://ogcincubator.github.io/ospd-activity-types/build/bblocks.ttl> a prov:Entity ;
-    dct:format "text/turtle" ;
-    prov:wasAttributedTo _:Ne4d2241e91e64f738c78707a3d55c77c ;
-    prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-11-25T10:28:37.329109"^^xsd:dateTime ;
-            prov:startedAtTime "2026-11-25T10:28:37.169268"^^xsd:dateTime ;
-            prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
-                    dct:format "application/json" ;
-                    dct:hasVersion "git:95af4e02d0bfd5ce21c6b0f82d966b413eb4ae62" ;
-                    rdfs:seeAlso <https://ogcincubator.github.io/ospd-activity-types/build/register.json> ] ;
-            prov:wasAssociatedWith _:Ne4d2241e91e64f738c78707a3d55c77c ] .
-
-<bblocks://ogc.ospd.activity-type.core> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Model ;
-    rdfs:label "OSPD Activity Types Register" ;
-    dct:abstract "The catalog of the OSPD-specific activity types: tool- and example-specific specialisations of the generic activity types of the Activity Types Register."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2026-11-23T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/core/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/core/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.core> ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2026-11-25"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/ospd-activity-types/> ;
-    skos:prefLabel "OSPD Activity Types Register" ;
-    skos:topConceptOf <https://ogcincubator.github.io/ospd-activity-types/> ;
-    dcat:keyword "activity-type",
-        "ospd",
-        "provenance" ;
-    prof:hasResource [ dct:format "text/turtle" ;
             prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/data.ttl> ;
-            prof:hasRole <https://ogcincubator.github.io/data> ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.ospd.activity-type.core> ;
-            prof:hasArtifact <https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.model.cross-domain.prov> ;
-            prof:hasArtifact <https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
-            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.register.activity-types> ;
-            prof:hasArtifact <https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole <https://ogcincubator.github.io/data> ] ;
     prof:isProfileOf <bblocks://ogc.register.activity-types> ;
     bblocks:dependsOn <bblocks://ogc.register.activity-types> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -140,7 +140,7 @@
 and a `specific` block carrying the Turtle definitions of the types, whose data is uploaded to the OSPD
 Prez instance when the register is built. Each type points to its generic parent with `skos:broader`.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-11-25T10:28:31.184897"^^xsd:dateTime ;
+    dct:modified "2026-11-25T10:49:32.191056"^^xsd:dateTime ;
     void:sparqlEndpoint <https://defs-hosted.opengis.net/fuseki-ospd/query> ;
     owl:imports <https://ogcincubator.github.io/activity-type-register/build/register.json>,
         <https://ogcincubator.github.io/registered-item-model/build/register.json>,
@@ -148,22 +148,22 @@ Prez instance when the register is built. Each type points to its generic parent
     skos:hasTopConcept <bblocks://ogc.ospd.activity-type.core>,
         <bblocks://ogc.ospd.activity-type.specific> ;
     skos:prefLabel "Building Blocks - OSPD Activity Types Register" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
-            dct:type "text/turtle" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/bblocks.ttl> ],
+            ns1:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/register.json> ],
         [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
             ns1:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/bblocks.jsonld> ],
-        [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/register.json> ] ;
+            ns1:hasTarget <https://ogcincubator.github.io/ospd-activity-types/build/bblocks.ttl> ] ;
     foaf:homepage <https://ogcincubator.github.io/ospd-activity-types/> ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/ospd-activity-types/build/tests/report.html> .
 
-_:Ne4d2241e91e64f738c78707a3d55c77c a prov:Agent,
+_:N2e89db8714614f6aa9de123965beb9c9 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.6.0" ;
