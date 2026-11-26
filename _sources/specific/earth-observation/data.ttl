@@ -1,0 +1,47 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:lightning2earthcare-observation-matching a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:source <https://github.com/sunnydean/lightning2earthcare/blob/be63866b12733db5ef7349205d36d8af8ea937f1/cwl/ospd2026/registry/geoprocessing-activities.jsonld#L18> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:closeMatch ospd:GA047 ;
+    skos:definition "Matches lightning observations to EarthCARE observations by location and acquisition time, accounting for parallax offsets."@en ;
+    skos:inScheme ospd-specific:earth-observation ;
+    skos:notation "collocation" ;
+    skos:note "Contributed to OSPD 2026 by lightning2earthcare (sunnydean); defined here (decision of 26 Nov 2026). No tool-neutral generic parent yet: open question. Evidence in dcterms:source."@en ;
+    skos:prefLabel "Multi-sensor observation matching"@en ;
+    skos:topConceptOf ospd-specific:earth-observation ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/lightning2earthcare-observation-matching"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:lightning2earthcare-storm-characterisation a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:source <https://github.com/sunnydean/lightning2earthcare/blob/be63866b12733db5ef7349205d36d8af8ea937f1/cwl/ospd2026/registry/geoprocessing-activities.jsonld#L27> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Estimates storm location, extent, duration, movement and lightning activity from grouped lightning observations and EarthCARE track measurements."@en ;
+    skos:inScheme ospd-specific:earth-observation ;
+    skos:notation "aggregation" ;
+    skos:note "Contributed to OSPD 2026 by lightning2earthcare (sunnydean); defined here (decision of 26 Nov 2026). No tool-neutral generic parent yet: open question. Evidence in dcterms:source."@en ;
+    skos:prefLabel "Storm characterisation"@en ;
+    skos:topConceptOf ospd-specific:earth-observation ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/lightning2earthcare-storm-characterisation"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd-specific:earth-observation a skos:ConceptScheme ;
+    dcterms:isPartOf <https://w3id.org/ogc/ospd/catalog> ;
+    skos:definition "Activity types specific to an OSPD tool, product or workflow that specialise the generic types of the family earth observation, and that OSPD participants contributed to this register."@en ;
+    skos:hasTopConcept ospd:lightning2earthcare-observation-matching,
+        ospd:lightning2earthcare-storm-characterisation ;
+    skos:prefLabel "OSPD specific activity types: earth observation"@en .
+

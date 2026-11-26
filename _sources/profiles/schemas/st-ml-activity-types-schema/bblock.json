@@ -1,0 +1,43 @@
+{
+  "name": "SpatioTemporal ML Activity Types Profile Schema",
+  "group": "Example: Activity Types",
+  "highlighted": true,
+  "title": "Schema for SpatioTemporal Machine learning training/inference activities, profiled from the Registered Item Model",
+  "abstract": "This is a schema representation of the ogc.register.ospd.profiles.st-ml-activity-types model",
+  "description": "See the ogc.register.ospd.profiles.st-ml-activity-types model for the description of the SpatioTemporal ML Activity Types Profile. This building block is a Schema representation of that block for json schema implementation purposes.",
+  "status": "under-development",
+  "version": "0.3",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema"
+  ],
+  "dependsOn": [
+    "ogc.register.ospd.profiles.st-ml-activity-types"
+  ],
+  "concept": [
+    "https://w3id.org/ogc/rim/ml-activity/STMLActivityType"
+  ],
+  "sources": [
+    {
+      "title": "STAC Machine Learning Model (MLM) Extension Ontology building block",
+      "link": "https://github.com/ogcincubator/bblocks-stac/tree/master/_sources/extensions/mlm-ontology"
+    },
+    {
+      "title": "STAC MLM extension README (field descriptions and example)",
+      "link": "https://github.com/stac-extensions/mlm/blob/main/README.md"
+    },
+    {
+      "title": "W3C PROV-O",
+      "link": "https://www.w3.org/TR/prov-o/"
+    }
+  ],
+  "tags": [
+    "machine learning",
+    "provenance",
+    "MLM",
+    "register",
+    "activity type"
+  ],
+  "dateTimeAddition": "2026-09-17T00:00:00Z",
+  "dateOfLastChange": "2026-09-23"
+}

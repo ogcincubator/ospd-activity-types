@@ -1,0 +1,82 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:aganitha-drought-classification a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/classification> ;
+    dcterms:source <https://github.com/ogcincubator/bblocks-openscience/blob/02f6895/_sources/prov-profiles/aganitha-ndvi/examples/drought-classification.json#L4> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Assigns a drought severity class to each administrative unit (mandal) from its composite drought index value, using class thresholds."@en ;
+    skos:editorialNote "Definition drafted on 26 Nov 2026 from the label and data of the example step; to be confirmed by the contributor."@en ;
+    skos:inScheme ospd-specific:workflow-and-scoring ;
+    skos:note "Contributed to OSPD 2026 by Aganitha (bblocks-openscience aganitha-ndvi examples); defined here (decision of 26 Nov 2026). No tool-neutral generic parent yet: open question. Evidence in dcterms:source."@en ;
+    skos:prefLabel "Drought severity classification"@en ;
+    skos:topConceptOf ospd-specific:workflow-and-scoring ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/aganitha-drought-classification"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:aganitha-index-normalisation a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/index-normalisation> ;
+    dcterms:source <https://github.com/ogcincubator/bblocks-openscience/blob/02f6895/_sources/prov-profiles/aganitha-ndvi/examples/smdi-normalisation.json#L4> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Normalises an indicator against its reference extremes over a reference period, as for the vegetation condition index (VCI) from NDVI and the soil moisture deficit index (SMDI)."@en ;
+    skos:editorialNote "Definition drafted on 26 Nov 2026 from the label and data of the example step; to be confirmed by the contributor."@en ;
+    skos:inScheme ospd-specific:workflow-and-scoring ;
+    skos:note "Contributed to OSPD 2026 by Aganitha (bblocks-openscience aganitha-ndvi examples); defined here (decision of 26 Nov 2026). No tool-neutral generic parent yet: open question. Evidence in dcterms:source."@en ;
+    skos:prefLabel "Indicator normalisation"@en ;
+    skos:topConceptOf ospd-specific:workflow-and-scoring ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/aganitha-index-normalisation"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:cvi-configuration-validation a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/configuration-validation> ;
+    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L39> ;
+    rdfs:subClassOf ospd:input-validation ;
+    skos:broader ospd:input-validation ;
+    skos:definition "Validates the CVI scoring configuration (thresholds, weights) before a run."@en ;
+    skos:inScheme ospd-specific:workflow-and-scoring ;
+    skos:note "Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Configuration validation"@en ;
+    skos:topConceptOf ospd-specific:workflow-and-scoring ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/cvi-configuration-validation"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:cvi-vulnerability-index-scoring a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/vulnerability-index-scoring> ;
+    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L88> ;
+    rdfs:subClassOf ospd:index-composition ;
+    skos:broader ospd:index-composition ;
+    skos:definition "Combines the five ranked CVI variables into the Coastal Vulnerability Index, sqrt(product/n), per transect."@en ;
+    skos:inScheme ospd-specific:workflow-and-scoring ;
+    skos:note "Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Vulnerability index scoring"@en ;
+    skos:topConceptOf ospd-specific:workflow-and-scoring ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/cvi-vulnerability-index-scoring"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd-specific:workflow-and-scoring a skos:ConceptScheme ;
+    dcterms:isPartOf <https://w3id.org/ogc/ospd/catalog> ;
+    skos:definition "Activity types specific to an OSPD tool, product or workflow that specialise the generic types of the family workflow and scoring, and that OSPD participants contributed to this register."@en ;
+    skos:hasTopConcept ospd:aganitha-drought-classification,
+        ospd:aganitha-index-normalisation,
+        ospd:cvi-configuration-validation,
+        ospd:cvi-vulnerability-index-scoring ;
+    skos:prefLabel "OSPD specific activity types: workflow and scoring"@en .
+

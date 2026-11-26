@@ -1,0 +1,14 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Geoprocessing Activity Type
+description: >
+  A profile of the Activity Type Register Profile for geoprocessing activity types
+
+allOf:
+  - $ref: bblocks://ogc.register.ospd.profiles.schemas.activity-types-schema
+
+  - type: object
+    properties:
+      usedEntityType:
+        description: >
+          URI identifying a class of spatial objects used as input
+          by activities of this type.

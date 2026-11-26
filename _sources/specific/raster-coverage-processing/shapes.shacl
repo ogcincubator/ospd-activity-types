@@ -1,0 +1,15 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix ex:      <https://w3id.org/ogc/ospd/shapes/> .
+
+# A specific activity type should specialise a generic one. The other constraints (label, concept scheme,
+# definition) are inherited from the core block through isProfileOf.
+ex:SpecificActivityTypeShape a sh:NodeShape ;
+    sh:targetClass acttype:ActivityType ;
+    sh:property [
+        sh:path skos:broader ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+    ] .

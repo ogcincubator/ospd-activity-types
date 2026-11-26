@@ -1,0 +1,76 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:point-cloud-thinning a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-thinning> ;
+    rdfs:subClassOf ospd:point-cloud-filtering ;
+    skos:broader ospd:point-cloud-filtering ;
+    skos:definition "Reduces the number of points to the given percentage by sequential point removal, which suits points stored in chronological order best."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+    skos:narrower ospd:pointcloud-point-cloud-thinning ;
+    skos:prefLabel "Point cloud thinning (simple)"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/point-cloud-thinning"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:point-cloud-to-grid a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-to-grid> ;
+    rdfs:subClassOf ospd:spatial-model-conversion ;
+    skos:broader ospd:spatial-model-conversion ;
+    skos:definition "Writes one value per grid cell from the points falling in it -- by default the z value of the first point -- as a single-band raster."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+    skos:narrower ospd:pointcloud-point-cloud-to-grid ;
+    skos:prefLabel "Point cloud to grid"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/point-cloud-to-grid"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:point-cloud-to-shapes a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-to-shapes> ;
+    rdfs:subClassOf ospd:spatial-model-conversion ;
+    skos:broader ospd:spatial-model-conversion ;
+    skos:definition "Converts a point cloud to a feature collection of points."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+    skos:narrower ospd:pointcloud-point-cloud-to-shapes ;
+    skos:prefLabel "Point cloud to shapes"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/point-cloud-to-shapes"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:point-cloud-filtering a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-filtering> ;
+    dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L742> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Keeps a subset of the points of a point cloud, chosen by a rule, and returns them as a point cloud."@en ;
+    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-filtering> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+    skos:narrower ospd:point-cloud-thinning ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Point cloud filtering"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/point-cloud-filtering"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> a skos:ConceptScheme ;
+    skos:definition "Point-cloud thinning, gridding and conversion to shapes."@en ;
+    skos:hasTopConcept ospd:point-cloud-filtering,
+        ospd:point-cloud-to-grid,
+        ospd:point-cloud-to-shapes ;
+    skos:prefLabel "Point cloud processing"@en .
+

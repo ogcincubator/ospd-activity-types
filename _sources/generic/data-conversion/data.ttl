@@ -1,0 +1,72 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geoproc: <https://w3id.org/ogc/rim/geoprocessing/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:cog-conversion a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/vegetation-productivity#CogConversion> ;
+    dcterms:source <https://github.com/52North/bblocks-openscience/blob/fe57fc59540ed1d64d18b174529d22add905d66c/_sources/prov-examples/52n-provenance/vegetation-productivity/example.json#L208> ;
+    rdfs:subClassOf ospd:encoding-conversion ;
+    skos:broader ospd:encoding-conversion ;
+    skos:definition "Converts raster results to Cloud-Optimised GeoTIFF."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;
+    skos:note "Moved from the OSPD specific types to this generic family (refactor of 26 Nov 2026): its definition names no tool, product or workflow. Evidence in dcterms:source."@en ;
+    skos:prefLabel "COG conversion"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/cog-conversion"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:spatial-model-conversion a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/spatial-model-conversion> ;
+    dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L704>,
+        <https://github.com/geonovum-labs/ospd-dtaas-register/blob/387794d7052af37986cadd791c81afe87acb24f4/_sources/ogcapi/processes/3dgi/reconstruct_buildings/examples/metadata.json#L2>,
+        <https://github.com/sunnydean/lightning2earthcare/blob/be63866b12733db5ef7349205d36d8af8ea937f1/cwl/ospd2026/registry/geoprocessing-activities.jsonld#L43> ;
+    rdfs:subClassOf geoproc:GeoprocessingActivityType ;
+    skos:definition "Converts spatial data from one spatial model to another, such as a point cloud to a grid coverage, to a collection of features or to 3D solids."@en ;
+    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/spatial-model-conversion> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;
+    skos:narrower ospd:lightning2earthcare-feature-construction,
+        ospd:point-cloud-to-grid,
+        ospd:point-cloud-to-shapes ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Spatial model conversion"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/spatial-model-conversion"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:encoding-conversion a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/encoding-conversion> ;
+    dcterms:source <https://github.com/52North/bblocks-openscience/blob/fe57fc59540ed1d64d18b174529d22add905d66c/_sources/prov-examples/52n-provenance/vegetation-productivity/example.json#L208>,
+        <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L753>,
+        <https://github.com/geonovum-labs/ospd-dtaas-register/blob/387794d7052af37986cadd791c81afe87acb24f4/_sources/ogcapi/processes/3dgi/convert_format/examples/metadata.json#L1> ;
+    rdfs:subClassOf geoproc:GeoprocessingActivityType ;
+    skos:altLabel "Format conversion"@en ;
+    skos:definition "Re-encodes spatial data in another data format, without changing the information it carries."@en ;
+    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/encoding-conversion> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;
+    skos:narrower ospd:cog-conversion,
+        ospd:raster-format-conversion ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Encoding conversion"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/encoding-conversion"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/activity-type/families/data-conversion> a skos:ConceptScheme ;
+    skos:definition "Activities that change the encoding or the spatial model of data without changing the information it carries."@en ;
+    skos:hasTopConcept ospd:encoding-conversion,
+        ospd:spatial-model-conversion ;
+    skos:prefLabel "Data conversion"@en .
+

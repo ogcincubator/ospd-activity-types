@@ -1,0 +1,27 @@
+{
+  "name": "OSPD specific activity types: information extraction and retrieval",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of information extraction and retrieval (ogc.register.ospd.generic.information-extraction-and-retrieval).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "information-extraction-and-retrieval"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.register.ospd.generic.information-extraction-and-retrieval",
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (information extraction and retrieval): definitions"
+    }
+  ]
+}

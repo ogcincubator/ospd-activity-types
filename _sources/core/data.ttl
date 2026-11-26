@@ -1,11 +1,41 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
 @prefix ospd-catalog: <https://w3id.org/ogc/ospd/> .
+@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+
+ospd:catalog a dcat:Catalog ;
+    dcterms:description "Generic activity types: what is done, independent of tools. Each family of related types is a concept scheme. They are described with the activity type profiles of the Registered Item Model, in the profile blocks of this register."@en ;
+    dcterms:hasPart <https://w3id.org/ogc/ospd/activity-type/families/data-conversion>,
+        <https://w3id.org/ogc/ospd/activity-type/families/earth-observation>,
+        <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval>,
+        <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling>,
+        <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing>,
+        <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing>,
+        <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing>,
+        <https://w3id.org/ogc/ospd/activity-type/families/sqlmm>,
+        <https://w3id.org/ogc/ospd/activity-type/families/terrain-and-hydrology>,
+        <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing>,
+        <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    dcterms:isPartOf ospd-catalog:catalog ;
+    dcterms:references acttype:,
+        rim:catalog,
+        <https://w3id.org/ogc/rim/geoprocessing/>,
+        <https://w3id.org/ogc/rim/ml-activity/> ;
+    dcterms:title "Generic activity types"@en .
 
 ospd-catalog:catalog a dcat:Catalog ;
-    dcterms:description "Activity types specific to the OGC Open Science Persistent Demonstrator (OSPD): tool- and example-specific types, each specialising a generic activity type of the Activity Types Register (skos:broader)."@en ;
-    dcterms:hasPart ospd-catalog:specific-activity-types ;
-    dcterms:references ospd:catalog ;
+    dcterms:description "The activity types of the OGC Open Science Persistent Demonstrator (OSPD): the generic activity types, grouped into families, which the participant registers (loaded from their ogcincubator forks) specialise with skos:broader."@en ;
+    dcterms:hasPart ospd:catalog,
+        ospd-specific:data-conversion,
+        ospd-specific:earth-observation,
+        ospd-specific:information-extraction-and-retrieval,
+        ospd-specific:ml-and-statistical-modeling,
+        ospd-specific:raster-coverage-processing,
+        ospd-specific:spatial-indexing,
+        ospd-specific:vector-geometry-processing,
+        ospd-specific:workflow-and-scoring ;
     dcterms:title "OSPD Activity Types Register"@en .
 

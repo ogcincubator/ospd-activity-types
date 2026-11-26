@@ -1,0 +1,40 @@
+{
+  "name": "Activity Types Register Profile Schema",
+  "group": "Example: Activity Types",
+  "highlighted": true,
+  "title": "Schema of activity types, profiled from the Registered Item Model",
+  "abstract": "This is a schema representation of the ogc.register.ospd.profiles.activity-types model",
+  "description": "See the ogc.register.ospd.profiles.activity-types model for the description of the Activity Types Register Profile. This building block is a Schema representation of that block for json schema implementation purposes.",
+  "status": "under-development",
+  "version": "0.3",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.rim.schemas.register-item"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register-item-class",
+    "ogc.register.ospd.profiles.activity-types"
+  ],
+  "concept": [
+    "https://w3id.org/ogc/rim/activity-type/ActivityType"
+  ],
+  "sources": [
+    {
+      "title": "W3C PROV-O",
+      "link": "https://www.w3.org/TR/prov-o/"
+    },
+    {
+      "title": "P-Plan Ontology",
+      "link": "https://www.opmw.org/model/p-plan/"
+    }
+  ],
+  "tags": [
+    "register",
+    "provenance",
+    "activity types",
+    "plan",
+    "schema"
+  ],
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "dateOfLastChange": "2026-10-30"
+}

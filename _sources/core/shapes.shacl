@@ -3,7 +3,7 @@
 @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
 @prefix ex:      <https://w3id.org/ogc/ospd/shapes/> .
 
-ex:SpecificActivityTypeShape a sh:NodeShape ;
+ex:GenericActivityTypeShape a sh:NodeShape ;
     sh:targetClass acttype:ActivityType ;
     sh:property [
         sh:path skos:prefLabel ;
@@ -14,13 +14,7 @@ ex:SpecificActivityTypeShape a sh:NodeShape ;
         sh:path skos:inScheme ;
         sh:class skos:ConceptScheme ;
         sh:minCount 1 ;
-        sh:message "An OSPD activity type must be in a concept scheme."
-    ] ;
-    sh:property [
-        sh:path skos:broader ;
-        sh:minCount 1 ;
-        sh:severity sh:Warning ;
-        sh:message "An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+        sh:message "A generic activity type must be in a concept scheme (its family)."
     ] ;
     sh:property [
         sh:path skos:definition ;

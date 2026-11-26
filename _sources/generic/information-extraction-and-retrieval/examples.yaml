@@ -1,0 +1,40 @@
+examples:
+  - title: Commodity Classification
+    snippets:
+      - language: turtle
+        code: |
+          @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
+          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+          @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#> .
+          @prefix prov: <http://www.w3.org/ns/prov#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+          @prefix rim: <https://w3id.org/ogc/rim/> .
+          @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+          @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+          ospd:GA042 a skos:Concept,
+                  acttype:ActivityType ;
+              dcterms:modified "2026-09-23"^^xsd:date ;
+              dcterms:replaces <http://ospd/demo/GA042> ;
+              dcterms:source <https://github.com/voyagersearch/voyager-prov-ts/blob/dev/docs/ospd-register-proposal.md> ;
+              rdfs:seeAlso <http://ospd/demo/classify-commodity> ;
+              rdfs:subClassOf acttype:ActivityType ;
+              owl:versionInfo "v1" ;
+              skos:broader ospd:GA048 ;
+              skos:definition "Text → commodity-taxonomy classifier (dictionary matcher over normalized labels). Domain-specific to agricultural / commodity data."@en ;
+              skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
+              skos:prefLabel "Commodity Classification"@en ;
+              skos:related ospd:GA043,
+                  ospd:GA044 ;
+              prov:qualifiedAttribution [ prov:agent [ foaf:name "Voyager Search" ] ;
+                      prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ],
+                  [ prov:agent [ foaf:name "Alex Bostic" ] ;
+                      prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+              rim:itemClass acttype:activityTypeItemClass ;
+              rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA042"^^xsd:anyURI ;
+              rim:publicationStatus rim:published ;
+              rim:validityStatus rim:valid .
+
+          <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> a skos:ConceptScheme .
