@@ -4,7 +4,7 @@ digraph G {
   edge [fontname="DejaVu Sans", fontsize=9];
   rim [fillcolor="#e8eef7", label=<<B>RIM: Registered Item Model</B><BR/>ISO 19135:2026 register model<BR/><FONT POINT-SIZE="9">registered-item-model · ogc.rim.*</FONT>>];
   gen [fillcolor="#e6f2e6", label=<<B>OSPD Activity Types Register (generic)</B><BR/>activity-type profiles + 109 generic types in 11 families<BR/><FONT POINT-SIZE="9">ospd-activity-types · ogc.register.ospd.*</FONT>>];
-  spec [fillcolor="#fbeedd", label=<<B>Participant registers (specific)</B><BR/>tool- and example-specific types, loaded from the ogcincubator forks<BR/><FONT POINT-SIZE="9">e.g. ospd-geolabs-process-profiles, ospd-dtaas-register</FONT>>];
+  spec [fillcolor="#fbeedd", label=<<B>Participant registers (specific)</B><BR/>tool- and example-specific types, loaded from the ogcincubator forks<BR/><FONT POINT-SIZE="9">e.g. GeoLabs process profiles, Geonovum DTaaS register</FONT>>];
   trace [fillcolor="#f4f4f4", style="rounded,filled,dashed", label=<<B>Provenance traces</B><BR/>prov:Activity typed with an activity type IRI>];
   gen -> rim [label="  profiles the model\l  (isProfileOf, imports)"];
   spec -> gen [label="  skos:broader, isProfileOf\l  (specialises generic types)"];
