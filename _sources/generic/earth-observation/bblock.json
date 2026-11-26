@@ -1,0 +1,23 @@
+{
+  "name": "Earth observation",
+  "abstract": "Earth-observation data access and applications: Sentinel-2 band retrieval and product selection, cloud and best-available-pixel handling. The water-bodies, algae-bloom and mangrove-biomass workflows that use them are defined by the participant registers.",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "activity-type",
+    "earth-observation"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.register.ospd.core",
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "Earth observation: generic activity type definitions"
+    }
+  ]
+}

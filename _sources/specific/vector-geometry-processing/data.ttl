@@ -1,0 +1,64 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:cvi-coastline-extraction a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/coastline-extraction> ;
+    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L46> ;
+    rdfs:subClassOf ospd:GA020 ;
+    skos:broader ospd:GA020 ;
+    skos:definition "Extracts the coastline of an area of interest from OpenStreetMap Overpass features."@en ;
+    skos:inScheme ospd-specific:vector-geometry-processing ;
+    skos:note "Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Coastline extraction"@en ;
+    skos:topConceptOf ospd-specific:vector-geometry-processing ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/cvi-coastline-extraction"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:cvi-erosion-data-integration a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/erosion-data-integration> ;
+    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L74> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Joins Deltares Coastal Hazard Wheel erosion classes to the transects and scores them."@en ;
+    skos:inScheme ospd-specific:vector-geometry-processing ;
+    skos:note "Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). No tool-neutral generic parent yet: open question. Evidence in dcterms:source."@en ;
+    skos:prefLabel "Erosion data integration"@en ;
+    skos:topConceptOf ospd-specific:vector-geometry-processing ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/cvi-erosion-data-integration"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:cvi-transect-generation a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/transect-generation> ;
+    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L53> ;
+    rdfs:subClassOf ospd:geometry-construction ;
+    skos:broader ospd:geometry-construction ;
+    skos:definition "Generates shore-normal transects along the coastline at a fixed spacing."@en ;
+    skos:inScheme ospd-specific:vector-geometry-processing ;
+    skos:note "Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Transect generation"@en ;
+    skos:topConceptOf ospd-specific:vector-geometry-processing ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/cvi-transect-generation"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd-specific:vector-geometry-processing a skos:ConceptScheme ;
+    dcterms:isPartOf <https://w3id.org/ogc/ospd/catalog> ;
+    skos:definition "Activity types specific to an OSPD tool, product or workflow that specialise the generic types of the family vector geometry processing, and that OSPD participants contributed to this register."@en ;
+    skos:hasTopConcept ospd:cvi-coastline-extraction,
+        ospd:cvi-erosion-data-integration,
+        ospd:cvi-transect-generation ;
+    skos:prefLabel "OSPD specific activity types: vector geometry processing"@en .
+

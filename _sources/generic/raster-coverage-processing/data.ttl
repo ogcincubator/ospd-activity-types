@@ -1,0 +1,463 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:GA012 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA012> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Soil-adjusted_vegetation_index> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:broader ospd:GA008 ;
+    skos:definition "NDVI with adjustments for soil colour, moisture and high density vegetation saturation effect"@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:prefLabel "Soil-adjusted vegetation index (SAVI)"@en ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA012"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA013 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA013> ;
+    dcterms:source <https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:broader ospd:GA008 ;
+    skos:definition "Normalized difference vegetation index (NDVI)"@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:prefLabel "NDVI"@en ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA013"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA010 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA010> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:definition "A Geoprocessing Activity that enhances the spatial resolution of raster imagery."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:prefLabel "SEN2SR"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA010"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA011 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA011> ;
+    dcterms:source <https://docs.ogc.org/is/14-065/14-065.html> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:definition "A Geoprocessing Activity that combines multiple raster tiles into a single raster dataset."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:prefLabel "Mosaic"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA011"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA018 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA018> ;
+    dcterms:source <https://gdal.org/en/stable/tutorials/reprojecting_data.html> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:definition "Reproject data from one CRS to another."@en ;
+    skos:exactMatch <https://catalog.ospd.dev.kurrawong.ai/catalogs/demo:geoacs/collections/demo:ospd-geoacs/items/demo:GA018> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:prefLabel "Reproject"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA018"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA026 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA026> ;
+    dcterms:source <https://gdal.org/en/stable/programs/gdal_raster_proximity.html> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA032 ;
+    skos:definition "Calculates the shortest distance from each raster cell to the nearest input feature, such as a stream or other vector or raster feature."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:prefLabel "Distance-to-feature calculation"@en ;
+    skos:related ospd:GA025,
+        ospd:GA028 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA026"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:ZonalStatistics a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/ZonalStatistics> ;
+    rdfs:seeAlso <https://example.org/ospd/process-types/zonal-statistics> ;
+    rdfs:subClassOf ospd:GA027 ;
+    skos:broader ospd:GA027 ;
+    skos:closeMatch ospd:GA027 ;
+    skos:definition "Aggregates a gridded source per zone, skipping nodata cells."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:note "Moved from the OSPD specific types to this generic family (refactor of 26 Nov 2026): its definition names no tool, product or workflow."@en ;
+    skos:prefLabel "Zonal statistics"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/ZonalStatistics"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:otsu-thresholding a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/otsu-thresholding> ;
+    rdfs:subClassOf ospd:raster-classification ;
+    skos:broader ospd:raster-classification ;
+    skos:definition "Divides the cells of a single-band raster into two classes at the threshold computed from the histogram of the cell values by Otsu's method, which maximises the variance between the two classes, and returns the cells of the upper class as a binary mask."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:otsu ;
+    skos:prefLabel "Otsu thresholding"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/otsu-thresholding"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:radiometric-index a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/radiometric-index> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:GA008 ;
+    skos:broader ospd:GA008 ;
+    skos:definition "Computes one or more named radiometric indices (e.g. NDVI, NDWI, SAVI) from the relevant spectral channels of the input raster(s)."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:calculate-indices,
+        ospd:norm-diff,
+        ospd:raster-radiometric-index ;
+    skos:prefLabel "Radiometric index"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/radiometric-index"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-band-math-multiband a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-band-math-multiband> ;
+    dcterms:source [ ],
+        [ ] ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Evaluates a user-supplied, possibly vector-valued mathematical expression per pixel across one or more input rasters, producing an output raster with one or more bands."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:band-math-multiband ;
+    skos:prefLabel "Raster band math (multi-band output)"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-band-math-multiband"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-crop a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-crop> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:coverage-subsetting ;
+    skos:broader ospd:coverage-subsetting ;
+    skos:definition "Extracts the pixels of a raster coverage that fall within a region of interest."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:extract-roi ;
+    skos:prefLabel "Raster crop"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-crop"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-extent a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-extent> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:extent-computation ;
+    skos:broader ospd:extent-computation ;
+    skos:definition "Computes the bounding envelope of a raster coverage, as a vector polygon."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:extent ;
+    skos:prefLabel "Raster extent"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-extent"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-format-conversion a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-format-conversion> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:encoding-conversion ;
+    skos:broader ospd:encoding-conversion ;
+    skos:definition "Re-encodes a raster coverage into another raster format, without altering its content."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:format-conversion ;
+    skos:prefLabel "Raster format conversion"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-format-conversion"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-rendering a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-rendering> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:portrayal ;
+    skos:broader ospd:portrayal ;
+    skos:definition "Depicts a raster as an image for viewing, giving each cell a colour from a colour map that associates values, or classes of values, with colours."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:plot-image ;
+    skos:prefLabel "Raster rendering"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-rendering"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-reprojection a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-reprojection> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:raster-regridding ;
+    skos:broader ospd:raster-regridding ;
+    skos:definition "Reprojects a raster coverage to another coordinate reference system, resampling pixel values as needed, preserving the coverage's content."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:reproject-band,
+        ospd:reprojection ;
+    skos:prefLabel "Raster reprojection"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-reprojection"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-resampling a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-resampling> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:raster-regridding ;
+    skos:broader ospd:raster-regridding ;
+    skos:definition "Changes the cell size of a raster coverage, or its number of cells along each axis, over the same extent and in the same coordinate reference system, computing each new cell value from the input cells by an interpolation method."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:reproject-image ;
+    skos:prefLabel "Raster resampling"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-resampling"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA028 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA028> ;
+    dcterms:source <https://grass.osgeo.org/grass-stable/manuals/v.what.rast.html> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA032 ;
+    skos:definition "Extracts the value of an input raster, or a defined neighbourhood of raster cells, at each input point location."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:cvi-elevation-analysis,
+        ospd:cvi-land-cover-analysis ;
+    skos:prefLabel "Raster sampling at points"@en ;
+    skos:related ospd:GA026,
+        ospd:GA027 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA028"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-band-math a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-band-math> ;
+    dcterms:source [ ] ;
+    rdfs:subClassOf ospd:GA008 ;
+    skos:broader ospd:GA008 ;
+    skos:definition "Evaluates a user-supplied mathematical expression per pixel across one or more input rasters, producing a monoband output raster."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:band-math,
+        ospd:calculate-band ;
+    skos:prefLabel "Raster band math"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-band-math"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:coverage-subsetting a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/coverage-subsetting> ;
+    dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L693> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Extracts a part of a coverage, restricted in its domain (an area of interest) or in its range (some bands), without changing the values extracted beyond a declared unit conversion."@en ;
+    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/coverage-subsetting> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:band-retrieval,
+        ospd:raster-crop ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Coverage subsetting"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/coverage-subsetting"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:portrayal a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/portrayal> ;
+    dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L764> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Depicts spatial data as an image for viewing, according to rules that associate values or classes of values with a symbology."@en ;
+    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/portrayal> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:raster-rendering ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Portrayal"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/portrayal"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-classification a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-classification> ;
+    dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L731>,
+        <https://github.com/starling-foundries/KindGrove/blob/6e3872eb82c5574744b682f13cf5cda14e7132a3/scripts/provenance.py#L81> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Assigns each cell of a raster to one of a set of classes from its values, and returns the classes as a raster or a mask."@en ;
+    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-classification> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:otsu-thresholding ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Raster classification"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-classification"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA027 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA027> ;
+    dcterms:source <https://grass.osgeo.org/grass-stable/manuals/r.stats.zonal.html> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "3" ;
+    skos:broader ospd:GA032 ;
+    skos:definition "Calculates summary statistics, such as mean, median, minimum or maximum, for raster cells within each input polygon or grid zone."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:ZonalStatistics ;
+    skos:prefLabel "Zonal raster statistics"@en ;
+    skos:related ospd:GA028,
+        ospd:GA036 ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA027"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA032 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA032> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:detect-water-body,
+        ospd:estimate-biomass,
+        ospd:mangrove,
+        ospd:water-bodies ;
+    skos:prefLabel "Raster analysis"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA032"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:raster-regridding a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-regridding> ;
+    dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L682> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    skos:definition "Computes the values of a raster on another grid, of another coordinate reference system or of another resolution, by resampling the input values."@en ;
+    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-regridding> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:raster-reprojection,
+        ospd:raster-resampling ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Raster regridding"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/raster-regridding"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA008 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-10-09"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA008> ;
+    rdfs:seeAlso <https://hirondelle.crim.ca/weaver/processes/calculate-band> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:closeMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/band-algebra>,
+        ospd:raster-band-math ;
+    skos:definition "Performs a calculation over imagery bands and returns the resulting raster using the specified band arithmetic."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    skos:narrower ospd:radiometric-index,
+        ospd:raster-band-math,
+        ospd:workflow-copernicus-process,
+        ospd:workflow-earth-search-process ;
+    skos:prefLabel "Band Calculation"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
+    prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA008"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> a skos:ConceptScheme ;
+    skos:definition "Operations on rasters and coverages: reprojection, resampling, cropping, mosaicking, format conversion, rendering, band math, spectral indices and zonal analysis."@en ;
+    skos:hasTopConcept ospd:GA008,
+        ospd:GA010,
+        ospd:GA011,
+        ospd:GA018,
+        ospd:GA032,
+        ospd:coverage-subsetting,
+        ospd:portrayal,
+        ospd:raster-band-math-multiband,
+        ospd:raster-classification,
+        ospd:raster-extent,
+        ospd:raster-format-conversion,
+        ospd:raster-regridding ;
+    skos:prefLabel "Raster coverage processing"@en .
+

@@ -1,0 +1,23 @@
+{
+  "name": "Point-cloud processing",
+  "abstract": "Point-cloud thinning, gridding and conversion to shapes.",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "activity-type",
+    "point-cloud-processing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.register.ospd.core",
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "Point-cloud processing: generic activity type definitions"
+    }
+  ]
+}

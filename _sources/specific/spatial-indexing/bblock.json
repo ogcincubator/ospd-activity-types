@@ -1,0 +1,27 @@
+{
+  "name": "OSPD specific activity types: spatial indexing",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of spatial indexing (ogc.register.ospd.generic.spatial-indexing).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "spatial-indexing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.register.ospd.generic.spatial-indexing",
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (spatial indexing): definitions"
+    }
+  ]
+}

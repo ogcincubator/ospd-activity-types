@@ -1,0 +1,31 @@
+examples:
+  - title: Standardised precipitation index
+    snippets:
+      - language: turtle
+        code: |
+          @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
+          @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+          @prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+          @prefix rim: <https://w3id.org/ogc/rim/> .
+          @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+          @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+          ospd:aganitha-standardised-index a skos:Concept,
+                  acttype:ActivityType ;
+              dcterms:replaces <https://example.org/ospd/process-types/standardised-index> ;
+              dcterms:source <https://github.com/ogcincubator/bblocks-openscience/blob/02f6895/_sources/prov-profiles/aganitha-ndvi/examples/spi.json#L4> ;
+              rdfs:subClassOf acttype:ActivityType ;
+              skos:definition "Computes the standardised precipitation index (SPI): precipitation accumulated over a period, transformed to a standard normal variable against its reference distribution."@en ;
+              skos:editorialNote "Definition drafted on 26 Nov 2026 from the label and data of the example step; to be confirmed by the contributor."@en ;
+              skos:inScheme ospd-specific:ml-and-statistical-modeling ;
+              skos:note "Contributed to OSPD 2026 by Aganitha (bblocks-openscience aganitha-ndvi examples); defined here (decision of 26 Nov 2026). No tool-neutral generic parent yet: open question. Evidence in dcterms:source."@en ;
+              skos:prefLabel "Standardised precipitation index"@en ;
+              skos:topConceptOf ospd-specific:ml-and-statistical-modeling ;
+              rim:itemClass acttype:activityTypeItemClass ;
+              rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/aganitha-standardised-index"^^xsd:anyURI ;
+              rim:publicationStatus rim:published ;
+              rim:validityStatus rim:valid .
+
+          <https://w3id.org/ogc/ospd/specific-activity-types/ml-and-statistical-modeling> a skos:ConceptScheme .

@@ -1,0 +1,27 @@
+{
+  "name": "OSPD specific activity types: machine learning and statistical modeling",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of machine learning and statistical modeling (ogc.register.ospd.generic.ml-and-statistical-modeling).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "ml-and-statistical-modeling"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.register.ospd.generic.ml-and-statistical-modeling",
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (machine learning and statistical modeling): definitions"
+    }
+  ]
+}

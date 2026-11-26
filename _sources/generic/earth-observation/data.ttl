@@ -1,0 +1,113 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:GA016 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA016> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:definition "BAP is a Geoprocessing Activity that determines the best available pixel in a satellite imagery time series."@en ;
+    skos:exactMatch <https://catalog.ospd.dev.kurrawong.ai/catalogs/demo:geoacs/collections/demo:ospd-geoacs/items/demo:GA016> ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    skos:prefLabel "Best available pixel (BAP)"@en ;
+    skos:related ospd:GA012,
+        ospd:GA013,
+        ospd:GA014,
+        ospd:GA015 ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA016"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:band-retrieval a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/band-retrieval> ;
+    dcterms:source [ ],
+        [ ] ;
+    rdfs:subClassOf ospd:coverage-subsetting ;
+    skos:broader ospd:coverage-subsetting ;
+    skos:definition "Retrieves one band, one range component, of an Earth observation product as a raster, over the whole product or over an area of interest, with the values the product provides, possibly converted to physical units by the scale and offset the product declares."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    skos:narrower ospd:crop,
+        ospd:download-band,
+        ospd:download-band-sentinel2-product-safe,
+        ospd:download-band-sentinel2-stac-item ;
+    skos:prefLabel "Band retrieval"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/band-retrieval"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:product-selection a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/product-selection> ;
+    dcterms:source [ ],
+        [ ],
+        [ ] ;
+    rdfs:subClassOf ospd:catalogue-search ;
+    skos:broader ospd:catalogue-search ;
+    skos:definition "Selects, from a catalogue of Earth observation products, those of a collection whose footprint intersects an area of interest and whose acquisition time falls within a time interval, possibly filtered further on their metadata, such as their cloud cover."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    skos:narrower ospd:select-products-sentinel2,
+        ospd:select-scene ;
+    skos:prefLabel "Product selection"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/product-selection"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA014 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA014> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    skos:prefLabel "Cloud cover"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA014"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:GA015 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA015> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    skos:prefLabel "Cloud mask distance"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+    prov:qualifiedAttribution [ prov:agent [ foaf:name "Martin Pontius" ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA015"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/activity-type/families/earth-observation> a skos:ConceptScheme ;
+    skos:definition "Earth-observation data access and applications: Sentinel-2 band retrieval and product selection, cloud and best-available-pixel handling. The water-bodies, algae-bloom and mangrove-biomass workflows that use them are defined by the participant registers."@en ;
+    skos:hasTopConcept ospd:GA014,
+        ospd:GA015,
+        ospd:GA016,
+        ospd:band-retrieval,
+        ospd:product-selection ;
+    skos:prefLabel "Earth observation"@en .
+

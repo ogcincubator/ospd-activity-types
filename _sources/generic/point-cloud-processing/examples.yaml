@@ -1,0 +1,27 @@
+examples:
+  - title: Point cloud thinning (simple)
+    snippets:
+      - language: turtle
+        code: |
+          @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
+          @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+          @prefix rim: <https://w3id.org/ogc/rim/> .
+          @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+          @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+          ospd:point-cloud-thinning a skos:Concept,
+                  acttype:ActivityType ;
+              dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-thinning> ;
+              rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+              skos:definition "Reduces the number of points to the given percentage by sequential point removal, which suits points stored in chronological order best."@en ;
+              skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+              skos:prefLabel "Point cloud thinning (simple)"@en ;
+              skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
+              rim:itemClass acttype:activityTypeItemClass ;
+              rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/point-cloud-thinning"^^xsd:anyURI ;
+              rim:publicationStatus rim:published ;
+              rim:validityStatus rim:valid .
+
+          <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> a skos:ConceptScheme .

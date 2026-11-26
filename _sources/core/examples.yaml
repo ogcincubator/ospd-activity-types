@@ -1,5 +1,5 @@
 examples:
-  - title: Catalog with the OSPD concept scheme
+  - title: OSPD catalog, generic catalog and a family concept scheme
     snippets:
       - language: turtle
         code: |
@@ -9,7 +9,11 @@ examples:
 
           <https://w3id.org/ogc/ospd/catalog> a dcat:Catalog ;
               dcterms:title "OSPD Activity Types Register"@en ;
-              dcterms:hasPart <https://w3id.org/ogc/ospd/specific-activity-types> .
+              dcterms:hasPart <https://w3id.org/ogc/ospd/activity-type/catalog> .
 
-          <https://w3id.org/ogc/ospd/specific-activity-types> a skos:ConceptScheme ;
-              skos:prefLabel "OSPD specific activity types"@en .
+          <https://w3id.org/ogc/ospd/activity-type/catalog> a dcat:Catalog ;
+              dcterms:title "Generic activity types"@en ;
+              dcterms:hasPart <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> .
+
+          <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> a skos:ConceptScheme ;
+              skos:prefLabel "Vector geometry processing"@en .

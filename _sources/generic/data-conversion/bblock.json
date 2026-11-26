@@ -1,0 +1,23 @@
+{
+  "name": "Data conversion",
+  "abstract": "Activities that change the encoding or the spatial model of data without changing the information it carries.",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "activity-type",
+    "data-conversion"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.register.ospd.core",
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "Data conversion: generic activity type definitions"
+    }
+  ]
+}

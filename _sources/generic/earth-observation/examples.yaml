@@ -1,0 +1,29 @@
+examples:
+  - title: Band retrieval
+    snippets:
+      - language: turtle
+        code: |
+          @prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
+          @prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+          @prefix rim: <https://w3id.org/ogc/rim/> .
+          @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+          @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+          ospd:band-retrieval a skos:Concept,
+                  acttype:ActivityType ;
+              dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/band-retrieval> ;
+              dcterms:source [ ],
+                  [ ] ;
+              rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+              skos:definition "Retrieves one band, one range component, of an Earth observation product as a raster, over the whole product or over an area of interest, with the values the product provides, possibly converted to physical units by the scale and offset the product declares."@en ;
+              skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+              skos:prefLabel "Band retrieval"@en ;
+              skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
+              rim:itemClass acttype:activityTypeItemClass ;
+              rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/band-retrieval"^^xsd:anyURI ;
+              rim:publicationStatus rim:published ;
+              rim:validityStatus rim:valid .
+
+          <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> a skos:ConceptScheme .

@@ -1,0 +1,27 @@
+{
+  "name": "OSPD specific activity types: workflow and scoring",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of workflow and scoring (ogc.register.ospd.generic.workflow-and-scoring).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "workflow-and-scoring"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": "bblocks://ogc.register.ospd.generic.workflow-and-scoring",
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (workflow and scoring): definitions"
+    }
+  ]
+}

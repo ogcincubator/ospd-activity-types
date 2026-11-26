@@ -1,0 +1,114 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:ScoringAndProgressTracking a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/ScoringAndProgressTracking> ;
+    rdfs:seeAlso <https://example.org/ospd/process-types/scoring-and-progress-tracking> ;
+    rdfs:subClassOf ospd:index-composition ;
+    skos:broader ospd:index-composition ;
+    skos:definition "Combines the scores of several sources into one result per zone and tracks its status against the previous result (New, Continued, Upgraded, Downgraded)."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    skos:note "Moved from the OSPD specific types to this generic family (refactor of 26 Nov 2026): its definition names no tool, product or workflow."@en ;
+    skos:prefLabel "Scoring and progress tracking"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/ScoringAndProgressTracking"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:WeightedScoringAndClassification a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/WeightedScoringAndClassification> ;
+    rdfs:seeAlso <https://example.org/ospd/process-types/weighted-scoring-and-classification> ;
+    rdfs:subClassOf ospd:index-composition ;
+    skos:broader ospd:index-composition ;
+    skos:definition "Combines weighted indicators, e.g. zonal statistics and extra model inputs, into a score and a level per zone; may carry state such as duration from the previous result."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    skos:note "Moved from the OSPD specific types to this generic family (refactor of 26 Nov 2026): its definition names no tool, product or workflow."@en ;
+    skos:prefLabel "Weighted scoring and classification"@en ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/WeightedScoringAndClassification"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:catalog-export a skos:Concept,
+        acttype:ActivityType ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Assembles the results of an analysis into a catalog of items with their assets, for example a STAC Catalog."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    skos:narrower ospd:export-stac,
+        ospd:stac ;
+    skos:note "Proposed generic type, introduced to give specific types a parent; not derived from a source definition."@en ;
+    skos:prefLabel "Catalog export"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/catalog-export"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:input-validation a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:source <https://github.com/geonovum-labs/ospd-dtaas-register/blob/387794d7052af37986cadd791c81afe87acb24f4/_sources/ogcapi/processes/3dgi/validate_point_cloud/examples/metadata.json#L2>,
+        <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L39> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Checks that input data or configuration meet the requirements of a downstream activity, such as format, completeness, reference system or value ranges, and reports or rejects what does not."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    skos:narrower ospd:cvi-configuration-validation ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Input validation"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/input-validation"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:workflow a skos:Concept,
+        acttype:ActivityType ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Orchestrates several activities, each consuming the outputs of earlier ones, as one executable whole. One execution of it is a workflow run."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    skos:narrower ospd:mangrove-workflow,
+        ospd:mangrove-workflow-steps,
+        ospd:workflow-copernicus,
+        ospd:workflow-earth-search ;
+    skos:note "Proposed generic type, introduced to give specific types a parent; not derived from a source definition."@en ;
+    skos:prefLabel "Workflow"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/workflow"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ospd:index-composition a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:replaces <https://example.org/ospd/process-types/index-composition> ;
+    dcterms:source <https://github.com/52North/bblocks-openscience/blob/fe57fc59540ed1d64d18b174529d22add905d66c/_sources/prov-profiles/aganitha-ndvi/examples/cdsi-composition.json#L4>,
+        <https://github.com/52North/bblocks-openscience/blob/fe57fc59540ed1d64d18b174529d22add905d66c/_sources/rss-hydro/ontology/activities/ontology.ttl#L35>,
+        <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L88> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    skos:definition "Combines several indicator values for the same unit, such as a cell, transect or administrative zone, each possibly normalised, scored or weighted, into one composite index or score for that unit."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    skos:narrower ospd:ScoringAndProgressTracking,
+        ospd:WeightedScoringAndClassification,
+        ospd:cvi-vulnerability-index-scoring ;
+    skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "Composite index calculation"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/index-composition"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> a skos:ConceptScheme ;
+    skos:definition "Workflow runs and scoring or classification activities used in the model-of-models and workflow examples."@en ;
+    skos:hasTopConcept ospd:catalog-export,
+        ospd:index-composition,
+        ospd:input-validation,
+        ospd:workflow ;
+    skos:prefLabel "Workflow and scoring"@en .
+

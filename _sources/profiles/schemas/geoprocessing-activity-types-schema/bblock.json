@@ -1,0 +1,38 @@
+{
+  "name": "Geoprocessing Activity Types Profile Schema",
+  "group": "Example: Activity Types",
+  "highlighted": true,
+  "title": "Model of geoprocessing activity types, profiled from the Activity Type Register Profile",
+  "abstract": "This is a schema representation of the ogc.register.ospd.profiles.geoprocessing-activity-types model",
+  "description": "See the ogc.register.ospd.profiles.geoprocessing-activity-types model for the description of the Geoprocessing Activity Types Profile. This building block is a Schema representation of that block for json schema implementation purposes.",
+  "status": "under-development",
+  "version": "0.3",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.register.ospd.profiles.schemas.activity-types-schema"
+  ],
+  "dependsOn": [
+    "ogc.register.ospd.profiles.geoprocessing-activity-types"
+  ],
+  "concept": [
+    "https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType"
+  ],
+  "sources": [
+    {
+      "title": "OGC GeoSPARQL 1.1",
+      "link": "https://docs.ogc.org/is/22-047r1/22-047r1.html"
+    },
+    {
+      "title": "W3C PROV-O",
+      "link": "https://www.w3.org/TR/prov-o/"
+    }
+  ],
+  "tags": [
+    "geoprocessing",
+    "provenance",
+    "activity type",
+    "register"
+  ],
+  "dateTimeAddition": "2026-09-23T00:00:00Z",
+  "dateOfLastChange": "2026-09-23"
+}
