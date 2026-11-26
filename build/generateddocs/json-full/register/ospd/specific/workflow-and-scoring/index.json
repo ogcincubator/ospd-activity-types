@@ -1,0 +1,70 @@
+
+
+{
+  "itemIdentifier": "ogc.register.ospd.specific.workflow-and-scoring",
+  "name": "OSPD specific activity types: workflow and scoring",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of workflow and scoring (ogc.register.ospd.generic.workflow-and-scoring).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "workflow-and-scoring"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.register.ospd.generic.workflow-and-scoring"
+  ],
+  "shaclShapes": {
+    "ogc.register.ospd.specific.workflow-and-scoring": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/workflow-and-scoring/shapes.shacl"
+    ],
+    "ogc.register.ospd.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.register.ospd.profiles.activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/workflow-and-scoring/data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (workflow and scoring): definitions"
+    }
+  ],
+  "dependsOn": [
+    "ogc.register.ospd.generic.workflow-and-scoring"
+  ],
+  "dateOfLastChange": "2026-11-26",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/workflow-and-scoring/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/workflow-and-scoring/",
+  "description": "# OSPD specific activity types: workflow and scoring\n\nActivity types contributed by OSPD participants that specialise the generic types of workflow and scoring (ogc.register.ospd.generic.workflow-and-scoring).\n\nThis block has 4 specific activity types, each the specialisation (`skos:broader`) of a generic type of\n[Workflow and scoring](https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring). It is a profile of that family's block, whose\nshapes it inherits, and adds a warning for a type without a generic parent. Its data resource (`data.ttl`) is uploaded to\nthe OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Configuration validation](https://w3id.org/ogc/ospd/activity-type/cvi-configuration-validation) (`cvi-configuration-validation`)\n- [Drought severity classification](https://w3id.org/ogc/ospd/activity-type/aganitha-drought-classification) (`aganitha-drought-classification`) -- no generic parent yet\n- [Indicator normalisation](https://w3id.org/ogc/ospd/activity-type/aganitha-index-normalisation) (`aganitha-index-normalisation`) -- no generic parent yet\n- [Vulnerability index scoring](https://w3id.org/ogc/ospd/activity-type/cvi-vulnerability-index-scoring) (`cvi-vulnerability-index-scoring`)\n",
+  "examples": [
+    {
+      "title": "Configuration validation",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/specific/workflow-and-scoring/example_1_1.ttl",
+          "sizeBytes": 1635,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd:cvi-configuration-validation a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/configuration-validation> ;\n    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L39> ;\n    rdfs:subClassOf ospd:input-validation ;\n    skos:broader ospd:input-validation ;\n    skos:definition \"Validates the CVI scoring configuration (thresholds, weights) before a run.\"@en ;\n    skos:inScheme ospd-specific:workflow-and-scoring ;\n    skos:note \"Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). Evidence in dcterms:source.\"@en ;\n    skos:prefLabel \"Configuration validation\"@en ;\n    skos:topConceptOf ospd-specific:workflow-and-scoring ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/cvi-configuration-validation\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\n<https://w3id.org/ogc/ospd/specific-activity-types/workflow-and-scoring> a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/specific/workflow-and-scoring"
+}

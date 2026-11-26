@@ -1,0 +1,29 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:GA009 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-10-09"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA009> ;
+    rdfs:seeAlso <https://hirondelle.crim.ca/weaver/processes/ogc-ospd2026-downscaling-unet> ;
+    rdfs:subClassOf acttype:ActivityType ;
+    owl:versionInfo "0.1.3.dev10" ;
+    skos:definition "Performs climate variable downscaling used to transform coarse-scale climate model outputs into high-resolution, locally relevant climate data, using a machine learning algorithm described through STAC MLM."@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    skos:prefLabel "ML Climate Variable Downscaling"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
+    prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA009"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> a skos:ConceptScheme .

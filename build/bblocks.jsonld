@@ -214,10 +214,10 @@
   ],
   "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
   "name": "Building Blocks - OSPD Activity Types Register",
-  "abstract": "Activity types specific to the OGC Open Science Persistent Demonstrator (OSPD), under stable\n`https://w3id.org/ogc/ospd/activity-type/` URIs, each specialising a generic activity type.\n",
-  "description": "The OSPD-specific activity types (tool- and example-specific), as a federated register of the\n[Activity Types Register](https://ogcincubator.github.io/activity-type-register/): a root block (catalog)\nand a `specific` block carrying the Turtle definitions of the types, whose data is uploaded to the OSPD\nPrez instance when the register is built. Each type points to its generic parent with `skos:broader`.\n",
+  "abstract": "The activity types of the OGC Open Science Persistent Demonstrator (OSPD), under stable\n`https://w3id.org/ogc/ospd/activity-type/` URIs: the generic activity types, grouped into families.\n",
+  "description": "The activity types of OSPD and the model they are described with: the activity type, geoprocessing and\nmachine learning profiles of the Registered Item Model (`profiles/`), the catalogs (`core/`) and the generic\nactivity types, one block and one concept scheme per family (`generic/<family>`). Specific types are defined\nby the participant registers, loaded from their ogcincubator forks, and point to a generic type with\n`skos:broader`. This register supersedes the [Activity Type Register](https://ogcincubator.github.io/activity-type-register/).\n",
   "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
-  "modified": "2026-11-25T11:11:26.010864",
+  "modified": "2026-11-26T12:39:50.588197",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"009466f93d27bf23cb4832f43883f4f524ab5d30",
@@ -233,8 +233,7 @@
   "validationReportJson": "https://ogcincubator.github.io/ospd-activity-types/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
-    "https://ogcincubator.github.io/registered-item-model/build/register.json",
-    "https://ogcincubator.github.io/activity-type-register/build/register.json"
+    "https://ogcincubator.github.io/registered-item-model/build/register.json"
   ],
   "remoteCacheDir": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/_cache",
   "links": [
@@ -265,9 +264,116 @@
   "skos:prefLabel": "Building Blocks - OSPD Activity Types Register",
   "hasConcepts": [
     {
-      "itemIdentifier": "ogc.ospd.activity-type.core",
+      "itemIdentifier": "ogc.register.ospd.profiles.activity-types",
+      "name": "Activity Types Register Profile",
+      "group": "Example: Activity Types",
+      "highlighted": true,
+      "title": "Model of activity types, profiled from the Registered Item Model",
+      "abstract": "A profile of the Registered Item Model for governed activity type records in the acttype:ActivityType hierarchy, with related PROV object types and an optional plan.",
+      "description": "An activity type register governs activity types with identifiers, statuses and change history. Specific activity type classes specialise acttype:ActivityType, a sub-class of rim:RegisterItem. Registered types may be classes used to type individual activity records; those records also inherit register item requirements. Every activity type record uses acttype:activityTypeItemClass and belongs to the acttype:ActivityType hierarchy through rdf:type. Related entity, agent and activity types and an optional prov:Plan describe the expected activity. Further profiles specialise the root and constrain these related types.",
+      "status": "under-development",
+      "version": "0.3",
+      "itemClass": "model",
+      "isProfileOf": [
+        "bblocks://ogc.rim.core-ontology"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.model.cross-domain.prov",
+        "bblocks://ogc.rim.core-ontology"
+      ],
+      "concept": [
+        "https://w3id.org/ogc/rim/activity-type/ActivityType"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "sources": [
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        },
+        {
+          "title": "P-Plan Ontology",
+          "link": "https://www.opmw.org/model/p-plan/"
+        }
+      ],
+      "tags": [
+        "register",
+        "provenance",
+        "activity types",
+        "plan"
+      ],
+      "dateTimeAddition": "2026-09-23T00:00:00Z",
+      "dateOfLastChange": "2026-11-26",
+      "ontology": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/activity-types/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/activity-types/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/activity-types/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/activity-types/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.profiles.activity-types"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.profiles.activity-types",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Activity Types Register Profile",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.core",
       "name": "OSPD Activity Types Register",
-      "abstract": "The catalog of the OSPD-specific activity types: tool- and example-specific specialisations of the generic activity types of the Activity Types Register.",
+      "abstract": "The catalogs of the OSPD activity types: the OSPD catalog and, in it, the catalog of the generic activity types, one concept scheme per family. Participant registers specialise the generic types.",
       "status": "under-development",
       "dateTimeAddition": "2026-11-23T00:00:00Z",
       "itemClass": "model",
@@ -279,23 +385,23 @@
       ],
       "group": "OSPD Activity Types",
       "isProfileOf": [
-        "bblocks://ogc.register.profiles.activity-types"
+        "bblocks://ogc.register.ospd.profiles.activity-types"
       ],
       "shaclShapes": [
         {
           "prof:hasArtifact": [
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/activity-type-register/_sources/profiles/activity-types/shapes.shacl"
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.register.profiles.activity-types",
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -324,31 +430,32 @@
           "role": "data",
           "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/data.ttl",
           "format": "text/turtle",
-          "title": "OSPD activity types register catalog"
+          "title": "OSPD activity types catalogs"
         }
       ],
+      "highlighted": true,
       "dependsOn": [
-        "bblocks://ogc.register.profiles.activity-types"
+        "bblocks://ogc.register.ospd.profiles.activity-types"
       ],
-      "dateOfLastChange": "2026-11-25",
+      "dateOfLastChange": "2026-11-26",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/core/",
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/core/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/core/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/core/index.json"
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/core/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/core/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.core"
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.core"
         }
       },
-      "@id": "bblocks://ogc.ospd.activity-type.core",
+      "@id": "bblocks://ogc.register.ospd.core",
       "@type": [
         "bblocks:Model",
         "skos:Concept",
@@ -366,29 +473,144 @@
       }
     },
     {
-      "itemIdentifier": "ogc.ospd.activity-type.specific",
-      "name": "OSPD specific activity types",
-      "abstract": "Activity types specific to OSPD (tool- and example-specific), each specialising a generic activity type.",
+      "itemIdentifier": "ogc.register.ospd.profiles.geoprocessing-activity-types",
+      "name": "Geoprocessing Activity Types Profile",
+      "group": "Example: Activity Types",
+      "highlighted": true,
+      "title": "Registers of geoprocessing activity types, profiled from the Activity Type Register Profile",
+      "abstract": "A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivityType, each required to use or generate at least one GeoSPARQL spatial data type.",
+      "description": "Geoprocessing activities (reprojection, clipping, index computation, classification, model inference over imagery) are distinguished from other activities by the kind of data they use and produce. This block adds geoproc:GeoprocessingActivityType, a sub-class of acttype:ActivityType that every registered geoprocessing activity type specialises. It also constrains the related PROV object types such a type declares: at least one acttype:usedEntityType or acttype:generatedEntityType must be a GeoSPARQL 1.1 spatial type (geo:SpatialObject or geo:SpatialObjectCollection, or a sub-class of either). Further profiles, such as the ML Activity Types Profile, specialise geoproc:GeoprocessingActivityType in turn and add their own constraints.",
+      "status": "under-development",
+      "version": "0.3",
+      "itemClass": "model",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.profiles.activity-types"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.model.cross-domain.geosparql",
+        "bblocks://ogc.register.ospd.profiles.activity-types"
+      ],
+      "concept": [
+        "https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "sources": [
+        {
+          "title": "OGC GeoSPARQL 1.1",
+          "link": "https://docs.ogc.org/is/22-047r1/22-047r1.html"
+        },
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        }
+      ],
+      "tags": [
+        "geoprocessing",
+        "provenance",
+        "activity type",
+        "register"
+      ],
+      "dateTimeAddition": "2026-09-23T00:00:00Z",
+      "dateOfLastChange": "2026-11-26",
+      "ontology": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/geoprocessing-activity-types/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/geoprocessing-activity-types/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/geoprocessing-activity-types/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/geoprocessing-activity-types/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.profiles.geoprocessing-activity-types"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Geoprocessing Activity Types Profile",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.data-conversion",
+      "name": "Data conversion",
+      "abstract": "Activities that change the encoding or the spatial model of data without changing the information it carries.",
       "highlighted": true,
       "status": "under-development",
-      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
       "itemClass": "model",
       "version": "0.1",
       "tags": [
-        "ospd",
         "activity-type",
-        "specific"
+        "data-conversion"
       ],
       "group": "OSPD Activity Types",
       "isProfileOf": [
-        "bblocks://ogc.ospd.activity-type.core"
+        "bblocks://ogc.register.ospd.core"
       ],
       "resources": [
         {
           "role": "data",
-          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data.ttl",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/data-conversion/data.ttl",
           "format": "text/turtle",
-          "title": "OSPD specific activity types: definitions"
+          "title": "Data conversion: generic activity type definitions"
         }
       ],
       "shaclShapes": [
@@ -396,16 +618,16 @@
           "prof:hasArtifact": [
             "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.ospd.activity-type.core",
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/activity-type-register/_sources/profiles/activity-types/shapes.shacl"
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.register.profiles.activity-types",
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -430,36 +652,2483 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.ospd.activity-type.core"
+        "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-25",
-      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/",
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/data-conversion/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/ospd/activity-type/specific/",
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/data-conversion/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/ospd/activity-type/specific/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/ospd/activity-type/specific/index.json"
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/data-conversion/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/data-conversion/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.ospd.activity-type.specific"
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.data-conversion"
         }
       },
-      "@id": "bblocks://ogc.ospd.activity-type.specific",
+      "@id": "bblocks://ogc.register.ospd.generic.data-conversion",
       "@type": [
         "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset",
         "bblocks:BBlock"
       ],
-      "skos:prefLabel": "OSPD specific activity types",
+      "skos:prefLabel": "Data conversion",
       "ldContext": null,
       "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.earth-observation",
+      "name": "Earth observation",
+      "abstract": "Earth-observation data access and applications: Sentinel-2 band retrieval and product selection, cloud and best-available-pixel handling. The water-bodies, algae-bloom and mangrove-biomass workflows that use them are defined by the participant registers.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "earth-observation"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/earth-observation/data.ttl",
+          "format": "text/turtle",
+          "title": "Earth observation: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/earth-observation/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/earth-observation/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/earth-observation/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/earth-observation/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.earth-observation"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.earth-observation",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Earth observation",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.information-extraction-and-retrieval",
+      "name": "Information extraction and retrieval",
+      "abstract": "Source acquisition, text metadata enrichment (entity extraction, geotagging, classification, normalization) and retrieval-augmented generation.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "information-extraction-and-retrieval"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/information-extraction-and-retrieval/data.ttl",
+          "format": "text/turtle",
+          "title": "Information extraction and retrieval: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/information-extraction-and-retrieval/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/information-extraction-and-retrieval/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/information-extraction-and-retrieval/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/information-extraction-and-retrieval/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.information-extraction-and-retrieval"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.information-extraction-and-retrieval",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Information extraction and retrieval",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.ml-and-statistical-modeling",
+      "name": "Machine learning and statistical modeling",
+      "abstract": "Machine-learning and statistical activities: regression, climate-variable downscaling, super-resolution and trend analysis, and inference executions.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "ml-and-statistical-modeling"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/ml-and-statistical-modeling/data.ttl",
+          "format": "text/turtle",
+          "title": "Machine learning and statistical modeling: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/ml-and-statistical-modeling/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/ml-and-statistical-modeling/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/ml-and-statistical-modeling/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/ml-and-statistical-modeling/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.ml-and-statistical-modeling"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.ml-and-statistical-modeling",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Machine learning and statistical modeling",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.point-cloud-processing",
+      "name": "Point-cloud processing",
+      "abstract": "Point-cloud thinning, gridding and conversion to shapes.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "point-cloud-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/point-cloud-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "Point-cloud processing: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/point-cloud-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/point-cloud-processing/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/point-cloud-processing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/point-cloud-processing/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.point-cloud-processing"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.point-cloud-processing",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Point-cloud processing",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.raster-coverage-processing",
+      "name": "Raster and coverage processing",
+      "abstract": "Operations on rasters and coverages: reprojection, resampling, cropping, mosaicking, format conversion, rendering, band math, spectral indices and zonal analysis.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "raster-coverage-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/raster-coverage-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "Raster and coverage processing: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/raster-coverage-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/raster-coverage-processing/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/raster-coverage-processing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/raster-coverage-processing/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.raster-coverage-processing"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.raster-coverage-processing",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Raster and coverage processing",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.spatial-indexing",
+      "name": "Spatial indexing",
+      "abstract": "Discrete global grid system (DGGS) indexing and conversion of geometries to grid cells.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "spatial-indexing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/spatial-indexing/data.ttl",
+          "format": "text/turtle",
+          "title": "Spatial indexing: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/spatial-indexing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/spatial-indexing/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/spatial-indexing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/spatial-indexing/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.spatial-indexing"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.spatial-indexing",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Spatial indexing",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.sqlmm",
+      "name": "SQL/MM spatial operations",
+      "abstract": "The spatial operations and predicates on geometries defined by ISO/IEC 13249-3 (SQL/MM Spatial) and OGC Simple Features Access: area, buffer, centroid, convex hull, the set operations and the spatial relation tests. Each specialises a grouping type of vector geometry processing.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "sqlmm",
+        "vector-geometry-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/sqlmm/data.ttl",
+          "format": "text/turtle",
+          "title": "SQL/MM spatial operations: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/sqlmm/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/sqlmm/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/sqlmm/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/sqlmm/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.sqlmm"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.sqlmm",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "SQL/MM spatial operations",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.terrain-and-hydrology",
+      "name": "Terrain and hydrology",
+      "abstract": "Terrain derivatives (slope, hillshading, ruggedness and position indices) and hydrological analysis (flow direction and accumulation, watersheds, stream networks, wetness index).",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "terrain-and-hydrology"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/terrain-and-hydrology/data.ttl",
+          "format": "text/turtle",
+          "title": "Terrain and hydrology: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/terrain-and-hydrology/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/terrain-and-hydrology/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/terrain-and-hydrology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/terrain-and-hydrology/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.terrain-and-hydrology"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.terrain-and-hydrology",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Terrain and hydrology",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.vector-geometry-processing",
+      "name": "Vector geometry processing",
+      "abstract": "Operations and tests on vector geometries: buffers, hulls, envelopes, set operations, spatial predicates and extents. The SQL/MM operations are a block of their own (ogc.register.ospd.generic.sqlmm).",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "vector-geometry-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/vector-geometry-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "Vector geometry processing: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/vector-geometry-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/vector-geometry-processing/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/vector-geometry-processing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/vector-geometry-processing/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.vector-geometry-processing"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.vector-geometry-processing",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Vector geometry processing",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.generic.workflow-and-scoring",
+      "name": "Workflow and scoring",
+      "abstract": "Workflow runs and scoring or classification activities used in the model-of-models and workflow examples.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-23T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "activity-type",
+        "workflow-and-scoring"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/workflow-and-scoring/data.ttl",
+          "format": "text/turtle",
+          "title": "Workflow and scoring: generic activity type definitions"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.core"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/workflow-and-scoring/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/workflow-and-scoring/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/workflow-and-scoring/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/workflow-and-scoring/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.generic.workflow-and-scoring"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.generic.workflow-and-scoring",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Workflow and scoring",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.profiles.st-ml-activity-types",
+      "name": "SpatioTemporal ML Activity Types Profile",
+      "group": "Example: Activity Types",
+      "highlighted": true,
+      "title": "SpatioTemporal Machine learning training/inference activities, profiled from the Registered Item Model",
+      "abstract": "A profile of the SpatioTemporal Machine learning Activity Types Profile describing spatiotemporal machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
+      "description": "The STAC Machine Learning Model (MLM) extension describes a model as a static artifact \u2014 a STAC Item or Collection with declared inputs, outputs and requirements \u2014 but has no notion of a particular run of that model. This block adds that: mlact:MLActivityType (with mlact:TrainingActivityType and mlact:InferenceActivityType sub-types) is a geoproc:GeoprocessingActivityType recording one execution, and so can be specialised into ML activity types held in an activity type register. It is also a rim:RegisterAction. In this ecosystem, running a model is itself a governed act \u2014 typically the one that adds a derived product to a register as a new rim:RegisterItem \u2014 so the run belongs in the same audit trail as any other register action. The activity's task, framework and accelerator are drawn from the MLM extension's own SKOS schemes rather than redefined, and its recorded inputs/outputs (mlact:ActivityInput / mlact:ActivityOutput, both prov:Entity) each declare via dct:conformsTo which of the model's own declared mlm:ModelInput/mlm:ModelOutput specifications they realise. Registered ML activity types must declare at least one mlact:ActivityInput sub-type as a used entity type, and registered inference types at least one mlact:ActivityOutput sub-type as a generated entity type.",
+      "status": "under-development",
+      "version": "0.3",
+      "itemClass": "model",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.contrib.stac.extensions.mlm-ontology",
+        "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types"
+      ],
+      "concept": [
+        "https://w3id.org/ogc/rim/ml-activity/STMLActivityType"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/st-ml-activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.st-ml-activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.contrib.stac.extensions.mlm-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "sources": [
+        {
+          "title": "STAC Machine Learning Model (MLM) Extension Ontology building block",
+          "link": "https://github.com/ogcincubator/bblocks-stac/tree/master/_sources/extensions/mlm-ontology"
+        },
+        {
+          "title": "STAC MLM extension README (field descriptions and example)",
+          "link": "https://github.com/stac-extensions/mlm/blob/main/README.md"
+        },
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        }
+      ],
+      "tags": [
+        "machine learning",
+        "provenance",
+        "MLM",
+        "register",
+        "activity type"
+      ],
+      "dateTimeAddition": "2026-09-17T00:00:00Z",
+      "dateOfLastChange": "2026-11-26",
+      "ontology": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/st-ml-activity-types/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/st-ml-activity-types/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/st-ml-activity-types/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/st-ml-activity-types/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/st-ml-activity-types/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.profiles.st-ml-activity-types"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.profiles.st-ml-activity-types",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "SpatioTemporal ML Activity Types Profile",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.profiles.schemas.activity-types-schema",
+      "name": "Activity Types Register Profile Schema",
+      "group": "Example: Activity Types",
+      "highlighted": true,
+      "title": "Schema of activity types, profiled from the Registered Item Model",
+      "abstract": "This is a schema representation of the ogc.register.ospd.profiles.activity-types model",
+      "description": "See the ogc.register.ospd.profiles.activity-types model for the description of the Activity Types Register Profile. This building block is a Schema representation of that block for json schema implementation purposes.",
+      "status": "under-development",
+      "version": "0.3",
+      "itemClass": "schema",
+      "isProfileOf": [
+        "bblocks://ogc.rim.schemas.register-item"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.profiles.activity-types",
+        "bblocks://ogc.rim.schemas.register-item",
+        "bblocks://ogc.rim.schemas.register-item-class"
+      ],
+      "concept": [
+        "https://w3id.org/ogc/rim/activity-type/ActivityType"
+      ],
+      "sources": [
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        },
+        {
+          "title": "P-Plan Ontology",
+          "link": "https://www.opmw.org/model/p-plan/"
+        }
+      ],
+      "tags": [
+        "register",
+        "provenance",
+        "activity types",
+        "plan",
+        "schema"
+      ],
+      "dateTimeAddition": "2026-10-30T00:00:00Z",
+      "dateOfLastChange": "2026-11-26",
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/activity-types-schema/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/activity-types-schema/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/activity-types-schema/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/activity-types-schema/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/activity-types-schema/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/activity-types-schema/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/activity-types-schema/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/schemas/activity-types-schema/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/activity-types-schema/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/schemas/activity-types-schema/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.profiles.schemas.activity-types-schema"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.profiles.schemas.activity-types-schema",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Activity Types Register Profile Schema",
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.data-conversion",
+      "name": "OSPD specific activity types: data conversion",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of data conversion (ogc.register.ospd.generic.data-conversion).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "data-conversion"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.data-conversion"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data-conversion/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.data-conversion",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data-conversion/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (data conversion): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.data-conversion"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data-conversion/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/data-conversion/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/data-conversion/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/data-conversion/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.data-conversion"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.data-conversion",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: data conversion",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.earth-observation",
+      "name": "OSPD specific activity types: earth observation",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of earth observation (ogc.register.ospd.generic.earth-observation).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "earth-observation"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.earth-observation"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/earth-observation/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.earth-observation",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/earth-observation/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (earth observation): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.earth-observation"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/earth-observation/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/earth-observation/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/earth-observation/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/earth-observation/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.earth-observation"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.earth-observation",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: earth observation",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.information-extraction-and-retrieval",
+      "name": "OSPD specific activity types: information extraction and retrieval",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of information extraction and retrieval (ogc.register.ospd.generic.information-extraction-and-retrieval).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "information-extraction-and-retrieval"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.information-extraction-and-retrieval"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/information-extraction-and-retrieval/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.information-extraction-and-retrieval",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/information-extraction-and-retrieval/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (information extraction and retrieval): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.information-extraction-and-retrieval"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/information-extraction-and-retrieval/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/information-extraction-and-retrieval/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/information-extraction-and-retrieval/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/information-extraction-and-retrieval/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.information-extraction-and-retrieval"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.information-extraction-and-retrieval",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: information extraction and retrieval",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.ml-and-statistical-modeling",
+      "name": "OSPD specific activity types: machine learning and statistical modeling",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of machine learning and statistical modeling (ogc.register.ospd.generic.ml-and-statistical-modeling).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "ml-and-statistical-modeling"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.ml-and-statistical-modeling"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/ml-and-statistical-modeling/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.ml-and-statistical-modeling",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/ml-and-statistical-modeling/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (machine learning and statistical modeling): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.ml-and-statistical-modeling"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/ml-and-statistical-modeling/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/ml-and-statistical-modeling/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/ml-and-statistical-modeling/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/ml-and-statistical-modeling/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.ml-and-statistical-modeling"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.ml-and-statistical-modeling",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: machine learning and statistical modeling",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.raster-coverage-processing",
+      "name": "OSPD specific activity types: raster and coverage processing",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of raster and coverage processing (ogc.register.ospd.generic.raster-coverage-processing).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "raster-coverage-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.raster-coverage-processing"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/raster-coverage-processing/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.raster-coverage-processing",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/raster-coverage-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (raster and coverage processing): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.raster-coverage-processing"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/raster-coverage-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/raster-coverage-processing/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/raster-coverage-processing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/raster-coverage-processing/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.raster-coverage-processing"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.raster-coverage-processing",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: raster and coverage processing",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.spatial-indexing",
+      "name": "OSPD specific activity types: spatial indexing",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of spatial indexing (ogc.register.ospd.generic.spatial-indexing).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "spatial-indexing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.spatial-indexing"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/spatial-indexing/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.spatial-indexing",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/spatial-indexing/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (spatial indexing): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.spatial-indexing"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/spatial-indexing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/spatial-indexing/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/spatial-indexing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/spatial-indexing/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.spatial-indexing"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.spatial-indexing",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: spatial indexing",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.vector-geometry-processing",
+      "name": "OSPD specific activity types: vector geometry processing",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of vector geometry processing (ogc.register.ospd.generic.vector-geometry-processing).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "vector-geometry-processing"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.vector-geometry-processing"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/vector-geometry-processing/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.vector-geometry-processing",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/vector-geometry-processing/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (vector geometry processing): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.vector-geometry-processing"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/vector-geometry-processing/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/vector-geometry-processing/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/vector-geometry-processing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/vector-geometry-processing/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.vector-geometry-processing"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.vector-geometry-processing",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: vector geometry processing",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.specific.workflow-and-scoring",
+      "name": "OSPD specific activity types: workflow and scoring",
+      "abstract": "Activity types contributed by OSPD participants that specialise the generic types of workflow and scoring (ogc.register.ospd.generic.workflow-and-scoring).",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "tags": [
+        "ospd",
+        "activity-type",
+        "specific",
+        "workflow-and-scoring"
+      ],
+      "group": "OSPD Activity Types",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.generic.workflow-and-scoring"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/workflow-and-scoring/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.specific.workflow-and-scoring",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.core",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "resources": [
+        {
+          "role": "data",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/workflow-and-scoring/data.ttl",
+          "format": "text/turtle",
+          "title": "OSPD specific activity types (workflow and scoring): definitions"
+        }
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.generic.workflow-and-scoring"
+      ],
+      "dateOfLastChange": "2026-11-26",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/workflow-and-scoring/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/workflow-and-scoring/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/workflow-and-scoring/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/workflow-and-scoring/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.specific.workflow-and-scoring"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.specific.workflow-and-scoring",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "OSPD specific activity types: workflow and scoring",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema",
+      "name": "Geoprocessing Activity Types Profile Schema",
+      "group": "Example: Activity Types",
+      "highlighted": true,
+      "title": "Model of geoprocessing activity types, profiled from the Activity Type Register Profile",
+      "abstract": "This is a schema representation of the ogc.register.ospd.profiles.geoprocessing-activity-types model",
+      "description": "See the ogc.register.ospd.profiles.geoprocessing-activity-types model for the description of the Geoprocessing Activity Types Profile. This building block is a Schema representation of that block for json schema implementation purposes.",
+      "status": "under-development",
+      "version": "0.3",
+      "itemClass": "schema",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.profiles.schemas.activity-types-schema"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types",
+        "bblocks://ogc.register.ospd.profiles.schemas.activity-types-schema"
+      ],
+      "concept": [
+        "https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType"
+      ],
+      "sources": [
+        {
+          "title": "OGC GeoSPARQL 1.1",
+          "link": "https://docs.ogc.org/is/22-047r1/22-047r1.html"
+        },
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        }
+      ],
+      "tags": [
+        "geoprocessing",
+        "provenance",
+        "activity type",
+        "register"
+      ],
+      "dateTimeAddition": "2026-09-23T00:00:00Z",
+      "dateOfLastChange": "2026-11-26",
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/geoprocessing-activity-types-schema/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/geoprocessing-activity-types-schema/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Geoprocessing Activity Types Profile Schema",
+      "openAPIDocument": null,
+      "ontology": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/ospd-activity-types/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.register.ospd.profiles.schemas.st-ml-activity-types-schema",
+      "name": "SpatioTemporal ML Activity Types Profile Schema",
+      "group": "Example: Activity Types",
+      "highlighted": true,
+      "title": "Schema for SpatioTemporal Machine learning training/inference activities, profiled from the Registered Item Model",
+      "abstract": "This is a schema representation of the ogc.register.ospd.profiles.st-ml-activity-types model",
+      "description": "See the ogc.register.ospd.profiles.st-ml-activity-types model for the description of the SpatioTemporal ML Activity Types Profile. This building block is a Schema representation of that block for json schema implementation purposes.",
+      "status": "under-development",
+      "version": "0.3",
+      "itemClass": "schema",
+      "isProfileOf": [
+        "bblocks://ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema",
+        "bblocks://ogc.register.ospd.profiles.st-ml-activity-types"
+      ],
+      "concept": [
+        "https://w3id.org/ogc/rim/ml-activity/STMLActivityType"
+      ],
+      "sources": [
+        {
+          "title": "STAC Machine Learning Model (MLM) Extension Ontology building block",
+          "link": "https://github.com/ogcincubator/bblocks-stac/tree/master/_sources/extensions/mlm-ontology"
+        },
+        {
+          "title": "STAC MLM extension README (field descriptions and example)",
+          "link": "https://github.com/stac-extensions/mlm/blob/main/README.md"
+        },
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        }
+      ],
+      "tags": [
+        "machine learning",
+        "provenance",
+        "MLM",
+        "register",
+        "activity type"
+      ],
+      "dateTimeAddition": "2026-09-17T00:00:00Z",
+      "dateOfLastChange": "2026-11-26",
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/st-ml-activity-types/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.register.ospd.profiles.st-ml-activity-types",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.contrib.stac.extensions.mlm-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/st-ml-activity-types-schema/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/st-ml-activity-types-schema/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/st-ml-activity-types-schema/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/st-ml-activity-types-schema/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/st-ml-activity-types-schema/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/st-ml-activity-types-schema/",
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/st-ml-activity-types-schema/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/schemas/st-ml-activity-types-schema/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/bblock/ogc.register.ospd.profiles.schemas.st-ml-activity-types-schema"
+        }
+      },
+      "@id": "bblocks://ogc.register.ospd.profiles.schemas.st-ml-activity-types-schema",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "SpatioTemporal ML Activity Types Profile Schema",
       "openAPIDocument": null,
       "ontology": null,
       "isDescribedBy": null,
@@ -470,10 +3139,82 @@
   ],
   "skos:hasTopConcept": [
     {
-      "@id": "bblocks://ogc.ospd.activity-type.core"
+      "@id": "bblocks://ogc.register.ospd.profiles.activity-types"
     },
     {
-      "@id": "bblocks://ogc.ospd.activity-type.specific"
+      "@id": "bblocks://ogc.register.ospd.core"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.profiles.geoprocessing-activity-types"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.data-conversion"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.earth-observation"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.information-extraction-and-retrieval"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.ml-and-statistical-modeling"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.point-cloud-processing"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.raster-coverage-processing"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.spatial-indexing"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.sqlmm"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.terrain-and-hydrology"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.vector-geometry-processing"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.generic.workflow-and-scoring"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.profiles.st-ml-activity-types"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.profiles.schemas.activity-types-schema"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.data-conversion"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.earth-observation"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.information-extraction-and-retrieval"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.ml-and-statistical-modeling"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.raster-coverage-processing"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.spatial-indexing"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.vector-geometry-processing"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.specific.workflow-and-scoring"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema"
+    },
+    {
+      "@id": "bblocks://ogc.register.ospd.profiles.schemas.st-ml-activity-types-schema"
     }
   ]
 }

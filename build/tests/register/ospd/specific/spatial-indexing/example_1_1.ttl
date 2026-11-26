@@ -1,0 +1,26 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:kindgrove-stac-fingerprint a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:source <https://github.com/starling-foundries/KindGrove/blob/6e3872eb82c5574744b682f13cf5cda14e7132a3/scripts/provenance.py#L119> ;
+    rdfs:subClassOf ospd:GA029 ;
+    skos:broader ospd:GA029 ;
+    skos:definition "Writes the STAC Fingerprint extension into a STAC catalog: for every item, the SHA-256 root of the compact rHEALPix DGGS zone list of its geometry at a refinement level."@en ;
+    skos:inScheme ospd-specific:spatial-indexing ;
+    skos:notation "identification" ;
+    skos:note "Contributed to OSPD 2026 by KindGrove (starling-foundries); defined here (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
+    skos:prefLabel "STAC fingerprinting"@en ;
+    skos:topConceptOf ospd-specific:spatial-indexing ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/kindgrove-stac-fingerprint"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/specific-activity-types/spatial-indexing> a skos:ConceptScheme .

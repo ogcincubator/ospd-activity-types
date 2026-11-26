@@ -1,0 +1,66 @@
+
+
+{
+  "itemIdentifier": "ogc.register.ospd.generic.spatial-indexing",
+  "name": "Spatial indexing",
+  "abstract": "Discrete global grid system (DGGS) indexing and conversion of geometries to grid cells.",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-23T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "activity-type",
+    "spatial-indexing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.register.ospd.core"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/spatial-indexing/data.ttl",
+      "format": "text/turtle",
+      "title": "Spatial indexing: generic activity type definitions"
+    }
+  ],
+  "shaclShapes": {
+    "ogc.register.ospd.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.register.ospd.profiles.activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.register.ospd.core"
+  ],
+  "dateOfLastChange": "2026-11-26",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/spatial-indexing/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/spatial-indexing/",
+  "description": "# Spatial indexing\n\nDiscrete global grid system (DGGS) indexing and conversion of geometries to grid cells.\n\nThis family has 3 generic activity types. It is a profile of the OSPD Activity Types Register block\n(`ogc.register.ospd.core`) and its data resource (`data.ttl`) is uploaded to the OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [DGGS cell indexing](https://w3id.org/ogc/ospd/activity-type/GA029) (`GA029`)\n- [Polygon-to-DGGS cell conversion](https://w3id.org/ogc/ospd/activity-type/GA036) (`GA036`)\n- [Spatial indexing](https://w3id.org/ogc/ospd/activity-type/GA033) (`GA033`)\n",
+  "examples": [
+    {
+      "title": "DGGS cell indexing",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/generic/spatial-indexing/example_1_1.ttl",
+          "sizeBytes": 1651,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd:GA029 a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:modified \"2026-09-17\"^^xsd:date ;\n    dcterms:replaces <http://ospd/demo/GA029> ;\n    dcterms:source <https://www.ogc.org/standards/dggs/> ;\n    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;\n    owl:versionInfo \"2\" ;\n    skos:broader ospd:GA033 ;\n    skos:definition \"Quantizes input spatial positions or geometries to cells at a specified resolution in a Discrete Global Grid System and returns the corresponding cell identifiers.\"@en ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> ;\n    skos:prefLabel \"DGGS cell indexing\"@en ;\n    skos:related ospd:GA027,\n        ospd:GA028 ;\n    prov:qualifiedAttribution [ prov:agent <https://hartis.org> ;\n            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ] ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/GA029\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\n<https://w3id.org/ogc/ospd/activity-type/families/spatial-indexing> a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/generic/spatial-indexing"
+}

@@ -1,0 +1,26 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ospd:GA002 a skos:Concept,
+        acttype:ActivityType ;
+    dcterms:modified "2026-09-17"^^xsd:date ;
+    dcterms:replaces <http://ospd/demo/GA002> ;
+    dcterms:source <https://geopandas.org/en/latest/docs/reference/api/geopandas.GeoSeries.boundary.html> ;
+    rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
+    owl:versionInfo "2" ;
+    skos:definition "Boundary is a Geoprocessing Activity that returns a polygon containing the vertecies of an input geometry without any interoir rings"@en ;
+    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
+    skos:prefLabel "Boundary"@en ;
+    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/GA002"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+<https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> a skos:ConceptScheme .

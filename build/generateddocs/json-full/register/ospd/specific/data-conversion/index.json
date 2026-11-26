@@ -1,0 +1,70 @@
+
+
+{
+  "itemIdentifier": "ogc.register.ospd.specific.data-conversion",
+  "name": "OSPD specific activity types: data conversion",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of data conversion (ogc.register.ospd.generic.data-conversion).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "data-conversion"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.register.ospd.generic.data-conversion"
+  ],
+  "shaclShapes": {
+    "ogc.register.ospd.specific.data-conversion": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data-conversion/shapes.shacl"
+    ],
+    "ogc.register.ospd.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.register.ospd.profiles.activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data-conversion/data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (data conversion): definitions"
+    }
+  ],
+  "dependsOn": [
+    "ogc.register.ospd.generic.data-conversion"
+  ],
+  "dateOfLastChange": "2026-11-26",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data-conversion/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/data-conversion/",
+  "description": "# OSPD specific activity types: data conversion\n\nActivity types contributed by OSPD participants that specialise the generic types of data conversion (ogc.register.ospd.generic.data-conversion).\n\nThis block has 2 specific activity types, each the specialisation (`skos:broader`) of a generic type of\n[Data conversion](https://w3id.org/ogc/ospd/activity-type/families/data-conversion). It is a profile of that family's block, whose\nshapes it inherits, and adds a warning for a type without a generic parent. Its data resource (`data.ttl`) is uploaded to\nthe OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Geospatial feature construction](https://w3id.org/ogc/ospd/activity-type/lightning2earthcare-feature-construction) (`lightning2earthcare-feature-construction`)\n- [Output export](https://w3id.org/ogc/ospd/activity-type/cool-spots-output-export) (`cool-spots-output-export`) -- no generic parent yet\n",
+  "examples": [
+    {
+      "title": "Geospatial feature construction",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/specific/data-conversion/example_1_1.ttl",
+          "sizeBytes": 1672,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd:lightning2earthcare-feature-construction a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:source <https://github.com/sunnydean/lightning2earthcare/blob/be63866b12733db5ef7349205d36d8af8ea937f1/cwl/ospd2026/registry/geoprocessing-activities.jsonld#L43> ;\n    rdfs:subClassOf ospd:spatial-model-conversion ;\n    skos:broader ospd:spatial-model-conversion ;\n    skos:definition \"Builds point features with measurements, times and identifiers from NetCDF observations and storm records, and writes them as GeoParquet.\"@en ;\n    skos:inScheme ospd-specific:data-conversion ;\n    skos:notation \"conversion\" ;\n    skos:note \"Contributed to OSPD 2026 by lightning2earthcare (sunnydean); defined here (decision of 26 Nov 2026). Evidence in dcterms:source.\"@en ;\n    skos:prefLabel \"Geospatial feature construction\"@en ;\n    skos:topConceptOf ospd-specific:data-conversion ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/lightning2earthcare-feature-construction\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\n<https://w3id.org/ogc/ospd/specific-activity-types/data-conversion> a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/specific/data-conversion"
+}

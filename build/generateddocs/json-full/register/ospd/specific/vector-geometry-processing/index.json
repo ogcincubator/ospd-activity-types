@@ -1,0 +1,70 @@
+
+
+{
+  "itemIdentifier": "ogc.register.ospd.specific.vector-geometry-processing",
+  "name": "OSPD specific activity types: vector geometry processing",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of vector geometry processing (ogc.register.ospd.generic.vector-geometry-processing).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "vector-geometry-processing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.register.ospd.generic.vector-geometry-processing"
+  ],
+  "shaclShapes": {
+    "ogc.register.ospd.specific.vector-geometry-processing": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/vector-geometry-processing/shapes.shacl"
+    ],
+    "ogc.register.ospd.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.register.ospd.profiles.activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/vector-geometry-processing/data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (vector geometry processing): definitions"
+    }
+  ],
+  "dependsOn": [
+    "ogc.register.ospd.generic.vector-geometry-processing"
+  ],
+  "dateOfLastChange": "2026-11-26",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/vector-geometry-processing/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/vector-geometry-processing/",
+  "description": "# OSPD specific activity types: vector geometry processing\n\nActivity types contributed by OSPD participants that specialise the generic types of vector geometry processing (ogc.register.ospd.generic.vector-geometry-processing).\n\nThis block has 3 specific activity types, each the specialisation (`skos:broader`) of a generic type of\n[Vector geometry processing](https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing). It is a profile of that family's block, whose\nshapes it inherits, and adds a warning for a type without a generic parent. Its data resource (`data.ttl`) is uploaded to\nthe OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Coastline extraction](https://w3id.org/ogc/ospd/activity-type/cvi-coastline-extraction) (`cvi-coastline-extraction`)\n- [Erosion data integration](https://w3id.org/ogc/ospd/activity-type/cvi-erosion-data-integration) (`cvi-erosion-data-integration`) -- no generic parent yet\n- [Transect generation](https://w3id.org/ogc/ospd/activity-type/cvi-transect-generation) (`cvi-transect-generation`)\n",
+  "examples": [
+    {
+      "title": "Coastline extraction",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/specific/vector-geometry-processing/example_1_1.ttl",
+          "sizeBytes": 1623,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd:cvi-coastline-extraction a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/coastline-extraction> ;\n    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L46> ;\n    rdfs:subClassOf ospd:GA020 ;\n    skos:broader ospd:GA020 ;\n    skos:definition \"Extracts the coastline of an area of interest from OpenStreetMap Overpass features.\"@en ;\n    skos:inScheme ospd-specific:vector-geometry-processing ;\n    skos:note \"Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). Evidence in dcterms:source.\"@en ;\n    skos:prefLabel \"Coastline extraction\"@en ;\n    skos:topConceptOf ospd-specific:vector-geometry-processing ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/cvi-coastline-extraction\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\n<https://w3id.org/ogc/ospd/specific-activity-types/vector-geometry-processing> a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/specific/vector-geometry-processing"
+}

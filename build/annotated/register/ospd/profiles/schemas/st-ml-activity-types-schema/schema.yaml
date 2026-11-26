@@ -1,0 +1,13 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: SpatioTemporal ML Activity Types Profile
+description: 'A profile of the Activity Type Register Profile for SpatioTemporal ML
+  Activity Types
+
+  '
+allOf:
+- $ref: https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.register.ospd.profiles.schemas.st-ml-activity-types-schema
+  register: https://ogcincubator.github.io/ospd-activity-types/build/register.json
+  version: '0.3'
+  dateOfLastChange: '2026-11-26'

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Geoprocessing Activity Type",
+  "description": "A profile of the Activity Type Register Profile for geoprocessing activity types\n",
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/activity-types-schema/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "usedEntityType": {
+          "description": "URI identifying a class of spatial objects used as input by activities of this type."
+        }
+      }
+    }
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema",
+    "register": "https://ogcincubator.github.io/ospd-activity-types/build/register.json",
+    "version": "0.3",
+    "dateOfLastChange": "2026-11-26"
+  }
+}

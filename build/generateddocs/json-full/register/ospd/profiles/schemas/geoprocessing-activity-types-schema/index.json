@@ -1,0 +1,96 @@
+
+
+{
+  "itemIdentifier": "ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema",
+  "name": "Geoprocessing Activity Types Profile Schema",
+  "group": "Example: Activity Types",
+  "highlighted": true,
+  "title": "Model of geoprocessing activity types, profiled from the Activity Type Register Profile",
+  "abstract": "This is a schema representation of the ogc.register.ospd.profiles.geoprocessing-activity-types model",
+  "description": "See the ogc.register.ospd.profiles.geoprocessing-activity-types model for the description of the Geoprocessing Activity Types Profile. This building block is a Schema representation of that block for json schema implementation purposes.",
+  "status": "under-development",
+  "version": "0.3",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.register.ospd.profiles.schemas.activity-types-schema"
+  ],
+  "dependsOn": [
+    "ogc.register.ospd.profiles.geoprocessing-activity-types",
+    "ogc.register.ospd.profiles.schemas.activity-types-schema"
+  ],
+  "concept": [
+    "https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType"
+  ],
+  "sources": [
+    {
+      "title": "OGC GeoSPARQL 1.1",
+      "link": "https://docs.ogc.org/is/22-047r1/22-047r1.html"
+    },
+    {
+      "title": "W3C PROV-O",
+      "link": "https://www.w3.org/TR/prov-o/"
+    }
+  ],
+  "tags": [
+    "geoprocessing",
+    "provenance",
+    "activity type",
+    "register"
+  ],
+  "dateTimeAddition": "2026-09-23T00:00:00Z",
+  "dateOfLastChange": "2026-11-26",
+  "shaclShapes": {
+    "ogc.register.ospd.profiles.geoprocessing-activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"
+    ],
+    "ogc.register.ospd.profiles.activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/geoprocessing-activity-types-schema/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/geoprocessing-activity-types-schema/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/",
+  "examples": [
+    {
+      "title": "example Buffer Geoprocessing Activity Type",
+      "content": "A buffer geoprocessing activity type",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/geoprocessing-activity-types-schema/examples/buffer.json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/example_1_1.json",
+          "sizeBytes": 903,
+          "code": " {\n    \"id\": \"Buffer\",\n    \"title\": \"Create a buffer around a polygon. \",\n    \"description\": \"This service shall return a feature collection representing the buffer of geometry InputPolygon at distance BufferDistance. The buffer of a geometry at distance d is the Polygon or MultiPolygon which contains all points within a distance d of the geometry.\",\n    \"version\": \"2.0.0\",\n    \"type\": \"geoprocessing:buffer\",\n    \"itemClass\": \"rim:RegisterItemClass\",\n    \"objectIdentifier\": \"https://example.org/registers/geoprocessing/buffer/v1\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"unpublished\",\n    \"inRegister\": \"https://example.org/registers/activity-types\",\n    \"realizes\": \"https://example.org/def/geoprocessing/buffer\",\n    \"usedEntityType\" : \"point\",\n    \"generatedEntityType\": \"polygon\",\n    \"associatedAgentType\": \"Geoprocessing library ...\",\n    \"informedByActivityType\": \"none\"\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/example_1_1.jsonld",
+          "sizeBytes": 1037,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/context.jsonld\",\n  \"id\": \"Buffer\",\n  \"title\": \"Create a buffer around a polygon. \",\n  \"description\": \"This service shall return a feature collection representing the buffer of geometry InputPolygon at distance BufferDistance. The buffer of a geometry at distance d is the Polygon or MultiPolygon which contains all points within a distance d of the geometry.\",\n  \"version\": \"2.0.0\",\n  \"type\": \"geoprocessing:buffer\",\n  \"itemClass\": \"rim:RegisterItemClass\",\n  \"objectIdentifier\": \"https://example.org/registers/geoprocessing/buffer/v1\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"unpublished\",\n  \"inRegister\": \"https://example.org/registers/activity-types\",\n  \"realizes\": \"https://example.org/def/geoprocessing/buffer\",\n  \"usedEntityType\": \"point\",\n  \"generatedEntityType\": \"polygon\",\n  \"associatedAgentType\": \"Geoprocessing library ...\",\n  \"informedByActivityType\": \"none\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/example_1_1.ttl",
+          "sizeBytes": 1235,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<file:///github/workspace/Buffer> a <geoprocessing:buffer> ;\n    dct:description \"This service shall return a feature collection representing the buffer of geometry InputPolygon at distance BufferDistance. The buffer of a geometry at distance d is the Polygon or MultiPolygon which contains all points within a distance d of the geometry.\" ;\n    dct:title \"Create a buffer around a polygon. \" ;\n    acttype:associatedAgentType <file:///github/workspace/> ;\n    acttype:generatedEntityType <file:///github/workspace/polygon> ;\n    acttype:informedByActivityType <file:///github/workspace/none> ;\n    acttype:usedEntityType <file:///github/workspace/point> ;\n    rim:inRegister <https://example.org/registers/activity-types> ;\n    rim:itemClass rim:RegisterItemClass ;\n    rim:objectIdentifier \"https://example.org/registers/geoprocessing/buffer/v1\"^^xsd:anyURI ;\n    rim:publicationStatus rim:unpublished ;\n    rim:realizes <https://example.org/def/geoprocessing/buffer> ;\n    rim:validityStatus rim:invalid ;\n    rim:version \"2.0.0\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Geoprocessing Activity Type\ndescription: 'A profile of the Activity Type Register Profile for geoprocessing activity\n  types\n\n  '\nallOf:\n- $ref: https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/activity-types-schema/schema.yaml\n- type: object\n  properties:\n    usedEntityType:\n      description: URI identifying a class of spatial objects used as input by activities\n        of this type.\nx-bblocks-metadata:\n  itemIdentifier: ogc.register.ospd.profiles.schemas.geoprocessing-activity-types-schema\n  register: https://ogcincubator.github.io/ospd-activity-types/build/register.json\n  version: '0.3'\n  dateOfLastChange: '2026-11-26'\n",
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/profiles/schemas/geoprocessing-activity-types-schema"
+}

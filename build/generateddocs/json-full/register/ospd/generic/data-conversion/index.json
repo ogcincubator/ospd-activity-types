@@ -1,0 +1,66 @@
+
+
+{
+  "itemIdentifier": "ogc.register.ospd.generic.data-conversion",
+  "name": "Data conversion",
+  "abstract": "Activities that change the encoding or the spatial model of data without changing the information it carries.",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "activity-type",
+    "data-conversion"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.register.ospd.core"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/data-conversion/data.ttl",
+      "format": "text/turtle",
+      "title": "Data conversion: generic activity type definitions"
+    }
+  ],
+  "shaclShapes": {
+    "ogc.register.ospd.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.register.ospd.profiles.activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.register.ospd.core"
+  ],
+  "dateOfLastChange": "2026-11-26",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/data-conversion/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/data-conversion/",
+  "description": "# Data conversion\n\nActivities that change the encoding or the spatial model of data without changing the information it carries.\n\nThis family has 3 generic activity types. It is a profile of the OSPD Activity Types Register block\n(`ogc.register.ospd.core`) and its data resource (`data.ttl`) is uploaded to the OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [COG conversion](https://w3id.org/ogc/ospd/activity-type/cog-conversion) (`cog-conversion`)\n- [Encoding conversion](https://w3id.org/ogc/ospd/activity-type/encoding-conversion) (`encoding-conversion`)\n- [Spatial model conversion](https://w3id.org/ogc/ospd/activity-type/spatial-model-conversion) (`spatial-model-conversion`)\n",
+  "examples": [
+    {
+      "title": "Encoding conversion",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/generic/data-conversion/example_1_1.ttl",
+          "sizeBytes": 2122,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix geoproc: <https://w3id.org/ogc/rim/geoprocessing/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd:encoding-conversion a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/encoding-conversion> ;\n    dcterms:source <https://github.com/52North/bblocks-openscience/blob/fe57fc59540ed1d64d18b174529d22add905d66c/_sources/prov-examples/52n-provenance/vegetation-productivity/example.json#L208>,\n        <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L753>,\n        <https://github.com/geonovum-labs/ospd-dtaas-register/blob/387794d7052af37986cadd791c81afe87acb24f4/_sources/ogcapi/processes/3dgi/convert_format/examples/metadata.json#L1> ;\n    rdfs:subClassOf geoproc:GeoprocessingActivityType ;\n    skos:altLabel \"Format conversion\"@en ;\n    skos:definition \"Re-encodes spatial data in another data format, without changing the information it carries.\"@en ;\n    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/encoding-conversion> ;\n    skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;\n    skos:note \"Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source.\"@en ;\n    skos:prefLabel \"Encoding conversion\"@en ;\n    skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/encoding-conversion\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\n<https://w3id.org/ogc/ospd/activity-type/families/data-conversion> a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/generic/data-conversion"
+}

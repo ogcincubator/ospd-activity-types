@@ -1,0 +1,70 @@
+
+
+{
+  "itemIdentifier": "ogc.register.ospd.specific.raster-coverage-processing",
+  "name": "OSPD specific activity types: raster and coverage processing",
+  "abstract": "Activity types contributed by OSPD participants that specialise the generic types of raster and coverage processing (ogc.register.ospd.generic.raster-coverage-processing).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "tags": [
+    "ospd",
+    "activity-type",
+    "specific",
+    "raster-coverage-processing"
+  ],
+  "group": "OSPD Activity Types",
+  "isProfileOf": [
+    "ogc.register.ospd.generic.raster-coverage-processing"
+  ],
+  "shaclShapes": {
+    "ogc.register.ospd.specific.raster-coverage-processing": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/raster-coverage-processing/shapes.shacl"
+    ],
+    "ogc.register.ospd.core": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/core/shapes.shacl"
+    ],
+    "ogc.register.ospd.profiles.activity-types": [
+      "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/raster-coverage-processing/data.ttl",
+      "format": "text/turtle",
+      "title": "OSPD specific activity types (raster and coverage processing): definitions"
+    }
+  ],
+  "dependsOn": [
+    "ogc.register.ospd.generic.raster-coverage-processing"
+  ],
+  "dateOfLastChange": "2026-11-26",
+  "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/raster-coverage-processing/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/raster-coverage-processing/",
+  "description": "# OSPD specific activity types: raster and coverage processing\n\nActivity types contributed by OSPD participants that specialise the generic types of raster and coverage processing (ogc.register.ospd.generic.raster-coverage-processing).\n\nThis block has 2 specific activity types, each the specialisation (`skos:broader`) of a generic type of\n[Raster and coverage processing](https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing). It is a profile of that family's block, whose\nshapes it inherits, and adds a warning for a type without a generic parent. Its data resource (`data.ttl`) is uploaded to\nthe OSPD Prez instance when the register is built.\n\n## Activity types\n\n- [Elevation analysis](https://w3id.org/ogc/ospd/activity-type/cvi-elevation-analysis) (`cvi-elevation-analysis`)\n- [Land-cover analysis](https://w3id.org/ogc/ospd/activity-type/cvi-land-cover-analysis) (`cvi-land-cover-analysis`)\n",
+  "examples": [
+    {
+      "title": "Elevation analysis",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/specific/raster-coverage-processing/example_1_1.ttl",
+          "sizeBytes": 1599,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ospd: <https://w3id.org/ogc/ospd/activity-type/> .\n@prefix ospd-specific: <https://w3id.org/ogc/ospd/specific-activity-types/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nospd:cvi-elevation-analysis a skos:Concept,\n        acttype:ActivityType ;\n    dcterms:replaces <https://example.org/ospd/process-types/elevation-analysis> ;\n    dcterms:source <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L81> ;\n    rdfs:subClassOf ospd:GA028 ;\n    skos:broader ospd:GA028 ;\n    skos:definition \"Samples Copernicus DEM elevation along the transects and scores it.\"@en ;\n    skos:inScheme ospd-specific:raster-coverage-processing ;\n    skos:note \"Contributed to OSPD 2026 by hartis-org (cvi-workflow); defined here (decision of 26 Nov 2026). Evidence in dcterms:source.\"@en ;\n    skos:prefLabel \"Elevation analysis\"@en ;\n    skos:topConceptOf ospd-specific:raster-coverage-processing ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://w3id.org/ogc/ospd/activity-type/cvi-elevation-analysis\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\n<https://w3id.org/ogc/ospd/specific-activity-types/raster-coverage-processing> a skos:ConceptScheme .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
+  "gitPath": "_sources/specific/raster-coverage-processing"
+}

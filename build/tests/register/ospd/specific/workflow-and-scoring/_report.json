@@ -1,0 +1,437 @@
+{
+  "title": "Validation report for ogc.register.ospd.specific.workflow-and-scoring - OSPD specific activity types: workflow and scoring",
+  "bblockName": "OSPD specific activity types: workflow and scoring",
+  "bblockId": "ogc.register.ospd.specific.workflow-and-scoring",
+  "generated": "2026-11-26T12:40:08.982134+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/register/ospd/specific/workflow-and-scoring/example_1_1.ttl",
+        "url": "https://ogcincubator.github.io/ospd-activity-types/build/tests/register/ospd/specific/workflow-and-scoring/example_1_1.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "hasWarnings": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 16,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl kept as provided"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/specific/workflow-and-scoring/data.ttl\n - /github/workspace/_sources/generic/workflow-and-scoring/data.ttl\n - https://www.w3.org/ns/prov-o\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - /github/workspace/_sources/core/data.ttl\n - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/profiles/activity-types/ontology.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/ogc/ospd/activity-type/aganitha-index-normalisation> ;\n            sh:resultMessage \"An OSPD-specific activity type should specialise a generic activity type (skos:broader).\" ;\n            sh:resultPath skos:broader ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n14c3b2803f1c467787b6237750f86e6cb1 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/ogc/ospd/activity-type/input-validation> ;\n            sh:resultMessage \"An OSPD-specific activity type should specialise a generic activity type (skos:broader).\" ;\n            sh:resultPath skos:broader ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n14c3b2803f1c467787b6237750f86e6cb1 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/ogc/ospd/activity-type/index-composition> ;\n            sh:resultMessage \"An OSPD-specific activity type should specialise a generic activity type (skos:broader).\" ;\n            sh:resultPath skos:broader ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n14c3b2803f1c467787b6237750f86e6cb1 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/ogc/ospd/activity-type/workflow> ;\n            sh:resultMessage \"An OSPD-specific activity type should specialise a generic activity type (skos:broader).\" ;\n            sh:resultPath skos:broader ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n14c3b2803f1c467787b6237750f86e6cb1 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/ogc/ospd/activity-type/aganitha-drought-classification> ;\n            sh:resultMessage \"An OSPD-specific activity type should specialise a generic activity type (skos:broader).\" ;\n            sh:resultPath skos:broader ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n14c3b2803f1c467787b6237750f86e6cb1 ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/ogc/ospd/activity-type/catalog-export> ;\n            sh:resultMessage \"An OSPD-specific activity type should specialise a generic activity type (skos:broader).\" ;\n            sh:resultPath skos:broader ;\n            sh:resultSeverity sh:Warning ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape _:n14c3b2803f1c467787b6237750f86e6cb1 ] .\n\n_:n14c3b2803f1c467787b6237750f86e6cb1 sh:message \"An OSPD-specific activity type should specialise a generic activity type (skos:broader).\" ;\n    sh:minCount 1 ;\n    sh:path skos:broader ;\n    sh:severity sh:Warning .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/specific/workflow-and-scoring/shapes.shacl: 6 warnings"
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Warning",
+              "focusNode": "https://w3id.org/ogc/ospd/activity-type/aganitha-drought-classification",
+              "resultPath": "skos:broader",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "ex:SpecificActivityTypeShape/sh:property (path skos:broader)",
+              "value": null,
+              "resultMessage": "An OSPD-specific activity type should specialise a generic activity type (skos:broader).",
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "isError": false,
+              "severity": "warning",
+              "message": "Warning (sh:MinCountConstraintComponent):\n  Source shape: ex:SpecificActivityTypeShape/sh:property (path skos:broader)\n  Focus node: ospd:aganitha-drought-classification\n  Result path: skos:broader\n  Message: An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Warning",
+              "focusNode": "https://w3id.org/ogc/ospd/activity-type/aganitha-index-normalisation",
+              "resultPath": "skos:broader",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "ex:SpecificActivityTypeShape/sh:property (path skos:broader)",
+              "value": null,
+              "resultMessage": "An OSPD-specific activity type should specialise a generic activity type (skos:broader).",
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "isError": false,
+              "severity": "warning",
+              "message": "Warning (sh:MinCountConstraintComponent):\n  Source shape: ex:SpecificActivityTypeShape/sh:property (path skos:broader)\n  Focus node: ospd:aganitha-index-normalisation\n  Result path: skos:broader\n  Message: An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Warning",
+              "focusNode": "https://w3id.org/ogc/ospd/activity-type/catalog-export",
+              "resultPath": "skos:broader",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "ex:SpecificActivityTypeShape/sh:property (path skos:broader)",
+              "value": null,
+              "resultMessage": "An OSPD-specific activity type should specialise a generic activity type (skos:broader).",
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "isError": false,
+              "severity": "warning",
+              "message": "Warning (sh:MinCountConstraintComponent):\n  Source shape: ex:SpecificActivityTypeShape/sh:property (path skos:broader)\n  Focus node: ospd:catalog-export\n  Result path: skos:broader\n  Message: An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Warning",
+              "focusNode": "https://w3id.org/ogc/ospd/activity-type/index-composition",
+              "resultPath": "skos:broader",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "ex:SpecificActivityTypeShape/sh:property (path skos:broader)",
+              "value": null,
+              "resultMessage": "An OSPD-specific activity type should specialise a generic activity type (skos:broader).",
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "isError": false,
+              "severity": "warning",
+              "message": "Warning (sh:MinCountConstraintComponent):\n  Source shape: ex:SpecificActivityTypeShape/sh:property (path skos:broader)\n  Focus node: ospd:index-composition\n  Result path: skos:broader\n  Message: An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Warning",
+              "focusNode": "https://w3id.org/ogc/ospd/activity-type/input-validation",
+              "resultPath": "skos:broader",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "ex:SpecificActivityTypeShape/sh:property (path skos:broader)",
+              "value": null,
+              "resultMessage": "An OSPD-specific activity type should specialise a generic activity type (skos:broader).",
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "isError": false,
+              "severity": "warning",
+              "message": "Warning (sh:MinCountConstraintComponent):\n  Source shape: ex:SpecificActivityTypeShape/sh:property (path skos:broader)\n  Focus node: ospd:input-validation\n  Result path: skos:broader\n  Message: An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+            },
+            {
+              "op": "shacl-result",
+              "resultSeverity": "http://www.w3.org/ns/shacl#Warning",
+              "focusNode": "https://w3id.org/ogc/ospd/activity-type/workflow",
+              "resultPath": "skos:broader",
+              "sourceConstraintComponent": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+              "sourceShape": null,
+              "sourceShapeDescription": "ex:SpecificActivityTypeShape/sh:property (path skos:broader)",
+              "value": null,
+              "resultMessage": "An OSPD-specific activity type should specialise a generic activity type (skos:broader).",
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "isError": false,
+              "severity": "warning",
+              "message": "Warning (sh:MinCountConstraintComponent):\n  Source shape: ex:SpecificActivityTypeShape/sh:property (path skos:broader)\n  Focus node: ospd:workflow\n  Result path: skos:broader\n  Message: An OSPD-specific activity type should specialise a generic activity type (skos:broader)."
+            },
+            {
+              "shaclFile": "_sources/specific/workflow-and-scoring/shapes.shacl",
+              "focusNodes": {
+                "ex:SpecificActivityTypeShape": {
+                  "nodes": [
+                    "ospd:cvi-configuration-validation"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/specific/workflow-and-scoring/shapes.shacl:\n - Shape ex:SpecificActivityTypeShape: ospd:cvi-configuration-validation\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/core/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/core/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "_sources/core/shapes.shacl",
+              "focusNodes": {
+                "ex:GenericActivityTypeShape": {
+                  "nodes": [
+                    "ospd:cvi-configuration-validation"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/core/shapes.shacl:\n - Shape ex:GenericActivityTypeShape: ospd:cvi-configuration-validation\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/profiles/activity-types/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/profiles/activity-types/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "_sources/profiles/activity-types/shapes.shacl",
+              "focusNodes": {
+                "acttype:ActivityTypeItemClassShape": {
+                  "nodes": [
+                    "acttype:activityTypeItemClass"
+                  ]
+                },
+                "acttype:ActivityTypeShape": {
+                  "nodes": [
+                    "ospd:cvi-configuration-validation"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/profiles/activity-types/shapes.shacl:\n - Shape acttype:ActivityTypeItemClassShape: acttype:activityTypeItemClass\n - Shape acttype:ActivityTypeShape: ospd:cvi-configuration-validation\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedUsage>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadMember>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Activity-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-generated>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-invalidated>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Collection-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-atLocation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadRole>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Entity-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadUsage>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Generation-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#End-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-alternateOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-used>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-activity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedStart>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-agent>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-entity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-influencer>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadActivity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasStartedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#EmptyCollection-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedEnd>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadPlan>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadPrimarySource>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasRevisionOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInformedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Start-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Invalidation-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasAttributedTo>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Plan-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Bundle-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-specializationOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedRevision>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasEndedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadGeneration>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Usage-shape>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "focusNodes": {
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterActionShape": {
+                  "nodes": []
+                },
+                "rim:ConceptVersionShape": {
+                  "nodes": []
+                },
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:ConceptShape": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterShape: *none*\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": true,
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  }
+}
