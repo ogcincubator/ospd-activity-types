@@ -217,7 +217,7 @@
   "abstract": "The activity types of the OGC Open Science Persistent Demonstrator (OSPD), under stable\n`https://w3id.org/ogc/ospd/activity-type/` URIs: the generic activity types, grouped into families.\n",
   "description": "The activity types of OSPD and the model they are described with: the activity type, geoprocessing and\nmachine learning profiles of the Registered Item Model (`profiles/`), the catalogs (`core/`) and the generic\nactivity types, one block and one concept scheme per family (`generic/<family>`). Specific types are defined\nby the participant registers, loaded from their ogcincubator forks, and point to a generic type with\n`skos:broader`. This register supersedes the [Activity Type Register](https://ogcincubator.github.io/activity-type-register/).\n",
   "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
-  "modified": "2026-11-26T12:39:50.588197",
+  "modified": "2026-11-26T12:48:22.228815",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"009466f93d27bf23cb4832f43883f4f524ab5d30",
@@ -341,13 +341,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/activity-types/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/activity-types/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/activity-types/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/activity-types/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -442,13 +442,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/core/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/core/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/core/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/core/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -559,13 +559,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/geoprocessing-activity-types/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/geoprocessing-activity-types/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/geoprocessing-activity-types/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/geoprocessing-activity-types/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -659,13 +659,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/data-conversion/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/data-conversion/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/data-conversion/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/data-conversion/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -760,13 +760,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/earth-observation/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/earth-observation/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/earth-observation/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/earth-observation/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -861,13 +861,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/information-extraction-and-retrieval/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/information-extraction-and-retrieval/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/information-extraction-and-retrieval/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/information-extraction-and-retrieval/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -962,13 +962,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/ml-and-statistical-modeling/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/ml-and-statistical-modeling/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/ml-and-statistical-modeling/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/ml-and-statistical-modeling/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1063,13 +1063,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/point-cloud-processing/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/point-cloud-processing/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/point-cloud-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/point-cloud-processing/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1164,13 +1164,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/raster-coverage-processing/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/raster-coverage-processing/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/raster-coverage-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/raster-coverage-processing/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1265,13 +1265,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/spatial-indexing/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/spatial-indexing/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/spatial-indexing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/spatial-indexing/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1367,13 +1367,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/sqlmm/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/sqlmm/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/sqlmm/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/sqlmm/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1468,13 +1468,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/terrain-and-hydrology/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/terrain-and-hydrology/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/terrain-and-hydrology/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/terrain-and-hydrology/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1569,13 +1569,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/vector-geometry-processing/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/vector-geometry-processing/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/vector-geometry-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/vector-geometry-processing/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1670,13 +1670,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/workflow-and-scoring/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/workflow-and-scoring/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/generic/workflow-and-scoring/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/generic/workflow-and-scoring/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1810,13 +1810,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/st-ml-activity-types/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/st-ml-activity-types/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/st-ml-activity-types/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/st-ml-activity-types/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1936,13 +1936,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/schemas/activity-types-schema/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/activity-types-schema/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/schemas/activity-types-schema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/activity-types-schema/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2045,13 +2045,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/data-conversion/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/data-conversion/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/data-conversion/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/data-conversion/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2156,13 +2156,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/earth-observation/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/earth-observation/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/earth-observation/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/earth-observation/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2267,13 +2267,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/information-extraction-and-retrieval/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/information-extraction-and-retrieval/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/information-extraction-and-retrieval/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/information-extraction-and-retrieval/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2378,13 +2378,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/ml-and-statistical-modeling/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/ml-and-statistical-modeling/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/ml-and-statistical-modeling/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/ml-and-statistical-modeling/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2489,13 +2489,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/raster-coverage-processing/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/raster-coverage-processing/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/raster-coverage-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/raster-coverage-processing/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2600,13 +2600,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/spatial-indexing/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/spatial-indexing/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/spatial-indexing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/spatial-indexing/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2711,13 +2711,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/vector-geometry-processing/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/vector-geometry-processing/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/vector-geometry-processing/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/vector-geometry-processing/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2822,13 +2822,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/workflow-and-scoring/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/workflow-and-scoring/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/specific/workflow-and-scoring/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/specific/workflow-and-scoring/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2955,13 +2955,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/",
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -3108,13 +3108,13 @@
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/st-ml-activity-types-schema/",
       "validationPassed": true,
       "documentation": {
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/st-ml-activity-types-schema/index.json"
-        },
         "markdown": {
           "mediatype": "text/markdown",
           "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/markdown/register/ospd/profiles/schemas/st-ml-activity-types-schema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/ospd-activity-types/build/generateddocs/json-full/register/ospd/profiles/schemas/st-ml-activity-types-schema/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
