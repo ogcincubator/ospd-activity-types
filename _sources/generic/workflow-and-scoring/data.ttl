@@ -41,8 +41,6 @@ ospd:catalog-export a skos:Concept,
     rdfs:subClassOf acttype:ActivityType ;
     skos:definition "Assembles the results of an analysis into a catalog of items with their assets, for example a STAC Catalog."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
-    skos:narrower ospd:export-stac,
-        ospd:stac ;
     skos:note "Proposed generic type, introduced to give specific types a parent; not derived from a source definition."@en ;
     skos:prefLabel "Catalog export"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
@@ -72,10 +70,6 @@ ospd:workflow a skos:Concept,
     rdfs:subClassOf acttype:ActivityType ;
     skos:definition "Orchestrates several activities, each consuming the outputs of earlier ones, as one executable whole. One execution of it is a workflow run."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;
-    skos:narrower ospd:mangrove-workflow,
-        ospd:mangrove-workflow-steps,
-        ospd:workflow-copernicus,
-        ospd:workflow-earth-search ;
     skos:note "Proposed generic type, introduced to give specific types a parent; not derived from a source definition."@en ;
     skos:prefLabel "Workflow"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/workflow-and-scoring> ;

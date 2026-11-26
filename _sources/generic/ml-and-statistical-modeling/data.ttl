@@ -37,8 +37,6 @@ ospd:GA009 a skos:Concept,
     owl:versionInfo "0.1.3.dev10" ;
     skos:definition "Performs climate variable downscaling used to transform coarse-scale climate model outputs into high-resolution, locally relevant climate data, using a machine learning algorithm described through STAC MLM."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
-    skos:narrower ospd:climate-downscaling,
-        ospd:climate-downscaling-inference ;
     skos:prefLabel "ML Climate Variable Downscaling"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/ml-and-statistical-modeling> ;
     prov:qualifiedAttribution [ prov:agent <https://www.crim.ca> ;

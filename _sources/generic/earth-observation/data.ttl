@@ -40,10 +40,6 @@ ospd:band-retrieval a skos:Concept,
     skos:broader ospd:coverage-subsetting ;
     skos:definition "Retrieves one band, one range component, of an Earth observation product as a raster, over the whole product or over an area of interest, with the values the product provides, possibly converted to physical units by the scale and offset the product declares."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    skos:narrower ospd:crop,
-        ospd:download-band,
-        ospd:download-band-sentinel2-product-safe,
-        ospd:download-band-sentinel2-stac-item ;
     skos:prefLabel "Band retrieval"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     rim:itemClass acttype:activityTypeItemClass ;
@@ -61,8 +57,6 @@ ospd:product-selection a skos:Concept,
     skos:broader ospd:catalogue-search ;
     skos:definition "Selects, from a catalogue of Earth observation products, those of a collection whose footprint intersects an area of interest and whose acquisition time falls within a time interval, possibly filtered further on their metadata, such as their cloud cover."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
-    skos:narrower ospd:select-products-sentinel2,
-        ospd:select-scene ;
     skos:prefLabel "Product selection"@en ;
     skos:topConceptOf <https://w3id.org/ogc/ospd/activity-type/families/earth-observation> ;
     rim:itemClass acttype:activityTypeItemClass ;

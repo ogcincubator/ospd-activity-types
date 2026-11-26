@@ -257,9 +257,6 @@ ospd:geometry-extent a skos:Concept,
     skos:broader ospd:extent-computation ;
     skos:definition "Computes the minimum bounding rectangle of a set of input geometries, as a geometry."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
-    skos:narrower ospd:parse-aoi,
-        ospd:parse-aoi-steps,
-        ospd:vector-geometry-extent ;
     skos:prefLabel "Geometry extent"@en ;
     rim:itemClass acttype:activityTypeItemClass ;
     rim:objectIdentifier "https://w3id.org/ogc/ospd/activity-type/geometry-extent"^^xsd:anyURI ;
