@@ -8,7 +8,6 @@
 
 ospd:point-cloud-thinning a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-thinning> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Reduces the number of points to the given percentage by sequential point removal, which suits points stored in chronological order best."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;

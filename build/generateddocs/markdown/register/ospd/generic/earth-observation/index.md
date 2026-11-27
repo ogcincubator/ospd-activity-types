@@ -39,7 +39,6 @@ This family has 5 generic activity types. It is a profile of the OSPD Activity T
 
 ospd:band-retrieval a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/band-retrieval> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;

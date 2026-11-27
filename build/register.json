@@ -4,7 +4,7 @@
   "abstract": "The activity types of the OGC Open Science Persistent Demonstrator (OSPD), under stable\n`https://w3id.org/ogc/ospd/activity-type/` URIs: the generic activity types, grouped into families.\n",
   "description": "The activity types of OSPD and the model they are described with: the activity type, geoprocessing and\nmachine learning profiles of the Registered Item Model (`profiles/`), the catalogs (`core/`) and the generic\nactivity types, one block and one concept scheme per family (`generic/<family>`). Specific types are defined\nby the participant registers, loaded from their ogcincubator forks, and point to a generic type with\n`skos:broader`. This register supersedes the [Activity Type Register](https://ogcincubator.github.io/activity-type-register/).\n",
   "sparqlEndpoint": "https://defs-hosted.opengis.net/fuseki-ospd/query",
-  "modified": "2026-11-26T13:19:24.891652",
+  "modified": "2026-11-27T09:44:41.119893",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"009466f93d27bf23cb4832f43883f4f524ab5d30",
@@ -72,7 +72,7 @@
         "plan"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "ontology": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/activity-types/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/",
       "validationPassed": true,
@@ -135,7 +135,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.profiles.activity-types"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/core/",
@@ -206,7 +206,7 @@
         "register"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "ontology": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/geoprocessing-activity-types/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/",
       "validationPassed": true,
@@ -268,7 +268,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/data-conversion/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/data-conversion/",
@@ -329,7 +329,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/earth-observation/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/earth-observation/",
@@ -390,7 +390,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/information-extraction-and-retrieval/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/information-extraction-and-retrieval/",
@@ -451,7 +451,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/ml-and-statistical-modeling/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/ml-and-statistical-modeling/",
@@ -512,7 +512,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/point-cloud-processing/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/point-cloud-processing/",
@@ -573,7 +573,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/raster-coverage-processing/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/raster-coverage-processing/",
@@ -634,7 +634,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/spatial-indexing/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/spatial-indexing/",
@@ -696,7 +696,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/sqlmm/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/sqlmm/",
@@ -757,7 +757,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/terrain-and-hydrology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/terrain-and-hydrology/",
@@ -818,7 +818,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/vector-geometry-processing/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/vector-geometry-processing/",
@@ -879,7 +879,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.core"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/generic/workflow-and-scoring/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/generic/workflow-and-scoring/",
@@ -961,7 +961,7 @@
         "activity type"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "ontology": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/st-ml-activity-types/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/st-ml-activity-types/",
       "validationPassed": true,
@@ -1021,7 +1021,7 @@
         "schema"
       ],
       "dateTimeAddition": "2026-10-30T00:00:00Z",
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "shaclShapes": {
         "ogc.register.ospd.profiles.activity-types": [
           "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/activity-types/shapes.shacl"
@@ -1105,7 +1105,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.data-conversion"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/data-conversion/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/data-conversion/",
@@ -1170,7 +1170,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.earth-observation"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/earth-observation/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/earth-observation/",
@@ -1235,7 +1235,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.information-extraction-and-retrieval"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/information-extraction-and-retrieval/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/information-extraction-and-retrieval/",
@@ -1300,7 +1300,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.ml-and-statistical-modeling"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/ml-and-statistical-modeling/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/ml-and-statistical-modeling/",
@@ -1365,7 +1365,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.raster-coverage-processing"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/raster-coverage-processing/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/raster-coverage-processing/",
@@ -1430,7 +1430,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.spatial-indexing"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/spatial-indexing/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/spatial-indexing/",
@@ -1495,7 +1495,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.vector-geometry-processing"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/vector-geometry-processing/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/vector-geometry-processing/",
@@ -1560,7 +1560,7 @@
       "dependsOn": [
         "bblocks://ogc.register.ospd.generic.workflow-and-scoring"
       ],
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/workflow-and-scoring/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/workflow-and-scoring/",
@@ -1617,7 +1617,7 @@
         "register"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "shaclShapes": {
         "ogc.register.ospd.profiles.geoprocessing-activity-types": [
           "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"
@@ -1700,7 +1700,7 @@
         "activity type"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-11-26",
+      "dateOfLastChange": "2026-11-27",
       "shaclShapes": {
         "ogc.register.ospd.profiles.geoprocessing-activity-types": [
           "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"

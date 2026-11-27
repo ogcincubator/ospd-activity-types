@@ -47,7 +47,6 @@ This family has 13 generic activity types. It is a profile of the OSPD Activity 
 
 ospd:analytical-hillshading a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/analytical-hillshading> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "For each cell, the angle at which light coming from the position of the light source hits the terrain surface."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/terrain-and-hydrology> ;

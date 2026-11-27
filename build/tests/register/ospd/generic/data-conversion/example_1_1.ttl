@@ -9,14 +9,12 @@
 
 ospd:encoding-conversion a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/encoding-conversion> ;
     dcterms:source <https://github.com/52North/bblocks-openscience/blob/fe57fc59540ed1d64d18b174529d22add905d66c/_sources/prov-examples/52n-provenance/vegetation-productivity/example.json#L208>,
         <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L753>,
         <https://github.com/geonovum-labs/ospd-dtaas-register/blob/387794d7052af37986cadd791c81afe87acb24f4/_sources/ogcapi/processes/3dgi/convert_format/examples/metadata.json#L1> ;
     rdfs:subClassOf geoproc:GeoprocessingActivityType ;
     skos:altLabel "Format conversion"@en ;
     skos:definition "Re-encodes spatial data in another data format, without changing the information it carries."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/encoding-conversion> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/data-conversion> ;
     skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
     skos:prefLabel "Encoding conversion"@en ;

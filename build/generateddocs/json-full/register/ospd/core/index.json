@@ -43,7 +43,7 @@
   "dependsOn": [
     "ogc.register.ospd.profiles.activity-types"
   ],
-  "dateOfLastChange": "2026-11-26",
+  "dateOfLastChange": "2026-11-27",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/core/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/core/",

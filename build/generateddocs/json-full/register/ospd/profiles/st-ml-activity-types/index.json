@@ -63,7 +63,7 @@
     "activity type"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-11-26",
+  "dateOfLastChange": "2026-11-27",
   "ontology": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/st-ml-activity-types/ontology.ttl",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/st-ml-activity-types/",
   "validationPassed": true,

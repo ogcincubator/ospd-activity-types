@@ -50,7 +50,6 @@ This family has 16 generic activity types. It is a profile of the OSPD Activity 
 
 ospd:area a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:geometry-measure ;

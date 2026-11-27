@@ -52,7 +52,7 @@
     "register"
   ],
   "dateTimeAddition": "2026-09-23T00:00:00Z",
-  "dateOfLastChange": "2026-11-26",
+  "dateOfLastChange": "2026-11-27",
   "ontology": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/geoprocessing-activity-types/ontology.ttl",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/",
   "validationPassed": true,

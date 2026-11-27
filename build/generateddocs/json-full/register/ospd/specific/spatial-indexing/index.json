@@ -46,7 +46,7 @@
   "dependsOn": [
     "ogc.register.ospd.generic.spatial-indexing"
   ],
-  "dateOfLastChange": "2026-11-26",
+  "dateOfLastChange": "2026-11-27",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/specific/spatial-indexing/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/ospd-activity-types/blob/main/build/tests/register/ospd/specific/spatial-indexing/",

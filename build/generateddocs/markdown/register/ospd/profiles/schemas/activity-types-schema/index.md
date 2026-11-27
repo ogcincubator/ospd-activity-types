@@ -124,7 +124,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.register.ospd.profiles.schemas.activity-types-schema
   register: https://ogcincubator.github.io/ospd-activity-types/build/register.json
   version: '0.3'
-  dateOfLastChange: '2026-11-26'
+  dateOfLastChange: '2026-11-27'
 
 ```
 

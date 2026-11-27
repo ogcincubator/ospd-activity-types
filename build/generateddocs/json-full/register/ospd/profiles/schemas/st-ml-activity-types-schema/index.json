@@ -43,7 +43,7 @@
     "activity type"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-11-26",
+  "dateOfLastChange": "2026-11-27",
   "shaclShapes": {
     "ogc.register.ospd.profiles.geoprocessing-activity-types": [
       "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/geoprocessing-activity-types/shapes.shacl"
@@ -73,7 +73,7 @@
   "resolvedSchemaProperties": "https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/st-ml-activity-types-schema/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/ospd-activity-types/_sources/profiles/schemas/st-ml-activity-types-schema/",
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: SpatioTemporal ML Activity Types Profile\ndescription: 'A profile of the Activity Type Register Profile for SpatioTemporal ML\n  Activity Types\n\n  '\nallOf:\n- $ref: https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.register.ospd.profiles.schemas.st-ml-activity-types-schema\n  register: https://ogcincubator.github.io/ospd-activity-types/build/register.json\n  version: '0.3'\n  dateOfLastChange: '2026-11-26'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: SpatioTemporal ML Activity Types Profile\ndescription: 'A profile of the Activity Type Register Profile for SpatioTemporal ML\n  Activity Types\n\n  '\nallOf:\n- $ref: https://ogcincubator.github.io/ospd-activity-types/build/annotated/register/ospd/profiles/schemas/geoprocessing-activity-types-schema/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.register.ospd.profiles.schemas.st-ml-activity-types-schema\n  register: https://ogcincubator.github.io/ospd-activity-types/build/register.json\n  version: '0.3'\n  dateOfLastChange: '2026-11-27'\n",
   "gitRepository": "https://github.com/ogcincubator/ospd-activity-types",
   "gitPath": "_sources/profiles/schemas/st-ml-activity-types-schema"
 }
