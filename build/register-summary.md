@@ -23,7 +23,7 @@ A profile of the Registered Item Model for governed activity type records in the
 
 **Type:** model
 
-The catalogs of the OSPD activity types: the OSPD catalog and, in it, the catalog of the generic activity types, one concept scheme per family. Participant registers specialise the generic types.
+The catalogs of the OSPD activity types: the OSPD catalog and, separate from it, the catalog of the generic activity types, one concept scheme per family. Participant registers specialise the generic types.
 
 ### `ogc.register.ospd.profiles.geoprocessing-activity-types` — Geoprocessing Activity Types Profile
 

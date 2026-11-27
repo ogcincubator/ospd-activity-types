@@ -3,7 +3,7 @@
 
 `ogc.register.ospd.core` *v0.1*
 
-The catalogs of the OSPD activity types: the OSPD catalog and, in it, the catalog of the generic activity types, one concept scheme per family. Participant registers specialise the generic types.
+The catalogs of the OSPD activity types: the OSPD catalog and, separate from it, the catalog of the generic activity types, one concept scheme per family. Participant registers specialise the generic types.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
@@ -14,7 +14,7 @@ The catalogs of the OSPD activity types: the OSPD catalog and, in it, the catalo
 The activity types of the OGC Open Science Persistent Demonstrator (OSPD), under stable URIs of the form
 `https://w3id.org/ogc/ospd/activity-type/<slug>`.
 
-This block holds two catalogs: the OSPD catalog (`https://w3id.org/ogc/ospd/catalog`) and, in it, the catalog of the generic
+This block holds two catalogs: the OSPD catalog (`https://w3id.org/ogc/ospd/catalog`) and, separate from it, the catalog of the generic
 activity types (`https://w3id.org/ogc/ospd/activity-type/catalog`), which lists one `skos:ConceptScheme` per family of related
 types. Each family is a building block under `generic/` that profiles this one and carries its concept scheme and the Turtle
 definitions of its types. This block is a profile of the activity type profile
