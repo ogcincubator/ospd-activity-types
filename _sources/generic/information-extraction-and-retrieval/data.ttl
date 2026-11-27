@@ -100,13 +100,11 @@ ospd:GA046 a skos:Concept,
 
 ospd:catalogue-search a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/catalogue-search> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L773>,
         <https://github.com/crim-ca/bblocks-process-profiles/blob/d555d292ed1e6b9a828f3b88bbd9bfb10ec7e1c1/_sources/downscaling-unet/workflow/activity-types.ttl#L125>,
         <https://github.com/sunnydean/lightning2earthcare/blob/be63866b12733db5ef7349205d36d8af8ea937f1/cwl/ospd2026/registry/geoprocessing-activities.jsonld#L34> ;
     rdfs:subClassOf acttype:ActivityType ;
     skos:definition "Selects, from a catalogue, the records of data that satisfy query criteria, such as a spatial extent, a time interval or metadata values."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/catalogue-search> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/information-extraction-and-retrieval> ;
     skos:narrower ospd:lightning2earthcare-observation-discovery,
         ospd:product-selection ;

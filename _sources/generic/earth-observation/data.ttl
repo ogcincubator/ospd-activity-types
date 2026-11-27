@@ -33,7 +33,6 @@ ospd:GA016 a skos:Concept,
 
 ospd:band-retrieval a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/band-retrieval> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:coverage-subsetting ;
@@ -49,7 +48,6 @@ ospd:band-retrieval a skos:Concept,
 
 ospd:product-selection a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/product-selection> ;
     dcterms:source [ ],
         [ ],
         [ ] ;

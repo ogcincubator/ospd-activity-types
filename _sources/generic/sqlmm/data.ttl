@@ -8,7 +8,6 @@
 
 ospd:area a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/area> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:geometry-measure ;
@@ -24,7 +23,6 @@ ospd:area a skos:Concept,
 
 ospd:buffer a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/buffer> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:geometry-construction ;
@@ -40,7 +38,6 @@ ospd:buffer a skos:Concept,
 
 ospd:centroid a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/centroid> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:geometry-construction ;
@@ -56,7 +53,6 @@ ospd:centroid a skos:Concept,
 
 ospd:contains a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/contains> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:spatial-relation-test ;
@@ -72,7 +68,6 @@ ospd:contains a skos:Concept,
 
 ospd:convex-hull a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/convex-hull> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:geometry-construction ;
@@ -88,7 +83,6 @@ ospd:convex-hull a skos:Concept,
 
 ospd:crosses a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/crosses> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:spatial-relation-test ;
@@ -104,7 +98,6 @@ ospd:crosses a skos:Concept,
 
 ospd:difference a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/difference> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:set-operation ;
@@ -120,7 +113,6 @@ ospd:difference a skos:Concept,
 
 ospd:disjoint a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/disjoint> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:spatial-relation-test ;
@@ -136,7 +128,6 @@ ospd:disjoint a skos:Concept,
 
 ospd:equals a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/equals> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:spatial-relation-test ;
@@ -152,7 +143,6 @@ ospd:equals a skos:Concept,
 
 ospd:intersection a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/intersection> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:set-operation ;
@@ -168,7 +158,6 @@ ospd:intersection a skos:Concept,
 
 ospd:intersects a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/intersects> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:spatial-relation-test ;
@@ -184,7 +173,6 @@ ospd:intersects a skos:Concept,
 
 ospd:is-simple a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/is-simple> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:geometry-property-test ;
@@ -200,7 +188,6 @@ ospd:is-simple a skos:Concept,
 
 ospd:symdifference a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/symdifference> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:set-operation ;
@@ -216,7 +203,6 @@ ospd:symdifference a skos:Concept,
 
 ospd:touches a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/touches> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:spatial-relation-test ;
@@ -232,7 +218,6 @@ ospd:touches a skos:Concept,
 
 ospd:union a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/union> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:set-operation ;
@@ -248,7 +233,6 @@ ospd:union a skos:Concept,
 
 ospd:within a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/within> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:spatial-relation-test ;

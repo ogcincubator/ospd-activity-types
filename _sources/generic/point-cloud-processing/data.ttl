@@ -8,7 +8,6 @@
 
 ospd:point-cloud-thinning a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-thinning> ;
     rdfs:subClassOf ospd:point-cloud-filtering ;
     skos:broader ospd:point-cloud-filtering ;
     skos:definition "Reduces the number of points to the given percentage by sequential point removal, which suits points stored in chronological order best."@en ;
@@ -21,7 +20,6 @@ ospd:point-cloud-thinning a skos:Concept,
 
 ospd:point-cloud-to-grid a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-to-grid> ;
     rdfs:subClassOf ospd:spatial-model-conversion ;
     skos:broader ospd:spatial-model-conversion ;
     skos:definition "Writes one value per grid cell from the points falling in it -- by default the z value of the first point -- as a single-band raster."@en ;
@@ -35,7 +33,6 @@ ospd:point-cloud-to-grid a skos:Concept,
 
 ospd:point-cloud-to-shapes a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-to-shapes> ;
     rdfs:subClassOf ospd:spatial-model-conversion ;
     skos:broader ospd:spatial-model-conversion ;
     skos:definition "Converts a point cloud to a feature collection of points."@en ;
@@ -49,11 +46,9 @@ ospd:point-cloud-to-shapes a skos:Concept,
 
 ospd:point-cloud-filtering a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-filtering> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L742> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Keeps a subset of the points of a point cloud, chosen by a rule, and returns them as a point cloud."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/point-cloud-filtering> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/point-cloud-processing> ;
     skos:narrower ospd:point-cloud-thinning ;
     skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;

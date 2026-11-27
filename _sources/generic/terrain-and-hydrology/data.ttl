@@ -31,7 +31,6 @@ ospd:GA021 a skos:Concept,
 
 ospd:analytical-hillshading a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/analytical-hillshading> ;
     rdfs:subClassOf ospd:GA030 ;
     skos:broader ospd:GA030 ;
     skos:definition "For each cell, the angle at which light coming from the position of the light source hits the terrain surface."@en ;
@@ -44,7 +43,6 @@ ospd:analytical-hillshading a skos:Concept,
 
 ospd:terrain-ruggedness-index a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/terrain-ruggedness-index> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:GA030 ;
     skos:broader ospd:GA030 ;
@@ -58,7 +56,6 @@ ospd:terrain-ruggedness-index a skos:Concept,
 
 ospd:topographic-position-index a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/topographic-position-index> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:GA030 ;
     skos:broader ospd:GA030 ;
@@ -146,7 +143,6 @@ ospd:GA035 a skos:Concept,
 
 ospd:slope a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/slope> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:GA030 ;
     skos:broader ospd:GA030 ;
@@ -221,7 +217,6 @@ ospd:GA030 a skos:Concept,
     dcterms:replaces <http://ospd/demo/GA030> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     owl:versionInfo "2" ;
-    skos:closeMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/terrain-derivative> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/terrain-and-hydrology> ;
     skos:narrower ospd:analytical-hillshading,
         ospd:slope,

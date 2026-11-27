@@ -109,12 +109,10 @@ ospd:GA020 a skos:Concept,
 
 ospd:geometry-construction a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/geometry-construction> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L639>,
         <https://github.com/hartis-org/cvi-workflow/blob/b6f8e98a07be3320a2a936a23cb427009abd12d0/ospd2026/provenance/cvi_full_workflow_design_runtime_entities.json#L53> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Derives a new geometry from one input geometry and, possibly, parameters such as a distance or a spacing."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/geometry-construction> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:narrower ospd:buffer,
         ospd:centroid,
@@ -130,11 +128,9 @@ ospd:geometry-construction a skos:Concept,
 
 ospd:geometry-measure a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/geometry-measure> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L713> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Measures a quantity of a geometry, such as its area or length, in the units of its spatial reference system."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/geometry-measure> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:narrower ospd:area ;
     skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
@@ -147,11 +143,9 @@ ospd:geometry-measure a skos:Concept,
 
 ospd:geometry-property-test a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/geometry-property-test> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L722> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Tests whether one geometry has a given property, such as being simple, empty or closed, and returns a boolean."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/geometry-property-test> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:narrower ospd:is-simple ;
     skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
@@ -164,11 +158,9 @@ ospd:geometry-property-test a skos:Concept,
 
 ospd:set-operation a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/set-operation> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L628> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Returns the geometry made of the points that belong to two input geometries according to a point-set operation (union, intersection, difference or symmetric difference)."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/set-operation> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:narrower ospd:difference,
         ospd:intersection,
@@ -184,11 +176,9 @@ ospd:set-operation a skos:Concept,
 
 ospd:spatial-relation-test a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/spatial-relation-test> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L620> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Tests whether a given spatial relation holds between two geometries, and returns a boolean."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/spatial-relation-test> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:narrower ospd:contains,
         ospd:crosses,
@@ -250,7 +240,6 @@ ospd:GA006 a skos:Concept,
 
 ospd:geometry-extent a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/geometry-extent> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf ospd:extent-computation ;
@@ -281,11 +270,9 @@ ospd:GA002 a skos:Concept,
 
 ospd:extent-computation a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/extent-computation> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L649> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Computes the bounding envelope of spatial data, a geometry or a coverage, as a geometry."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/extent-computation> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/vector-geometry-processing> ;
     skos:narrower ospd:geometry-extent,
         ospd:raster-extent ;

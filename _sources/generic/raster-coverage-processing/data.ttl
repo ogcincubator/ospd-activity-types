@@ -133,7 +133,6 @@ ospd:ZonalStatistics a skos:Concept,
 
 ospd:otsu-thresholding a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/otsu-thresholding> ;
     rdfs:subClassOf ospd:raster-classification ;
     skos:broader ospd:raster-classification ;
     skos:definition "Divides the cells of a single-band raster into two classes at the threshold computed from the histogram of the cell values by Otsu's method, which maximises the variance between the two classes, and returns the cells of the upper class as a binary mask."@en ;
@@ -146,7 +145,6 @@ ospd:otsu-thresholding a skos:Concept,
 
 ospd:radiometric-index a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/radiometric-index> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:GA008 ;
     skos:broader ospd:GA008 ;
@@ -160,7 +158,6 @@ ospd:radiometric-index a skos:Concept,
 
 ospd:raster-band-math-multiband a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-band-math-multiband> ;
     dcterms:source [ ],
         [ ] ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
@@ -175,7 +172,6 @@ ospd:raster-band-math-multiband a skos:Concept,
 
 ospd:raster-crop a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-crop> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:coverage-subsetting ;
     skos:broader ospd:coverage-subsetting ;
@@ -189,7 +185,6 @@ ospd:raster-crop a skos:Concept,
 
 ospd:raster-extent a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-extent> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:extent-computation ;
     skos:broader ospd:extent-computation ;
@@ -204,7 +199,6 @@ ospd:raster-extent a skos:Concept,
 
 ospd:raster-format-conversion a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-format-conversion> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:encoding-conversion ;
     skos:broader ospd:encoding-conversion ;
@@ -219,7 +213,6 @@ ospd:raster-format-conversion a skos:Concept,
 
 ospd:raster-rendering a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-rendering> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:portrayal ;
     skos:broader ospd:portrayal ;
@@ -233,7 +226,6 @@ ospd:raster-rendering a skos:Concept,
 
 ospd:raster-reprojection a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-reprojection> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:raster-regridding ;
     skos:broader ospd:raster-regridding ;
@@ -247,7 +239,6 @@ ospd:raster-reprojection a skos:Concept,
 
 ospd:raster-resampling a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-resampling> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:raster-regridding ;
     skos:broader ospd:raster-regridding ;
@@ -283,7 +274,6 @@ ospd:GA028 a skos:Concept,
 
 ospd:raster-band-math a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-band-math> ;
     dcterms:source [ ] ;
     rdfs:subClassOf ospd:GA008 ;
     skos:broader ospd:GA008 ;
@@ -297,11 +287,9 @@ ospd:raster-band-math a skos:Concept,
 
 ospd:coverage-subsetting a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/coverage-subsetting> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L693> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Extracts a part of a coverage, restricted in its domain (an area of interest) or in its range (some bands), without changing the values extracted beyond a declared unit conversion."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/coverage-subsetting> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:narrower ospd:band-retrieval,
         ospd:raster-crop ;
@@ -315,11 +303,9 @@ ospd:coverage-subsetting a skos:Concept,
 
 ospd:portrayal a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/portrayal> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L764> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Depicts spatial data as an image for viewing, according to rules that associate values or classes of values with a symbology."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/portrayal> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:narrower ospd:raster-rendering ;
     skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
@@ -332,12 +318,10 @@ ospd:portrayal a skos:Concept,
 
 ospd:raster-classification a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-classification> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L731>,
         <https://github.com/starling-foundries/KindGrove/blob/6e3872eb82c5574744b682f13cf5cda14e7132a3/scripts/provenance.py#L81> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Assigns each cell of a raster to one of a set of classes from its values, and returns the classes as a raster or a mask."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-classification> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:narrower ospd:otsu-thresholding ;
     skos:note "Promoted by the OSPD 2026 activity-type triage (decision of 26 Nov 2026). Evidence in dcterms:source."@en ;
@@ -387,11 +371,9 @@ ospd:GA032 a skos:Concept,
 
 ospd:raster-regridding a skos:Concept,
         acttype:ActivityType ;
-    dcterms:replaces <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-regridding> ;
     dcterms:source <https://github.com/GeoLabs/bblocks-generic-profiles/blob/56fd9896e9e21cbd9d67c1fd3194917a4cc48934/scripts/activity-types.yaml#L682> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     skos:definition "Computes the values of a raster on another grid, of another coordinate reference system or of another resolution, by resampling the input values."@en ;
-    skos:exactMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/raster-regridding> ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:narrower ospd:raster-reprojection,
         ospd:raster-resampling ;
@@ -410,8 +392,7 @@ ospd:GA008 a skos:Concept,
     rdfs:seeAlso <https://hirondelle.crim.ca/weaver/processes/calculate-band> ;
     rdfs:subClassOf <https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType> ;
     owl:versionInfo "2" ;
-    skos:closeMatch <https://w3id.org/geolabs/ospd/generic-profiles/activity-type/band-algebra>,
-        ospd:raster-band-math ;
+    skos:closeMatch ospd:raster-band-math ;
     skos:definition "Performs a calculation over imagery bands and returns the resulting raster using the specified band arithmetic."@en ;
     skos:inScheme <https://w3id.org/ogc/ospd/activity-type/families/raster-coverage-processing> ;
     skos:narrower ospd:radiometric-index,
