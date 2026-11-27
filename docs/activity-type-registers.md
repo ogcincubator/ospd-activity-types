@@ -16,7 +16,7 @@ All repositories are under `github.com/ogcincubator`.
 | **RIM** | `registered-item-model` (`ogc.rim.*`) | The Registered Item Model (ISO 19135:2026): registers, register items, statuses, governance. No activity types. Catalog: `w3id.org/ogc/rim/catalog`. |
 | **Activity type profiles** | `ospd-activity-types`, `_sources/profiles/` (`ogc.register.ospd.profiles.*`) | The activity type profiles of the RIM (`acttype:ActivityType`, geoprocessing and ML profiles, JSON schemas). No activity types. Until 26 Nov 2026 in `activity-type-register`, which this register supersedes. |
 | **Generic activity types** | `ospd-activity-types`, `_sources/core/` and `_sources/generic/` (`ogc.register.ospd.*`) | The **generic activity types**, grouped into **families**: one block and one `skos:ConceptScheme` per family (`generic/<family>`), among them the SQL/MM spatial operations. |
-| **Specific activity types** | one register per participant, e.g. the GeoLabs process profiles or the Geonovum DTaaS register, to be loaded from forks in `ogcincubator` (not created yet) | The types of one participant: tool- or example-specific **specialisations** of generic types. They are loaded from the forks and not repeated in `ospd-activity-types`. |
+| **Specific activity types** | one register per participant, e.g. the GeoLabs process profiles or the Geonovum DTaaS register, loaded from forks in `ogcincubator`; so far only the GeoLabs one exists (`geolabs-bblocks-process-profiles`, see the worked example in section 2) | The types of one participant: tool- or example-specific **specialisations** of generic types. They are loaded from the forks and not repeated in `ospd-activity-types`. |
 
 **How they interact**
 
@@ -73,6 +73,14 @@ Example: project *Acme* defines `acme-flood-extent`.
    Required: the two types, `rim:itemClass`, `rim:objectIdentifier` and the two statuses (RIM shapes), `skos:prefLabel` and `skos:inScheme`. Recommended: `skos:definition`, and `skos:broader` plus `rdfs:subClassOf` to the generic parent. Optional: `dcterms:source`, `rdfs:seeAlso`, `prov:qualifiedAttribution`, `skos:closeMatch` to similar types elsewhere.
 5. **Choose the URI namespace.** Use the project's own w3id prefix (a pull request to `perma-id/w3id.org`, as done for `/ogc/ospd`). OSPD participants adding types to the OSPD register keep `.../ogc/ospd/activity-type/<slug>`.
 6. **Build and publish.** `./build.sh`, fix validation errors, push to `main`: CI validates, deploys Pages and uploads the data. Cite the new IRI as the `rdf:type` of your `prov:Activity` instances.
+
+**Worked example: GeoLabs.** `ogcincubator/geolabs-bblocks-process-profiles` is a fork of `GeoLabs/bblocks-process-profiles` that acts as a downstream register of this one.
+
+- *Namespace:* `https://w3id.org/ogc/ospd/geolabs/` is used as if GeoLabs controlled it (a pretence for the demonstrator).
+- *What it defines:* only what is specific to GeoLabs, the 58 process types (`activity-type/<group>-<slug>`, e.g. `sqlmm-contains`), in one concept scheme and one `dcat:Catalog` (`.../geolabs/catalog`, `dcterms:isPartOf` the OSPD catalog). The generic types GeoLabs used to define are not repeated: every reference to them points at the OSPD IRI.
+- *Links point upwards:* each process type has `skos:broadMatch` (another concept scheme) and `rdfs:subClassOf` to its OSPD parent, and no `skos:broader`. This register does not point at the downstream one, so the old `dcterms:replaces` and `skos:*Match` statements to GeoLabs IRIs were removed from it.
+- *Publication:* the fork has its own `sparql:` section (own graph, same Fuseki) and CI, with the secrets `sparql_username` and `sparql_password`. On a new fork, enable Actions and run the workflow once with *Run workflow*: the first push run is skipped by the template guard.
+- *Alternative:* to define the remapped generic types in the participant register too, bind each to its OSPD type with `skos:closeMatch` or `skos:broadMatch`; the fork's `alignment/` has the data and the instructions.
 
 # 3. Promoting a specific type to a generic one
 
