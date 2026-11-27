@@ -1,6 +1,6 @@
 {
   "name": "OSPD Activity Types Register",
-  "abstract": "The catalogs of the OSPD activity types: the OSPD catalog and, in it, the catalog of the generic activity types, one concept scheme per family. Participant registers specialise the generic types.",
+  "abstract": "The catalogs of the OSPD activity types: the OSPD catalog and, separate from it, the catalog of the generic activity types, one concept scheme per family. Participant registers specialise the generic types.",
   "status": "under-development",
   "dateTimeAddition": "2026-11-23T00:00:00Z",
   "itemClass": "model",
